@@ -3,13 +3,6 @@ import { createAzure } from '@ai-sdk/azure';
 
 
 
-console.log({
-  AZURE_API_KEY: process.env.AZURE_API_KEY,
-  AZURE_RESOURCE_NAME: process.env.AZURE_RESOURCE_NAME,
-  AZURE_OPENAI_DEPLOYMENT: process.env.AZURE_OPENAI_DEPLOYMENT,
-});
-
-
 const azure = createAzure({
 
   resourceName: process.env.AZURE_RESOURCE_NAME!,
@@ -26,6 +19,7 @@ const text = await pdfToText(
   );
 
 console.log("sdddfgftext");
+
 
 
 
