@@ -1,0 +1,1 @@
+Need to have a company account to access Linkedin API

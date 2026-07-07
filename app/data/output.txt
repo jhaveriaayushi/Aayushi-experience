@@ -1,0 +1,124 @@
+
+
+  
+Contact
+jhaveriaayushi@gmail.com
+www.linkedin.com/in/aayushi-
+jhaveri-680253192 (LinkedIn)
+Top Skills
+Agile Methodologies
+Product Development
+MATLAB
+Certifications
+SPANISH CEFR B2
+Professional Scrum Master I
+Honors-Awards
+Runner-up in RCSU Imperial College
+Science Challenge 2019
+Aayushi Jhaveri
+Technical Product Manager @ Frog | Cambridge Engineering
+London Area, United Kingdom
+Experience
+frog
+Technical Product Manager
+April 2026 - Present (1 month)
+London Area, United Kingdom
+Capgemini Invent
+Associate Consultant 
+June 2025 - March 2026 (10 months)
+London Area, United Kingdom
+- Problem discovery and solution ideation for internal and client-facing
+digital tools, translating user and operational pain points into clear product
+requirements and wireframes.
+- Delivered workshops and stakeholder sessions for a major UK retailer,
+shaping and pitching practical solutions to improve in-store and operational
+workflows.
+- Contributing to a government post-quantum cryptography migration
+programme, developing strategy artefacts and execution playbooks to support
+secure, scalable rollout.
+- Participated in a Nesta-led hackathon, co-building an early-stage product to
+improve children’s cybersecurity through offline engagement.
+UCL
+Experiment Set-up Designer
+September 2024 - October 2024 (2 months)
+London Area, United Kingdom
+- Collaborated on a study with the UCL Department of Experimental
+Psychology, designing and constructing custom slide-and-trolley apparatuses
+tailored for chimpanzee interactions.
+- Engineered the system to accommodate chimpanzee-specific size, strength,
+and safety considerations.
+The Little Car Company
+Software and Electrical Engineering Intern
+July 2022 - September 2022 (3 months)
+Bicester, England, United Kingdom
+ 
+Page 1 of 3
+
+  
+- Collaborated with a multidisciplinary team to design the electrical system for
+the first Tamiya electric vehicle prototype, negotiating parts with vendors and
+arranging shipments.
+- Identified and resolved software bugs in the DB5 Junior car dashboard using
+VCL, enabling production to resume.
+- Conducted vehicle testing, analysed CANBus data, and optimised
+performance by identifying and addressing abnormalities.
+- Led an ergonomics survey on dashboard layouts, presenting feedback to
+senior management and contributing to the creation of the first prototype.
+Raspberry Pi Trading
+Software Intern
+June 2021 - August 2021 (3 months)
+Cambridge, England, United Kingdom
+- Clearly documented how to interface the Pico board with various third-party
+hardware modules, like a 
+GPS using NMEA protocol, to support hobbyists and external companies when
+developing projects.
+- Worked collaboratively using version control software (GitHub) to co-develop
+by branching and 
+merging code.
+https://github.com/raspberrypi/pico-examples
+Department for Business, Energy and Industrial Strategy (BEIS)
+Work experience
+October 2019 - October 2019 (1 month)
+London, England, United Kingdom
+- Presenting a potential clean energy scheme that proposed additional wind
+farms.
+- Assisting in judging smart system entries for the Innovation Fund against
+given success criteria.
+Dell EMC
+Work experience
+July 2019 - July 2019 (1 month)
+London, England, United Kingdom
+- Worked on a robotics project, balancing costs and functionality under a tight
+deadline.
+- Gained insight into the product sales cycle by tracking new server
+development.
+ 
+Page 2 of 3
+
+  
+- Delivered a winning presentation on Quantum Computing to a group of
+employees.
+NALITS
+Work Experience
+December 2018 - December 2018 (1 month)
+London, England, United Kingdom
+- Designing a security system by considering requirements, usability features,
+stakeholders and feasibility.
+- Learning how different sensors work and using a Raspberry Pi 3b to control
+them and interlink their processes using multi-threading.
+- Creating programs that analyse video footage using OpenCV and Cuda to
+recognise objects with a suitable degree of certainty.
+Education
+University of Cambridge
+Master of Engineering - MEng, Engineering · (October 2023 - June 2024)
+University of Cambridge
+Bachelor of Arts - BA, Engineering · (October 2020 - June 2023)
+Bentley Wood High School Sixth Form
+ · (2018 - 2020)
+Royal Academy of Arts
+attRAct Programme, Fine/Studio Arts, General · (January 2019 - December
+2019)
+Bentley Wood High School
+ · (2013 - 2018)
+ 
+Page 3 of 3

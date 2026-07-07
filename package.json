@@ -6,10 +6,16 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "pdf-to-text": "node scripts/pdf-to-text.js",
     "lint": "eslint"
   },
   "dependencies": {
-    "next": "16.2.9",
+    "@ai-sdk/azure": "^3.0.77",
+    "@ai-sdk/openai": "^3.0.74",
+    "@ai-sdk/react": "^3.0.210",
+    "ai": "^6.0.208",
+    "pdf-parse": "^1.1.1",
+    "next": "^16.2.9",
     "react": "19.2.4",
     "react-dom": "19.2.4"
   },
