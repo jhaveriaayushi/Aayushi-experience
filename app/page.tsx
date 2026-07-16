@@ -3,6 +3,8 @@
 import { useChat } from '@ai-sdk/react';
 import { DefaultChatTransport } from 'ai';
 import { useState } from 'react';
+import ReactMarkdown from "react-markdown";
+
 
 
 
@@ -105,10 +107,18 @@ export default function Page() {
                 }`}
               >
 
+              
+            <div className="whitespace-pre-wrap">
               {message.role === 'user' ? 'User: ' : 'AIyushi: '}
-              {message.parts.map((part, index) =>
-                part.type === 'text' ? <span key={index}>{part.text}</span> : null,
-              )}
+
+              <ReactMarkdown>
+                {message.parts
+                  .filter((part) => part.type === 'text')
+                  .map((part) => part.text)
+                  .join('')}
+              </ReactMarkdown>
+            </div>
+
               </div>
             </div>
           ))}
