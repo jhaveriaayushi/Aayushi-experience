@@ -83,7 +83,7 @@ export default function Page() {
           {/* Show a starter welcome bubble when no messages exist yet. */}
           {messages.length === 0 && (
             <div className="flex mb-4 justify-start">
-              <div className="max-w-[70%] rounded-2xl px-4 py-3 bg-gray-200 text-black">
+              <div className="max-w-[70%] rounded-2xl px-4 py-3 assistant-bubble">
                 AIyushi: Hi, I'm AIyushi 👋 Aayushi's AI CV. Ask me anything about her experiences and interests. 
               </div>
             </div>
@@ -102,8 +102,8 @@ export default function Page() {
               <div
                 className={`max-w-[70%] rounded-2xl px-4 py-3 ${
                   message.role === 'user'
-                    ? 'bg-blue-500 text-white'
-                    : 'bg-gray-200 text-black'
+                    ? 'user-bubble'
+                    : 'assistant-bubble'
                 }`}
               >
 
@@ -126,7 +126,7 @@ export default function Page() {
           
         {status === 'submitted' || status === 'streaming' ? (
           <div className="flex mb-4 justify-start">
-            <div className="bg-gray-200 text-black rounded-2xl px-4 py-3 flex gap-1">
+            <div className="assistant-bubble rounded-2xl px-4 py-3 flex gap-1">
               <span className="animate-bounce">•</span>
               <span
                 className="animate-bounce"

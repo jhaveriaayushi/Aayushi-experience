@@ -1,12 +1,13 @@
 @import "tailwindcss";
 
+
 :root {
-  /* Professional theme (default) */
   --background: #ffffff;
   --foreground: #171717;
 
   --user-bubble: #2563eb;
-  --assistant-bubble: #f3f4f6;
+  --assistant-bubble: #99bbff;
+  
 }
 
 [data-theme="fun"] {
@@ -14,8 +15,19 @@
   --foreground: #ffffff;
 
   --user-bubble: #8b5cf6;
-  --assistant-bubble: #1e293b;
+  --assistant-bubble: #ce81db;
 }
+
+.assistant-bubble {
+  background: var(--assistant-bubble);
+  color: var(--foreground);
+}
+
+.user-bubble {
+  background: var(--user-bubble);
+  color: var(--foreground);
+}
+
 
 @theme inline {
   --color-background: var(--background);
