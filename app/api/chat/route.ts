@@ -16,14 +16,9 @@ export const maxDuration = 30;
 const { pdfToText } = require("../../../scripts/pdf-to-text");
 
 const text = await pdfToText(
-    "app/data/linkedin.pdf",
-    "app/data/output.txt"
+    "app/chat/data/linkedin.pdf",
+    "app/chat/data/output.txt"
   );
-
-console.log("sdddfgftext");
-
-
-
 
 
 /*async function getPageText(url: string) {
