@@ -21,6 +21,7 @@ export function Navbar() {
       <Link href="/">Home</Link>
       <Link href="/about">About</Link>
       <Link href="/chat">Chat</Link>
+      <Link href="/art">Art</Link>
 
       <label className="ml-auto flex items-center gap-2">
               <span>Boring Mode</span>
