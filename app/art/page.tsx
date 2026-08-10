@@ -6,16 +6,36 @@ export default function ArtPage() {
   const [posts, setPosts] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
 
+   const sizes = [
+    "w-48",
+    "w-56",
+    "w-64",
+    "w-72",
+    ];
+
+    const rotations = [
+    "-rotate-2",
+    "rotate-1",
+    "rotate-2",
+    "-rotate-1",
+    ];
+
   useEffect(() => {
     async function loadPosts() {
-      const res = await fetch("/api/instagram");
-      const data = await res.json();
+        const res = await fetch("/api/instagram");
+        const data = await res.json();
 
-      console.log("ArtPage data:", data);
+         console.log("ArtPage data:", data);
+        const shuffled = [...data.data].sort(
+        () => Math.random() - 0.5
+        );
 
-      setPosts(data.data);
-      setLoading(false);
+        setPosts(shuffled);
+        setLoading(false);
     }
+   
+
+
 
     loadPosts();
   }, []);
@@ -24,14 +44,20 @@ export default function ArtPage() {
     return <div className="p-6">Loading...</div>;
   }
 
+    const galleryPosts = posts.map((post, index) => ({
+    ...post,
+    size: sizes[index % sizes.length],
+    rotation: rotations[index % rotations.length],
+    }));
+  
   return (
     <div className="p-6">
       <h1 className="text-4xl font-bold mb-6">
         Art Gallery
       </h1>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        {posts.map((post) => (
+      <div className="flex flex-wrap justify-center items-center gap-12 max-w-7xl mx-auto">
+        {galleryPosts.map((post) => (
           <a
             key={post.id}
             href={post.permalink}
@@ -45,14 +71,14 @@ export default function ArtPage() {
                     muted
                     loop
                     playsInline
-                    className="w-full rounded-lg shadow-md"
-                >
+                    className={`${post.size} ${post.rotation}`}>
+            
                 </video>
                 ) : (
                 <img
                     src={post.media_url}
                     alt={post.caption || "Instagram post"}
-                    className="w-full rounded-lg shadow-md"
+                    className={`${post.size} ${post.rotation}`}
                 />
                 )}
           </a>
