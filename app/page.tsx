@@ -25,6 +25,8 @@ export default function Home() {
     return () => clearInterval(interval);
     }, []);
 
+    
+
       const [showOptions, setShowOptions] = useState(false);
       const optionsRef = useRef<HTMLDivElement>(null);
 
@@ -38,56 +40,89 @@ export default function Home() {
         }, 100);
       };
 
+    useEffect(() => {
+      document.body.style.overflow = showOptions ? "auto" : "hidden";
+      document.documentElement.style.overflow = showOptions ? "auto" : "hidden";
+
+      return () => {
+        document.body.style.overflow = "auto";
+        document.documentElement.style.overflow = "auto";
+      };
+    }, [showOptions]);
+
 
   return (
-    <main>
-      <section className="h-screen flex flex-col items-center justify-center">
-        <h1 className="text-6xl font-extrabold mb-4">
+    <main
+  className={"relative min-h-[250vh]"}
+>
+  <div
+  className="absolute inset-0 translate-x-[20%] -translate-y-[30%]"
+>
+  <video
+    autoPlay
+    muted
+    loop
+    playsInline
+    className="w-full h-full object-contain object-[90%_30%]"
+>
+    <source src="hero.mp4" type="video/mp4" />
+  </video>
+
+</div>
+
+      <section className="relative h-screen flex flex-col items-start justify-center overflow-hidden">
+
+      <div className="fixed inset-0 bg-gradient-to-r from-black/100 via-black/90 to-transparent"></div>
+
+        <div className="relative z-10 w-full px-12">
+        <h1 className="text-6xl font-extrabold mb-4 text-left">
           {displayed}
           {isTyping && <span className="animate-pulse">|</span>}
         </h1>
 
-        <p className="text-xl text-slate-600 mb-8">
+        <p className="text-xl foreground mb-8">
           Ask me anything about Aayushi's
           experience, technical skills,
           project work, education and career journey.
         </p>
-
+    
         <button
           onClick={handleGetStarted}
-          className="px-8 py-4 bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition"
+          className="px-8 py-4 buttons rounded-xl hover:bg-blue-700 transition"
           > Get Started
           </button>
+              </div>
         </section>
 
 
           {showOptions && (
           <section
           ref={optionsRef}
-          className="min-h-screen flex items-center justify-center"
+          className="relative min-h-screen flex items-center justify-center"
           >
-          <div className="grid grid-cols-2 gap-8 max-w-4xl w-full px-6">
+          {/*<div className="absolute bottom-0 h-250 left-0 right-0 bg-gradient-to-t from-black/100 via-black/90 to-transparent"></div>*/}
+          <div className="grid grid-cols-2 gap-8 max-w-4xl w-full px-6 relative z-10">
           <button 
           onClick={() => router.push("/about")}
-          className="h-48 text-2xl rounded-2xl bg-blue-500 text-white">
+          className="cursor-pointer h-48 text-2xl rounded-2xl buttons">
           About
           </button>
       
           <button 
           onClick={() => router.push("/chat")}
-          className="h-48 text-2xl rounded-2xl bg-purple-500 text-white">
+          className="cursor-pointer h-48 text-2xl rounded-2xl buttons">
           AI Chat
           </button>
       
           <button 
           onClick={() => router.push("/cv")}
-          className="h-48 text-2xl rounded-2xl bg-green-500 text-white">
+          className="cursor-pointer h-48 text-2xl rounded-2xl buttons">
           CV
           </button>
       
           <button 
-          onClick={() => router.push("/gallery")}
-          className="h-48 text-2xl rounded-2xl bg-orange-500 text-white">
+          onClick={() => router.push("/art")}
+          className="cursor-pointer h-48 text-2xl rounded-2xl buttons">
           Art Gallery 
           </button>
           </div>

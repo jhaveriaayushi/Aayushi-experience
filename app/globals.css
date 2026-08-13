@@ -2,8 +2,8 @@
 
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: hsl(0, 0%, 0%);
+  --foreground: #bababa;
 
   --user-bubble: #2563eb;
   --assistant-bubble: #99bbff;
@@ -11,10 +11,10 @@
 }
 
 [data-theme="fun"] {
-  --background: #0f172a;
-  --foreground: #ffffff;
+  --background: #f7ccf8;
+  --foreground: #8000b3;
 
-  --user-bubble: #8b5cf6;
+  --user-bubble: #160f27;
   --assistant-bubble: #ce81db;
 }
 
@@ -28,6 +28,10 @@
   color: var(--foreground);
 }
 
+.buttons {
+  background: var(--user-bubble);
+  color: var(--foreground);
+}
 
 
 

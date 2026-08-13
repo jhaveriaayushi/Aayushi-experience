@@ -9,9 +9,6 @@ import ReactMarkdown from "react-markdown";
 
 export default function Page() {
   
-
-
-
   // Chat state and helpers from the AI SDK.
   const { messages, sendMessage, status, error } = useChat({
     transport: new DefaultChatTransport({

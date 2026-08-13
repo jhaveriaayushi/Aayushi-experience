@@ -17,7 +17,7 @@ export function Navbar() {
   };
 
   return (
-    <nav className="flex gap-6 p-4 border-b">
+    <nav className="flex gap-6 p-4 border-b z-80">
       <Link href="/">Home</Link>
       <Link href="/about">About</Link>
       <Link href="/chat">Chat</Link>
