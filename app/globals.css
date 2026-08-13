@@ -20,7 +20,7 @@
 
 .assistant-bubble {
   background: var(--assistant-bubble);
-  color: var(--foreground);
+  color: var(--background);
 }
 
 .user-bubble {

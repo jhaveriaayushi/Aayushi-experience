@@ -50,7 +50,12 @@ export default function Home() {
       };
     }, [showOptions]);
 
-
+      useEffect(() => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      }, []);
   return (
     <main
   className={"relative min-h-[250vh]"}
@@ -115,7 +120,7 @@ export default function Home() {
           </button>
       
           <button 
-          onClick={() => router.push("/cv")}
+          onClick={() => router.push("/CV")}
           className="cursor-pointer h-48 text-2xl rounded-2xl buttons">
           CV
           </button>

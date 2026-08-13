@@ -38,13 +38,12 @@ export default function Page() {
         <div className="flex-1 overflow-y-auto p-4">
 
           {/* Show a starter welcome bubble when no messages exist yet. */}
-          {messages.length === 0 && (
             <div className="flex mb-4 justify-start">
               <div className="max-w-[70%] rounded-2xl px-4 py-3 assistant-bubble">
-                AIyushi: Hi, I'm AIyushi 👋 Aayushi's AI CV. Ask me anything about her experiences and interests. 
+                <strong>AIyushi:</strong>Hi, I'm AIyushi 👋 Aayushi's AI CV. Ask me anything about her experiences and interests. 
               </div>
             </div>
-          )}
+          
 
           {/* Render all chat messages in the conversation. */}
           {messages.map(message => (
@@ -66,7 +65,9 @@ export default function Page() {
 
               
             <div className="whitespace-pre-wrap">
-              {message.role === 'user' ? 'User: ' : 'AIyushi: '}
+              <strong>
+                {message.role === "user" ? "User: " : "AIyushi: "}
+              </strong>
 
               <ReactMarkdown>
                 {message.parts
