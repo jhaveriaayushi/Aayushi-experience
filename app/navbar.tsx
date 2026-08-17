@@ -23,6 +23,8 @@ export function Navbar() {
       <Link href="/chat">Chat</Link>
       <Link href="/art">Art</Link>
       <Link href="/CV">CV</Link>
+      <Link href="/skills">Skills</Link>
+      <Link href="/blog">Blog</Link>
 
       <label className="ml-auto flex items-center gap-2">
               <span>Boring Mode</span>
