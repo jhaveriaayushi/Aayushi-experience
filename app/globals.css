@@ -11,11 +11,11 @@
 }
 
 [data-theme="fun"] {
-  --background: #f7ccf8;
+  --background: #f8e7cc;
   --foreground: #8000b3;
 
   --user-bubble: #160f27;
-  --assistant-bubble: #ce81db;
+  --assistant-bubble: #e4dccb;
 }
 
 .assistant-bubble {

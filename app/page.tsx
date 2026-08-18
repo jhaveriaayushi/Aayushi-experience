@@ -11,7 +11,6 @@ export default function Home() {
     
     useEffect(() => {
         let i = 0;
-      
         const interval = setInterval(() => {
         setDisplayed(text.slice(0, i + 1));
         i++;
@@ -24,8 +23,6 @@ export default function Home() {
       
     return () => clearInterval(interval);
     }, []);
-
-    
 
       const [showOptions, setShowOptions] = useState(false);
       const optionsRef = useRef<HTMLDivElement>(null);
@@ -61,31 +58,34 @@ export default function Home() {
   className={"relative min-h-[250vh]"}
 >
   <div
-  className="absolute inset-0 translate-x-[20%] -translate-y-[30%]"
+  className="absolute inset-0 translate-x-[20%] overflow-hidden w-[90%]"
 >
+
   <video
+  style={{
+    maskImage: 'linear-gradient(to top, transparent 0%, black 33%)',
+    WebkitMaskImage: 'linear-gradient(to top, transparent 0%, black 33%)',
+  }}
     autoPlay
     muted
     loop
     playsInline
-    className="w-full h-full object-contain object-[90%_30%]"
+    className="w-full"
 >
     <source src="hero.mp4" type="video/mp4" />
   </video>
-
 </div>
 
       <section className="relative h-screen flex flex-col items-start justify-center overflow-hidden">
 
-      <div className="fixed inset-0 bg-gradient-to-r from-black/100 via-black/90 to-transparent"></div>
-
-        <div className="relative z-10 w-full px-12">
-        <h1 className="text-6xl font-extrabold mb-4 text-left">
+<div className="fixed inset-0 bg-gradient-to-r from-background from-20% via-background/95 via-30% to-transparent to-80%" />
+      <div className="relative z-10 max-w-7xl mx-auto w-full px-6 md:px-12">
+        <h1 className="text-[clamp(2.5rem,8vw,5rem)] font-extrabold mb-4 leading-none">
           {displayed}
           {isTyping && <span className="animate-pulse">|</span>}
         </h1>
 
-        <p className="text-xl foreground mb-8">
+        <p className="text-[clamp(1rem,4vw,1.25rem)] foreground mb-8">
           Ask me anything about Aayushi's
           experience, technical skills,
           project work, education and career journey.
@@ -106,7 +106,8 @@ export default function Home() {
           className="relative min-h-screen flex items-center justify-center"
           >
           {/*<div className="absolute bottom-0 h-250 left-0 right-0 bg-gradient-to-t from-black/100 via-black/90 to-transparent"></div>*/}
-          <div className="grid grid-cols-2 gap-8 max-w-4xl w-full px-6 relative z-10">
+         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl w-full px-6"
+>
           <button 
           onClick={() => router.push("/about")}
           className="cursor-pointer h-48 text-2xl rounded-2xl buttons">
