@@ -32,7 +32,7 @@ useEffect(() => {
   };
 
   return (
-    <nav className="flex gap-6 p-4 border-b z-80">
+    <nav className="flex gap-6 p-4 border-b z-20">
       <Link href="/">Home</Link>
       <Link href="/about">About</Link>
       <Link href="/chat">Chat</Link>
