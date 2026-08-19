@@ -15,7 +15,7 @@ export default function AboutPage() {
   const [selected, setSelected] = useState("About");
 
   return (
-    <main className="min-h-screen bg-black text-white px-8 py-16">
+    <main className="min-h-screen bg-background theme-font px-8 py-16">
       <div className="max-w-6xl mx-auto">
         <div className="mb-16">
           <p className="text-pink-400 uppercase tracking-[0.3em] mb-4">

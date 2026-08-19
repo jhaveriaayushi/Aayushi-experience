@@ -58,7 +58,7 @@ export default function Home() {
   className={"relative min-h-[250vh]"}
 >
   <div
-  className="absolute inset-0 translate-x-[20%] overflow-hidden w-[90%]"
+  className="absolute inset-0 translate-x-[25%] overflow-hidden w-[90%]"
 >
 
   <video
@@ -78,15 +78,15 @@ export default function Home() {
 
       <section className="relative h-screen flex flex-col items-start justify-center overflow-hidden">
 
-<div className="fixed inset-0 bg-gradient-to-r from-background from-20% via-background/95 via-30% to-transparent to-80%" />
+<div className="fixed inset-0 bg-gradient-to-r from-background from-20% via-background/95 via-35% to-transparent to-90%" />
       <div className="relative z-10 max-w-7xl mx-auto w-full px-6 md:px-12">
-        <h1 className="text-[clamp(2.5rem,8vw,5rem)] font-extrabold mb-4 leading-none">
+        <h1 className="text-[clamp(2.5rem,8vw,5rem)] theme-font font-extrabold mb-4 leading-none">
           {displayed}
           {isTyping && <span className="animate-pulse">|</span>}
         </h1>
 
-        <p className="text-[clamp(1rem,4vw,1.25rem)] foreground mb-8">
-          Ask me anything about Aayushi's
+        <p className="text-[clamp(1rem,4vw,1.25rem)] theme-sub-font foreground mb-8 max-w-[40ch]">
+          Ask me anything about Aayushi's 
           experience, technical skills,
           project work, education and career journey.
         </p>

@@ -33,7 +33,7 @@ const posts = [
 
 export default function BlogPage() {
   return (
-    <main className="min-h-screen bg-black text-white px-8 py-16">
+    <main className="min-h-screen bg-background theme-font px-8 py-16">
       <div className="max-w-6xl mx-auto">
         <p className="text-pink-400 uppercase tracking-[0.3em] mb-4">
           THOUGHTS & EXPERIMENTS

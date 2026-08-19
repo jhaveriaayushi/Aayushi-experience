@@ -7,15 +7,20 @@
 
   --user-bubble: #2563eb;
   --assistant-bubble: #99bbff;
-  
+
+  --theme-font: "Inter", sans-serif;
+  --theme-sub-font: var(--font-geist-mono);
 }
 
 [data-theme="fun"] {
   --background: #f8e7cc;
-  --foreground: #8000b3;
+  --foreground: #68010b;
 
-  --user-bubble: #160f27;
-  --assistant-bubble: #e4dccb;
+  --user-bubble: #cfbb93;
+  --assistant-bubble: #eaaaaa;
+
+  --theme-font: "Caveat", cursive;
+  --theme-sub-font: var(--font-quicksand);
 }
 
 .assistant-bubble {
@@ -33,6 +38,13 @@
   color: var(--foreground);
 }
 
+.theme-font {
+font-family: var(--theme-font);
+}
+
+.theme-sub-font {
+font-family: var(--theme-sub-font);
+}
 
 
 @theme inline {
