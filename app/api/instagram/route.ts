@@ -8,6 +8,5 @@ export async function GET() {
 
   const data = await res.json();
 
-  console.log(JSON.stringify(data, null, 2));
   return NextResponse.json(data);
 }

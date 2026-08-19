@@ -53,8 +53,7 @@ export default function SkillsBrickGame() {
     const canvas = canvasRef.current;
     if (!canvas) return;
 
-    const ctx = canvas.getContext("2d");
-    if (!ctx) return;
+    const ctx = canvas.getContext("2d")!;
 
     const width = 900;
     const height = 560;
@@ -103,6 +102,7 @@ export default function SkillsBrickGame() {
       });
 
     function movePaddle(event: MouseEvent) {
+      if (!canvas) return;
       const rect = canvas.getBoundingClientRect();
       const mouseX = event.clientX - rect.left;
       const scaleX = canvas.width / rect.width;
