@@ -297,10 +297,10 @@ export default function SkillsBrickGame() {
   }, []);
 
   return (
-    <main className="min-h-screen bg-black text-white flex flex-col items-center justify-center px-6 py-10">
+    <main className="min-h-screen bg-background theme-font flex flex-col items-center justify-center px-6 py-10">
       <div className="w-full max-w-5xl mb-6 text-center">
         <h1 className="text-4xl font-extrabold mb-3">
-          AIyushi Skill Breaker
+          Aayushi Skill Breaker
         </h1>
 
         <p className="text-white/70">
