@@ -39,11 +39,11 @@
 }
 
 .theme-font {
-font-family: var(--theme-font);
+  font-family: var(--theme-font);
 }
 
 .theme-sub-font {
-font-family: var(--theme-sub-font);
+  font-family: var(--theme-sub-font);
 }
 
 

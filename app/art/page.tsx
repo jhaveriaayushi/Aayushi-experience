@@ -168,11 +168,11 @@ export default function ArtPage() {
 
       {selectedIndex !== null && (
         <div
-          className="fixed inset-0 bg-black/80 flex items-center justify-center z-50"
+          className="fixed inset-0 bg-background/80 flex items-center justify-center z-50"
           onClick={() => setSelectedIndex(null)}
         >
           <div
-            className="relative max-w-[70vw] max-h-[70vh]"
+            className="relative flex flex-col items-center max-w-[70vw]"
             onClick={(e) => e.stopPropagation()}
           >
             {(() => {
@@ -213,7 +213,7 @@ export default function ArtPage() {
                             prev === 0 ? slides.length - 1 : prev - 1
                           )
                         }
-                        className="absolute -left-16 top-1/2 -translate-y-1/2 text-white text-4xl cursor-pointer hover:scale-120"
+                        className="absolute -left-16 top-1/2 -translate-y-1/2 text-foreground text-7xl cursor-pointer hover:scale-120"
                       >
                         ←
                       </button>
@@ -224,7 +224,7 @@ export default function ArtPage() {
                             prev === slides.length - 1 ? 0 : prev + 1
                           )
                         }
-                        className="absolute -right-16 top-1/2 -translate-y-1/2 text-white text-4xl cursor-pointer hover:scale-120"
+                        className="absolute -right-16 top-1/2 -translate-y-1/2 text-foreground text-7xl cursor-pointer hover:scale-120"
                       >
                         →
                       </button>
@@ -233,10 +233,32 @@ export default function ArtPage() {
 
                   <button
                     onClick={() => setSelectedIndex(null)}
-                    className="absolute -top-10 -right-10 text-white text-5xl cursor-pointer hover:scale-120"
+                    className="absolute -top-10 -right-10 text-5xl text-foreground cursor-pointer hover:scale-120"
                   >
                     ×
                   </button>
+                  {slides.length > 1 && (
+                    <div className="mt-3 flex items-center justify-center gap-2">
+                      {slides.map((_: any, index: number) => (
+                        <button
+                          key={index}
+                          onClick={() => setSelectedSlide(index)}
+                          className={`h-2 w-2 rounded-full transition-all ${index === selectedSlide
+                              ? "bg-foreground scale-125"
+                              : "bg-foreground/40 hover:bg-foreground/70"
+                            }`}
+                        />
+                      ))}
+                    </div>
+                  )}
+
+                  {post.caption && (
+                    <p className="mt-4 max-w-[70vw] text-center text-sm whitespace-pre-wrap text-foreground">
+                      {post.caption}
+                    </p>
+                  )}
+
+
                 </>
               );
             })()}

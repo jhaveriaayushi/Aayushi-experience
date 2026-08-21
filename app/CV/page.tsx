@@ -53,8 +53,8 @@ export default function CVPage() {
     selectedTag === "All"
       ? experiences
       : experiences.filter((exp) =>
-          exp.tags.includes(selectedTag)
-        );
+        exp.tags.includes(selectedTag)
+      );
 
   return (
     <main className="max-w-5xl mx-auto p-8">
@@ -65,11 +65,10 @@ export default function CVPage() {
           <button
             key={tag}
             onClick={() => setSelectedTag(tag)}
-            className={`px-4 py-2 rounded-full transition ${
-              selectedTag === tag
-                ? "bg-white text-black"
-                : "bg-white/10 text-white hover:bg-white/20"
-            }`}
+            className={`px-4 py-2 rounded-full transition ${selectedTag === tag
+              ? "bg-white text-black"
+              : "bg-white/10 text-white hover:bg-white/20"
+              }`}
           >
             {tag}
           </button>

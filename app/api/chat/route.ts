@@ -16,9 +16,9 @@ export const maxDuration = 30;
 const { pdfToText } = require("../../../scripts/pdf-to-text");
 
 const text = await pdfToText(
-    "app/chat/data/linkedin.pdf",
-    "app/chat/data/output.txt"
-  );
+  "app/chat/data/linkedin.pdf",
+  "app/chat/data/output.txt"
+);
 
 
 /*async function getPageText(url: string) {
@@ -34,7 +34,7 @@ const text = await pdfToText(
 export async function POST(req: Request) {
   const { messages }: { messages: UIMessage[] } = await req.json();
 
-  
+
 
   const result = streamText({
     model: azure(process.env.AZURE_OPENAI_DEPLOYMENT!), // Use the Azure OpenAI model from env
