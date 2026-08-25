@@ -50,13 +50,14 @@ export default function ArtPage() {
   }));
 
   return (
+    <main className="w-full max-w-[1200px] mx-auto px-8 py-8">
     <div className="p-6">
       <h1 className="text-4xl theme-font font-bold mb-6 ease-out">
         Art Gallery
       </h1>
 
 
-      <div className="flex flex-wrap justify-center items-center gap-12 max-w-7xl mx-auto">
+      <div className="flex flex-wrap justify-center items-center gap-12">
         {galleryPosts.map((post, index) => {
           const isCarousel = post.media_type === "CAROUSEL_ALBUM";
           console.log("hi");
@@ -266,6 +267,7 @@ export default function ArtPage() {
         </div>
       )}
     </div>
+    </main>
   );
 }
 

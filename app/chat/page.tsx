@@ -22,7 +22,7 @@ export default function Page() {
   const [input, setInput] = useState('');
 
   return (
-
+    <main className="w-full max-w-[1200px] mx-auto px-8 py-8">
     <>
       <div className="flex flex-col h-screen">
 
@@ -81,8 +81,8 @@ export default function Page() {
 
 
           {status === 'submitted' || status === 'streaming' ? (
-            <div className="flex mb-4 justify-start">
-              <div className="assistant-bubble rounded-2xl px-4 py-3 flex gap-1">
+            
+              <div className="assistant-bubble rounded-2xl px-4 py-3 mb-4 max-w-[70%]">
                 <span className="animate-bounce">•</span>
                 <span
                   className="animate-bounce"
@@ -97,7 +97,6 @@ export default function Page() {
                   •
                 </span>
               </div>
-            </div>
           ) : null}
 
 
@@ -139,5 +138,7 @@ export default function Page() {
         </form>
       </div>
     </>
+
+</main>
   );
 }
