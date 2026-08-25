@@ -45,11 +45,11 @@ export function Navbar() {
         {/* Desktop menu */}
         <div className="hidden md:flex px-4 gap-6 ">
           <Link href="/">Home</Link>
-          <Link href="/">About</Link>
+          <Link href="/about">About</Link>
           <Link href="/chat">Chat</Link>
           <Link href="/art">Art</Link>
-          <Link href="/">CV</Link>
-          <Link href="/">Skills</Link>
+          <Link href="/CV">CV</Link>
+          <Link href="/skills">Skills</Link>
           <Link href="/blog">Blog</Link>
         </div>
 
@@ -57,17 +57,17 @@ export function Navbar() {
         {menuOpen && (
             <div className="md:hidden flex flex-col px-4 pb-4 gap-3 absolute top-12 left-0 w-full bg-[var(--background)] border-b">
             <Link href="/">Home</Link>
-            <Link href="/">About</Link>
+            <Link href="/about">About</Link>
             <Link href="/chat">Chat</Link>
             <Link href="/art">Art</Link>
-            <Link href="/">CV</Link>
-            <Link href="/">Skills</Link>
+            <Link href="/CV">CV</Link>
+            <Link href="/skills">Skills</Link>
             <Link href="/blog">Blog</Link>
           </div>
         )}
 
         <Link href="/" className="absolute left-1/2 -translate-x-1/2 font-bold text-xl">
-          AIyushi
+          Aayushi
         </Link>
 
 
