@@ -32,7 +32,7 @@ export default function Page() {
   return (
     <div className="flex flex-col flex-1 w-full max-w-[1200px] mx-auto">
   
-          <div className="= sticky top-0 z-20 justify-between items-center p-4 border-b backdrop-blur-md bg-background/60">
+          <div className="sticky top-0 z-20 justify-between items-center p-4 border-b backdrop-blur-md bg-background/60">
             <h1 className="text-xl font-bold">
               Chat with AIyushi
             </h1>
