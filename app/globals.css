@@ -5,8 +5,9 @@
   --background: hsl(0, 0%, 0%);
   --foreground: #bababa;
 
-  --user-bubble: #2563eb;
+  --user-bubble: #676767;
   --assistant-bubble: #99bbff;
+  --bubble-outline: #fefefe;
 
   --theme-font: "Inter", sans-serif;
   --theme-sub-font: var(--font-geist-mono);
@@ -28,6 +29,7 @@
 
   --user-bubble: #cfbb93;
   --assistant-bubble: #eaaaaa;
+  --bubble-outline: #8b8b8b;
 
   --theme-font: "Caveat", cursive;
   --theme-sub-font: var(--font-quicksand);
@@ -47,16 +49,30 @@
 .assistant-bubble {
   background: var(--assistant-bubble);
   color: var(--background);
+  border: 1px solid var(--bubble-outline);
 }
 
 .user-bubble {
   background: var(--user-bubble);
   color: var(--foreground);
+  border: 1px solid var(--bubble-outline);
 }
 
 .buttons {
-  background: var(--user-bubble);
+background: color-mix(in srgb, var(--foreground) 10%, transparent);
   color: var(--foreground);
+  border: 1px solid color-mix(in srgb, var(--foreground) 10%, transparent);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  opacity: 0.8;
+  backdrop-filter: blur(4px);
+}
+
+.buttons:hover {
+  transform: translateY(-0.5rem);
+  border-color: rgba(234, 242, 244, 0.4);
+  background: rgb(255 255 255 / 0.1);
+  box-shadow: 0 0 40px rgba(219, 222, 223, 0.15);
 }
 
 .theme-font {

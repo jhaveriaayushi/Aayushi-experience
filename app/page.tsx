@@ -93,7 +93,7 @@ export default function Home() {
 
           <button
             onClick={handleGetStarted}
-            className="px-8 py-4 buttons rounded-xl hover:bg-blue-700 transition"
+            className="px-8 py-4 buttons rounded-xl transition"
           > Get Started
           </button>
         </div>
@@ -106,31 +106,62 @@ export default function Home() {
           className="relative min-h-screen flex items-center justify-center"
         >
           {/*<div className="absolute bottom-0 h-250 left-0 right-0 bg-gradient-to-t from-black/100 via-black/90 to-transparent"></div>*/}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl w-full px-6"
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl w-full px-6 md:px-20"
           >
             <button
               onClick={() => router.push("/about")}
-              className="cursor-pointer h-48 text-2xl rounded-2xl bg-foreground buttons">
-              About
+              className="group rounded-3xl p-6 text-left backdrop-blur-sm buttons"
+            >
+              <h3 className="mb-2 text-2xl font-bold">
+                ✨ About Me
+              </h3>
+                            <h4 className="mb-2 italic">How did I get here?</h4>
+              <p className="text-sm text-white/70">
+                Discover my journey, favourite things, pet peeves, and the path that brought me here.
+              </p>
             </button>
 
             <button
               onClick={() => router.push("/chat")}
-              className="cursor-pointer h-48 text-2xl rounded-2xl foreground buttons">
-              AI Chat
+              className="group rounded-3xl p-6 text-left backdrop-blur-sm buttons"
+            >
+              <h3 className="mb-2 text-2xl font-bold">
+                🤖 Ask AIyushi
+              </h3>
+              <h4 className="mb-2 italic">Ask me anything</h4>
+
+              <p className="text-sm text-white/70">
+              This AI knows my interests, experience, and plenty of wonderfully random facts.
+              </p>
             </button>
 
             <button
               onClick={() => router.push("/CV")}
-              className="cursor-pointer h-48 text-2xl rounded-2xl foreground buttons">
-              CV
+              className="group rounded-3xl p-6 text-left backdrop-blur-sm buttons"
+            >
+              <h3 className="mb-2 text-2xl font-bold">
+                📄 CV Explorer
+              </h3>
+                            <h4 className="mb-2 italic">All you need to know professionally</h4>
+              <p className="text-sm text-white/70">
+                Browse my experience through interactive filters and themes.
+              </p>
             </button>
+
 
             <button
               onClick={() => router.push("/art")}
-              className="cursor-pointer h-48 text-2xl rounded-2xl foreground buttons">
-              Art Gallery
+              className="group rounded-3xl p-6 text-left backdrop-blur-sm buttons"
+            >
+              <h3 className="mb-2 text-2xl font-bold">
+                🎨 Art Gallery
+              </h3>
+                            <h4 className="mb-2 italic">My creative corner</h4>
+              <p className="text-sm text-white/70">
+                A collection of sketches and experimentsfrom @aayushi_archives.
+              </p>
             </button>
+
           </div>
         </section>
       )}
