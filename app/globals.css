@@ -10,6 +10,16 @@
 
   --theme-font: "Inter", sans-serif;
   --theme-sub-font: var(--font-geist-mono);
+
+  --like-start: #296959;
+  --like-mid: #fbbf24;
+  --like-end: #291a0f;
+
+  --dislike-start: #e9d5ff;
+  --dislike-mid: #a78bfa;
+  --dislike-end: #6d28d9;
+
+  --accent: #67e8f9;
 }
 
 [data-theme="fun"] {
@@ -21,7 +31,18 @@
 
   --theme-font: "Caveat", cursive;
   --theme-sub-font: var(--font-quicksand);
+
+  --like-start: #fef9c3;
+  --like-mid: #facc15;
+  --like-end: #ea580c;
+
+  --dislike-start: #f3e8ff;
+  --dislike-mid: #c084fc;
+  --dislike-end: #7e22ce;
+
+  --accent: #f472b6;
 }
+
 
 .assistant-bubble {
   background: var(--assistant-bubble);
@@ -59,3 +80,28 @@ body {
   background: var(--background);
   color: var(--foreground);
 }
+
+@keyframes floatBubble {
+
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.45;
+  }
+
+  50% {
+    transform: translateY(-18px);
+    opacity: 0.9;
+  }
+}
+
+.about-image-frame {
+  border: 4px solid var(--accent);
+  border-radius: 0.5rem;
+}
+
+[data-theme="fun"] .about-image-frame {
+  border-radius: 62% 38% 30% 70% / 45% 58% 42% 55%;
+  transform: rotate(-3deg);
+}
+
