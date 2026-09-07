@@ -9,8 +9,10 @@
   --assistant-bubble: #99bbff;
   --bubble-outline: #fefefe;
 
-  --theme-font: "Inter", sans-serif;
-  --theme-sub-font: var(--font-geist-mono);
+/* Headings */
+--theme-font: var(--font-eb-garamond);
+/* Body */
+--theme-body-font: var(--font-inter);
 
   --like-start: #296959;
   --like-mid: #fbbf24;
@@ -61,26 +63,31 @@
 .buttons {
 background: color-mix(in srgb, var(--foreground) 10%, transparent);
   color: var(--foreground);
-  border: 1px solid color-mix(in srgb, var(--foreground) 10%, transparent);
+  border: 1px solid color-mix(in srgb, var(--foreground) 30%, transparent);
   cursor: pointer;
   transition: all 0.3s ease-in-out;
-  opacity: 0.8;
-  backdrop-filter: blur(4px);
+  opacity: 1;
+  backdrop-filter: blur(10px);
 }
 
 .buttons:hover {
-  transform: translateY(-0.5rem);
-  border-color: rgba(234, 242, 244, 0.4);
+  transform: translateY(-0.3rem);
+  border-color: var(--accent);
   background: rgb(255 255 255 / 0.1);
-  box-shadow: 0 0 40px rgba(219, 222, 223, 0.15);
+  box-shadow: 0 0 10px var(--accent);
 }
 
-.theme-font {
+
+h1, h2, h3, h4, h5, h6 {
   font-family: var(--theme-font);
 }
 
-.theme-sub-font {
-  font-family: var(--theme-sub-font);
+body {
+  font-family: var(--theme-body-font);
+}
+
+.theme-font{
+  font-family: var(--theme-font);
 }
 
 
@@ -88,8 +95,6 @@ background: color-mix(in srgb, var(--foreground) 10%, transparent);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
 
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
 }
 
 body {

@@ -80,7 +80,7 @@ export default function Home() {
 
         <div className="fixed inset-0 bg-gradient-to-r from-background from-20% via-background/95 via-35% to-transparent to-90%" />
         <div className="relative z-10 max-w-7xl mx-auto w-full px-6 md:px-12">
-          <h1 className="text-[clamp(2.5rem,8vw,5rem)] theme-font font-extrabold mb-4 leading-none">
+          <h1 className="text-[clamp(2.5rem,8vw,5rem)] theme-font mb-4 leading-none">
             {displayed}
             {isTyping && <span className="animate-pulse">|</span>}
           </h1>

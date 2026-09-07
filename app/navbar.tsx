@@ -43,7 +43,7 @@ export function Navbar() {
         </button>
 
         {/* Desktop menu */}
-        <div className="[&>a]:transition-all [&>a]:hover:font-bold hidden md:flex px-4 gap-6 ">
+        <div className="[&>a]:transition-all [&>a]:hover:font-bold theme-font hidden md:flex px-4 gap-6 ">
           <Link href="/">Home</Link>
           <Link href="/about">About</Link>
           <Link href="/chat">Chat</Link>
@@ -73,7 +73,7 @@ md:hidden
 `}
         >
           <div className="flex flex-col px-4 pt-4 gap-3">
-            <h1 className="font-bold">Menu</h1>
+            <h1 className="font-bold theme-font">Menu</h1>
             <Link href="/">Home</Link>
             <Link href="/about">About</Link>
             <Link href="/chat">Chat</Link>
@@ -92,7 +92,7 @@ md:hidden
 
 
         <label className="ml-auto flex items-center gap-2">
-          <span className="hidden sm:block">Boring</span>
+          <span className="hidden sm:block theme-font">Boring</span>
 
           <div
             onClick={toggleTheme}
@@ -106,7 +106,7 @@ md:hidden
             />
           </div>
 
-          <span className="hidden sm:block">Fun</span>
+          <span className="hidden sm:block theme-font">Fun</span>
         </label>
 
 

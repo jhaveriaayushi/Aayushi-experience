@@ -140,7 +140,7 @@ export default function Page() {
             />
             <button type="submit"
               disabled={status === 'submitted' || status === 'streaming'}
-              className="px-6 py-2 bg-foreground text-white rounded-xl">
+              className="px-6 py-2 bg-foreground text-white rounded-xl buttons">
               Submit
             </button>
           </form>

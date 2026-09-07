@@ -162,7 +162,7 @@ export default function AboutPage() {
 
           <h2
             id="about-title"
-            className="mt-4 max-w-2xl font-serif text-3xl font-semibold tracking-tight text-foreground sm:text-5xl"
+            className="mt-4 max-w-2xl text-3xl font-semibold tracking-tight text-foreground sm:text-5xl"
           >
             Product manager, designer, and engineer.
           </h2>
