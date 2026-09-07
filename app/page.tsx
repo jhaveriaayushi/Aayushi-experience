@@ -2,6 +2,7 @@
 import { useEffect, useRef, useState } from "react";
 
 import { useRouter } from "next/navigation";
+import { AIyushi } from "./ai_box";
 
 export default function Home() {
   const router = useRouter();
@@ -126,7 +127,7 @@ export default function Home() {
               className="group rounded-3xl p-6 text-left backdrop-blur-sm buttons"
             >
               <h3 className="mb-2 text-2xl font-bold">
-                🤖 Ask AIyushi
+                🤖 Ask <AIyushi />
               </h3>
               <h4 className="mb-2 italic">Ask me anything</h4>
 
