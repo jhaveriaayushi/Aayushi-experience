@@ -134,9 +134,15 @@ export const maxDuration = 30;
 
 export async function POST(req: Request) {
 
-  const { rateLimited } = await checkRateLimit("aiyushi-chat", {
-    request: req,
-  });
+const rateLimitKey =
+  req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ||
+  req.headers.get("x-real-ip") ||
+  "local-development";
+
+const { rateLimited } = await checkRateLimit("aiyushi-chat", {
+  request: req,
+  rateLimitKey,
+});
 
 
   if (rateLimited) {

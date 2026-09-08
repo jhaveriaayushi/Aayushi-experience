@@ -17,8 +17,6 @@ export default function Page() {
     }),
   });
 
-
-
   // Local input value for the message composer.
   const [input, setInput] = useState('');
 
@@ -32,28 +30,28 @@ export default function Page() {
   }, [messages, status]);
 
   console.log("messages", messages);
-console.log("status", status);
-console.log("error", error);
+  console.log("status", status);
+  console.log("error", error);
 
   return (
-    <div className="h-screen flex flex-col flex-1 w-full max-w-4xl mx-auto" 
->
+    <div className="h-screen flex flex-col flex-1 w-full max-w-4xl mx-auto"
+    >
 
-<div
-  className="fixed inset-0 pointer-events-none -z-10"
-  style={{
-    background: `
+      <div
+        className="fixed inset-0 pointer-events-none -z-10"
+        style={{
+          background: `
       radial-gradient(
         circle at top,
         color-mix(in srgb, var(--accent-light) 20%, transparent),
         transparent 40%
       )
     `,
-  }}
-/>
-<div className="sticky top-0 z-20">
-  <div
-    className="
+        }}
+      />
+      <div className="sticky top-0 z-20">
+        <div
+          className="
       pointer-events-none
       absolute inset-x-0 top-0 h-24
       bg-gradient-to-b
@@ -64,14 +62,14 @@ console.log("error", error);
       [mask-image:linear-gradient(to_bottom,black_0%,black_35%,transparent_100%)]
       [-webkit-mask-image:linear-gradient(to_bottom,black_0%,black_35%,transparent_100%)]
     "
-  />
+        />
 
-  <div className="relative p-4">
-    <h1 className="text-2xl font-bold tracking-tight">
-      Chat with <AIyushi />
-    </h1>
-  </div>
-</div>
+        <div className="relative p-4">
+          <h1 className="text-2xl font-bold tracking-tight">
+            Chat with <AIyushi />
+          </h1>
+        </div>
+      </div>
 
       {/* Main chat area with welcome message and conversation history */}
       <div className="flex-1 overflow-y-auto p-4">
