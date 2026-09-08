@@ -131,9 +131,6 @@ export default function AboutPage() {
 
   return (
     <main className="relative min-h-screen overflow-hidden bg-background px-4 py-12 text-white selection:bg-fuchsia-300 selection:text-slate-950 sm:px-8">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_15%,rgba(49, 156, 180, 0.48),transparent_35%),radial-gradient(circle_at_20%_70%,rgba(168,85,247,0.16),transparent_38%),linear-gradient(to_bottom,#071c2d,#041019)]" />
-
-
 
       <section
         className="relative mx-auto mb-20 w-full max-w-4xl text-center"
@@ -141,10 +138,7 @@ export default function AboutPage() {
       >
         <div
           className="mx-auto flex max-w-3xl flex-col items-center rounded-3xl border p-6 shadow-2xl backdrop-blur-md sm:p-10"
-          style={{
-            backgroundColor: "var(--about-panel)",
-            borderColor: "var(--about-border)",
-          }}
+
         >
           <div
             className="about-image-frame mb-7 h-36 w-36 overflow-hidden shadow-xl transition-all duration-500 sm:h-44 sm:w-44"
@@ -156,7 +150,7 @@ export default function AboutPage() {
             />
           </div>
 
-          <p className="text-xs font-bold uppercase tracking-[0.34em] text-[var(--accent)]">
+          <p className="text-sm font-bold uppercase tracking-[0.34em] text-[var(--accent-light)]">
             Hi there, I’m Aayushi
           </p>
 

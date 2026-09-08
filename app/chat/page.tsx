@@ -136,7 +136,7 @@ export default function Page() {
           value={input}
           onChange={e => setInput(e.target.value)}
           disabled={status === 'submitted' || status === 'streaming'}
-          placeholder="Say something..."
+          placeholder="What would you like to know about Aayushi?"
         />
         <button type="submit"
           disabled={status === 'submitted' || status === 'streaming'}

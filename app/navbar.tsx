@@ -43,7 +43,7 @@ export function Navbar() {
         </button>
 
         {/* Desktop menu */}
-        <div className="[&>a]:transition-all [&>a]:hover:font-bold theme-font hidden md:flex px-4 gap-6 ">
+        <div className="[&>a]:transition-all [&>a]:hover:font-bold sub-theme-font hidden md:flex px-4 gap-6 ">
           <Link href="/">Home</Link>
           <Link href="/about">About</Link>
           <Link href="/chat">Chat</Link>
@@ -73,7 +73,7 @@ md:hidden
 `}
         >
           <div className="flex flex-col px-4 pt-4 gap-3">
-            <h1 className="font-bold theme-font">Menu</h1>
+            <h1 className="font-bold sub-theme-font">Menu</h1>
             <Link href="/">Home</Link>
             <Link href="/about">About</Link>
             <Link href="/chat">Chat</Link>
@@ -84,7 +84,14 @@ md:hidden
           </div>
         </div>
 
-        <Link href="/" className="absolute left-1/2 -translate-x-1/2 font-bold theme-font text-xl">
+        <Link href="/" className="
+
+absolute left-1/2 -translate-x-1/2
+font-bold theme-font text-xl
+transition-all
+hover:text-[var(--accent-light)]
+hover:text-shadow-[0_0_10px_var(--accent-light)]
+">
           Aayushi
         </Link>
 
@@ -92,11 +99,11 @@ md:hidden
 
 
         <label className="ml-auto flex items-center gap-2">
-          <span className="hidden sm:block theme-font">Boring</span>
+          <span className="hidden sm:block sub-theme-font">Boring</span>
 
           <div
             onClick={toggleTheme}
-            className="w-14 h-8 rounded-full cursor-pointer relative bg-foreground"
+            className="w-14 h-8 rounded-full cursor-pointer relative bg-[var(--accent-dark)] transition-colors"
           >
             <div
               className={`absolute top-1 w-6 h-6 bg-white rounded-full transition-transform ${theme === "fun"
@@ -106,7 +113,7 @@ md:hidden
             />
           </div>
 
-          <span className="hidden sm:block theme-font">Fun</span>
+          <span className="hidden sm:block sub-theme-font">Fun</span>
         </label>
 
 
