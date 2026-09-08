@@ -23,7 +23,7 @@
   --dislike-end: #6d28d9;
 
   --accent-dark: #315b5e;
-  --accent-light: #9edae4;
+  --accent-light: #9dced7;
 }
 
 [data-theme="fun"] {
@@ -51,14 +51,26 @@
 
 
 .assistant-bubble {
-  background: var(--accent-light);
-  color: var(--background);
+
+background: linear-gradient(
+135deg,
+color-mix(in srgb, var(--accent-dark) 100%, var(--background)),
+color-mix(in srgb, var(--accent-dark) 60%, var(--background))
+);
+  color: var(--foreground);
+  border: 2px solid color-mix(in srgb, var(--accent-dark) 20%, transparent);
 }
 
 .user-bubble {
-  background: var(--accent-dark);
-  color: var(--foreground);
+background: linear-gradient(
+135deg,
+color-mix(in srgb, var(--accent-light) 100%, var(--background)),
+color-mix(in srgb, var(--accent-light) 60%, var(--background))
+);
+  color: var(--background);
+  border: 2px solid color-mix(in srgb, var(--accent-light) 20%, transparent);
 }
+
 
 .buttons {
   background: color-mix(in srgb, var(--foreground) 10%, transparent);

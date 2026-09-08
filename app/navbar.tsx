@@ -33,7 +33,7 @@ export function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="relative z-50 border-b">
+    <nav className="relative z-50 border-b bg-background">
       <div className="relative flex items-center p-3 border-b">
         <button
           className="ml-4 md:hidden text-3xl"
@@ -120,6 +120,10 @@ hover:text-shadow-[0_0_10px_var(--accent-light)]
 
 
 
+      </div>
+
+      <div className="border-t border-[color-mix(in_srgb,var(--accent-light)_15%,transparent)] bg-[color-mix(in_srgb,var(--accent-dark)_18%,transparent)] px-4 py-1.5 text-center text-xs font-medium tracking-wide text-[color-mix(in_srgb,var(--foreground)_75%,transparent)]">
+        This website is still a work in progress.
       </div>
     </nav>
   );

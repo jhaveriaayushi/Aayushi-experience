@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const likes = ["AI", "Olives", "Art", "Robotics", "Playful UX", "Making things", "Automation"];
 const dislikes = ["Boring forms", "Clutter", "Tiny buttons", "Slow websites", "Needless jargon"];
@@ -130,51 +131,62 @@ export default function AboutPage() {
   })();
 
   return (
-    <main className="relative min-h-screen overflow-hidden bg-background px-4 py-12 text-white selection:bg-fuchsia-300 selection:text-slate-950 sm:px-8">
+    <main className="relative min-h-screen overflow-hidden bg-background px-4 py-12 sm:px-8">
 
       <section
         className="relative mx-auto mb-20 w-full max-w-4xl text-center"
         aria-labelledby="about-title"
       >
-        <div
-          className="mx-auto flex max-w-3xl flex-col items-center rounded-3xl border p-6 shadow-2xl backdrop-blur-md sm:p-10"
+        <div className="relative mx-auto max-w-5xl overflow-hidden rounded-[2rem] border border-[color-mix(in_srgb,var(--accent-light)_20%,transparent)] bg-gradient-to-br from-[color-mix(in_srgb,var(--accent-light)_12%,transparent)] via-[color-mix(in_srgb,var(--background)_60%,transparent)] to-[color-mix(in_srgb,var(--accent-dark)_20%,transparent)] p-6 shadow-2xl shadow-[color-mix(in_srgb,var(--accent-dark)_30%,transparent)] backdrop-blur-md sm:p-10">
+          <div className="pointer-events-none absolute -right-24 -top-24 h-64 w-64 rounded-full bg-[color-mix(in_srgb,var(--accent-light)_10%,transparent)] blur-3xl" aria-hidden="true" />
 
-        >
-          <div
-            className="about-image-frame mb-7 h-36 w-36 overflow-hidden shadow-xl transition-all duration-500 sm:h-44 sm:w-44"
-          >
-            <img
-              src="/me.jpeg"
-              alt="Aayushi"
-              className="h-full w-full object-cover"
-            />
+          <div className="relative grid items-center gap-10 md:items-start md:grid-cols-[minmax(12rem,0.75fr)_1.25fr] md:gap-14">
+            <div className="flex flex-col items-center md:items-start">
+              <div className="about-image-frame relative h-48 w-48 overflow-hidden rounded-[2rem] shadow-2xl shadow-[color-mix(in_srgb,var(--accent-dark)_40%,transparent)] transition-[border-radius,transform] duration-700 ease-in-out hover:rotate-2 hover:scale-[1.02] sm:h-60 sm:w-60">
+                <img src="/me.jpeg" alt="Aayushi" className="h-full w-full object-cover" />
+              </div>
+              <p className="mt-5 text-xs font-bold uppercase tracking-[0.28em] text-[color-mix(in_srgb,var(--accent-light)_60%,transparent)]">Based in London · Always making</p>
+            </div>
+
+            <div>
+              <p className="text-sm font-bold uppercase tracking-[0.34em] text-[var(--accent-light)]">Hi there, I&apos;m Aayushi</p>
+              <h2 id="about-title" className="mt-4 max-w-2xl text-4xl font-semibold leading-[1.05] tracking-tight text-foreground sm:text-6xl">
+                Product manager, designer, and engineer.
+              </h2>
+              <p className="mt-6 max-w-2xl text-base leading-7 text-[color-mix(in_srgb,var(--foreground)_75%,transparent)] sm:text-lg">
+                I enjoy turning fuzzy ideas into useful, thoughtful experiences. My work sits at the intersection of product strategy, playful design, and hands-on engineering, and I&apos;m happiest when I&apos;m learning, making, and connecting seemingly unrelated things.
+              </p>
+              <p className="mt-4 max-w-2xl text-sm leading-6 text-[color-mix(in_srgb,var(--foreground)_55%,transparent)] sm:text-base">
+                Outside of work, you&apos;ll usually find me creating something. I paint, sculpt, build Raspberry Pi projects, and dive into almost any DIY challenge that catches my attention. I&apos;m loyal to no medium, just the joy of making.
+              </p>
+              <p className="mt-4 max-w-2xl text-sm leading-6 text-[color-mix(in_srgb,var(--foreground)_55%,transparent)] sm:text-base">
+                Curious, energetic, and loyal to no medium, I am a jack of all trades, hoping to master a few. Recently, I&apos;ve been exploring sustainable AI and its potential to help people and the planet.
+              </p>
+
+              <div className="mt-7 flex flex-wrap justify-center gap-3">
+                <Link href="/chat" className="rounded-full bg-[var(--accent-light)] px-5 py-3 text-sm font-bold text-[var(--background)] transition hover:-translate-y-0.5 hover:shadow-[0_8px_24px_color-mix(in_srgb,var(--accent-light)_25%,transparent)]">
+                  Ask my AI CV <span aria-hidden="true">↗</span>
+                </Link>
+                <Link href="/CV" className="rounded-full border border-[color-mix(in_srgb,var(--accent-light)_25%,transparent)] px-5 py-3 text-sm font-semibold text-[color-mix(in_srgb,var(--foreground)_80%,transparent)] transition hover:-translate-y-0.5 hover:border-[color-mix(in_srgb,var(--accent-light)_70%,transparent)] hover:text-[var(--foreground)]">
+                  View my CV
+                </Link>
+              </div>
+            </div>
           </div>
-
-          <p className="text-sm font-bold uppercase tracking-[0.34em] text-[var(--accent-light)]">
-            Hi there, I’m Aayushi
-          </p>
-
-          <h2
-            id="about-title"
-            className="mt-4 max-w-2xl text-3xl font-semibold tracking-tight text-foreground sm:text-5xl"
-          >
-            Product manager, designer, and engineer.
-          </h2>
-
-          <p className="mt-5 max-w-2xl text-sm leading-7 text-[var(--about-muted)] sm:text-base">
-            I enjoy turning fuzzy ideas into useful, thoughtful experiences. My work sits at the intersection of product strategy, playful design, and hands-on engineering, and I'm happiest when I'm learning, making, and connecting seemingly unrelated things.
-          </p><br></br><p>
-            Outside of work, you'll usually find me creating something. I paint, sculpt, build Raspberry Pi projects, and dive into almost any DIY challenge that catches my attention. I'm loyal to no medium, just the joy of making.
-          </p><br></br><p>
-            Curious, energetic, and loyal to no medium, I am a jack of all trades, hoping to master a few. Recently, I've been exploring sustainable AI and its potential to help people and the planet.
-
-          </p>
         </div>
+
+        <a
+          href="#fishbowl"
+          className="group mt-8 inline-flex flex-col items-center gap-2 text-xs font-bold uppercase tracking-[0.28em] text-[color-mix(in_srgb,var(--accent-light)_55%,transparent)] transition hover:text-[var(--accent-light)]"
+        >
+          <span>There&apos;s more below</span>
+          <span className="text-lg leading-none transition-transform duration-300 group-hover:translate-y-1" aria-hidden="true">↓</span>
+        </a>
       </section>
 
 
 
-      <section className="relative mx-auto flex max-w-5xl flex-col items-center">
+      <section id="fishbowl" className="relative mx-auto flex max-w-5xl scroll-mt-8 flex-col items-center">
         <p className="mb-2 text-xs font-bold uppercase tracking-[0.34em] text-cyan-200/80">
           Get to know me
         </p>
