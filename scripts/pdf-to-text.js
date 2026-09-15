@@ -25,11 +25,10 @@ const fs = require("fs");
 const path = require("path");
 const pdf = require("pdf-parse");
 
-async function pdfToText(pdfPath, outPath) {
+async function pdfToText(pdfPath) {
   const dataBuffer = fs.readFileSync(pdfPath);
   const data = await pdf(dataBuffer);
 
-  fs.writeFileSync(outPath, data.text, "utf8");
 
   return data.text;
 }
