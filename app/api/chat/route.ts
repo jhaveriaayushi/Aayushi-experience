@@ -24,10 +24,8 @@ const pdfPath = path.join(
   "linkedin.pdf"
 );
 
-const text = await pdfToText(
-  pdfPath,
-  "app/chat/data/output.txt"
-);
+const linkedinText = await pdfToText(pdfPath);
+
 
 const requestSchema = z.object({
   messages: z.array(z.custom<UIMessage>()).min(1).max(12),
@@ -120,7 +118,7 @@ Portfolio information:
 
 
 
-     Use the following info to answer the questions${text}`
+     Use the following info to answer the questions${linkedinText}`
 
 
 const azureModel = process.env.AZURE_MODEL ?? "gpt-4o";
