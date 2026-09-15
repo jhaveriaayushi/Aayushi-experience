@@ -13,6 +13,7 @@
     "@ai-sdk/azure": "^3.0.77",
     "@ai-sdk/openai": "^3.0.74",
     "@ai-sdk/react": "^3.0.210",
+    "@vercel/analytics": "^2.0.1",
     "@vercel/firewall": "^1.2.5",
     "ai": "^6.0.208",
     "framer-motion": "^13.2.0",

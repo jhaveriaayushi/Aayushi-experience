@@ -45,8 +45,8 @@
   --dislike-mid: #c084fc;
   --dislike-end: #7e22ce;
 
-  --accent-dark: #f472b6;
-  --acccent-light: #f9a8d4;
+  --accent-dark: #ff98cd;
+  --accent-light: #85305f;
 }
 
 
@@ -141,4 +141,5 @@ body {
 [data-theme="fun"] .about-image-frame {
   border-radius: 62% 38% 30% 70% / 45% 58% 42% 55%;
   transform: rotate(-3deg);
+    border: 2px solid var(--accent-light);
 }

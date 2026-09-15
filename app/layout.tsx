@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { EB_Garamond } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "./navbar";
+import { Analytics } from "@vercel/analytics/next"
 
 
 const ebGaramond = EB_Garamond({
@@ -29,6 +30,7 @@ export default function RootLayout({
         <main className="flex-1 flex flex-col">
         {children}
         </main>
+        <Analytics />
       </body>
     </html>
   );
