@@ -14,8 +14,18 @@ const azure = createAzure({
   apiKey: process.env.AZURE_API_KEY!,
 });
 
+
+
+const pdfPath = path.join(
+  process.cwd(),
+  "app",
+  "chat",
+  "data",
+  "linkedin.pdf"
+);
+
 const text = await pdfToText(
-  "app/chat/data/linkedin.pdf",
+  pdfPath,
   "app/chat/data/output.txt"
 );
 
