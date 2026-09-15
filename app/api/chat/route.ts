@@ -142,6 +142,7 @@ export const maxDuration = 30;
 
 export async function POST(req: Request) {
 
+  /*
 const rateLimitKey =
   req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ||
   req.headers.get("x-real-ip") ||
@@ -158,7 +159,7 @@ const { rateLimited } = await checkRateLimit("aiyushi-chat", {
       { error: "Chat limit reached. Please try again later." },
       { status: 429 }
     );
-  }
+  }*/
 
   const body = await req.json().catch(() => null);
   const parsed = requestSchema.safeParse(body);
