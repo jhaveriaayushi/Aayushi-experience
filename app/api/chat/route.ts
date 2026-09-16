@@ -168,7 +168,7 @@ if (!parsed.success) {
 
   return Response.json(
     {
-      error: "Invalid request.",
+      error: "Invalid request. Aayushi has recieved an alert. She will be fixing this soon.",
     },
     { status: 400 }
   );
@@ -180,7 +180,7 @@ if (!parsed.success) {
 
   if (serializedLength > 50_000) {
     return Response.json(
-      { error: "Conversation is too long." },
+      { error: "Conversation is too long. Please use smaller prompts." },
       { status: 413 }
     );
   }

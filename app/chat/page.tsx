@@ -174,11 +174,11 @@ export default function Page() {
         {error && (
           <div className="flex mb-4 justify-start">
             <div className="max-w-[70%] rounded-2xl px-4 py-3 bg-red-100 text-red-700 border border-red-300">
-              ⚠️ Sorry, AIyushi is having trouble responding right now. Aayushi has recieved an alert. She will be fixing this soon.
+              ⚠️ Sorry, <AIyushi /> is unable to respond.
               <br />
-              Please type another message in to retry.
-              <br />
-              <span className="text-xs text-red-500">Error: {error.message}</span>
+              <span className="text-s text-red-500">
+                Error: {JSON.parse(error.message).error}
+              </span>
             </div>
 
           </div>
