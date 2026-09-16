@@ -171,11 +171,11 @@ const { rateLimited } = await checkRateLimit("aiyushi-chat", {
     );
   }
 
-  const messages = parsed.data.messages.slice(-8);
+  const messages = parsed.data.messages.slice(-4);
 
   const serializedLength = JSON.stringify(messages).length;
 
-  if (serializedLength > 10_000) {
+  if (serializedLength > 50_000) {
     return Response.json(
       { error: "Conversation is too long." },
       { status: 413 }

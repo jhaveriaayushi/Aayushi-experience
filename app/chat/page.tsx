@@ -177,7 +177,10 @@ export default function Page() {
               ⚠️ Sorry, AIyushi is having trouble responding right now. Aayushi has recieved an alert. She will be fixing this soon.
               <br />
               Please type another message in to retry.
+              <br />
+              <span className="text-xs text-red-500">Error: {error.message}</span>
             </div>
+
           </div>
         )}
         <div ref={messagesEndRef} />
