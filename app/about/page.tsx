@@ -137,7 +137,7 @@ export default function AboutPage() {
         className="relative mx-auto mb-20 w-full max-w-4xl text-center"
         aria-labelledby="about-title"
       >
-        <div className="relative mx-auto max-w-5xl overflow-hidden rounded-[2rem] border border-[color-mix(in_srgb,var(--accent-light)_20%,transparent)] bg-gradient-to-br from-[color-mix(in_srgb,var(--accent-light)_12%,transparent)] via-[color-mix(in_srgb,var(--background)_60%,transparent)] to-[color-mix(in_srgb,var(--accent-dark)_20%,transparent)] p-6 shadow-2xl shadow-[color-mix(in_srgb,var(--accent-dark)_30%,transparent)] backdrop-blur-md sm:p-10">
+        <div className="rectangle relative mx-auto max-w-5xl overflow-hidden">
           <div className="pointer-events-none absolute -right-24 -top-24 h-64 w-64 rounded-full bg-[color-mix(in_srgb,var(--accent-light)_10%,transparent)] blur-3xl" aria-hidden="true" />
 
           <div className="relative grid items-center gap-10 md:items-start md:grid-cols-[minmax(12rem,0.75fr)_1.25fr] md:gap-14">
@@ -149,7 +149,7 @@ export default function AboutPage() {
             </div>
 
             <div>
-              <p className="text-sm font-bold uppercase tracking-[0.34em] text-[var(--accent-light)]">Hi there, I&apos;m Aayushi</p>
+              <h4 className="text-sm font-bold uppercase tracking-[0.34em] text-[var(--accent-light)]">Hi there, I&apos;m Aayushi</h4>
               <h2 id="about-title" className="mt-4 max-w-2xl text-4xl font-semibold leading-[1.05] tracking-tight text-foreground sm:text-6xl">
                 Product manager, designer, and engineer.
               </h2>
@@ -164,10 +164,10 @@ export default function AboutPage() {
               </p>
 
               <div className="mt-7 flex flex-wrap justify-center gap-3">
-                <Link href="/chat" className="rounded-full bg-[var(--accent-light)] px-5 py-3 text-sm font-bold text-[var(--background)] transition hover:-translate-y-0.5 hover:shadow-[0_8px_24px_color-mix(in_srgb,var(--accent-light)_25%,transparent)]">
+                <Link href="/chat" className="featured-button px-5 py-3 text-sm transition hover:-translate-y-0.5 hover:shadow-[0_8px_24px_color-mix(in_srgb,var(--accent-light)_25%,transparent)]">
                   Ask my AI CV <span aria-hidden="true">↗</span>
                 </Link>
-                <Link href="/CV" className="rounded-full border border-[color-mix(in_srgb,var(--accent-light)_25%,transparent)] px-5 py-3 text-sm font-semibold text-[color-mix(in_srgb,var(--foreground)_80%,transparent)] transition hover:-translate-y-0.5 hover:border-[color-mix(in_srgb,var(--accent-light)_70%,transparent)] hover:text-[var(--foreground)]">
+                <Link href="/CV" className="buttons bg-[var(--background)] px-5 py-3 text-sm font-semibold text-[var(--foreground)] transition hover:-translate-y-0.5 hover:shadow-[0_8px_24px_color-mix(in_srgb,var(--accent-light)_25%,transparent)]">
                   View my CV
                 </Link>
               </div>
@@ -187,11 +187,11 @@ export default function AboutPage() {
 
 
       <section id="fishbowl" className="relative mx-auto flex max-w-5xl scroll-mt-8 flex-col items-center">
-        <p className="mb-2 text-xs font-bold uppercase tracking-[0.34em] text-cyan-200/80">
+        <h4 className="mb-2 text-xs tracking-[0.34em]">
           Get to know me
-        </p>
+        </h4>
         <h1 className="text-center font-serif text-4xl tracking-tight sm:text-6xl">Fishbowl of feelings</h1>
-        <p className="mt-3 max-w-xl text-center text-sm leading-6 text-cyan-50/65 sm:text-base">
+        <p className="mt-3 max-w-xl text-center text-sm leading-6 sm:text-base">
           Hover over a star, or tap one on mobile, to discover something I like or dislike.
         </p>
 

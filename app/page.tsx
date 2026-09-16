@@ -86,15 +86,15 @@ export default function Home() {
             {isTyping && <span className="animate-pulse">|</span>}
           </h1>
 
-          <p className="text-[clamp(1rem,4vw,1.25rem)] theme-sub-font foreground mb-8 max-w-[40ch]">
+          <h4 className="text-[clamp(0.5rem,3vw,1rem)] text-[var(--accent-light)] theme-sub-font mb-8 max-w-[40ch]">
             Ask me anything about Aayushi's
             experience, technical skills,
             project work, education and career journey.
-          </p>
+          </h4>
 
           <button
             onClick={handleGetStarted}
-            className="px-8 py-4 buttons bg-[color-mix(in_srgb,var(--accent-dark)_40%,transparent)] rounded-xl transition"
+            className="px-8 py-4 featured-button rounded-xl transition"
           > Get Started
           </button>
         </div>
@@ -116,7 +116,7 @@ export default function Home() {
               <h3 className="mb-2 text-2xl font-bold">
                 ✨ About Me
               </h3>
-                            <h4 className="mb-2 italic">How did I get here?</h4>
+                            <h4 className="mb-2 text-xs">How did I get here?</h4>
               <p className="text-sm text-foreground/70">
                 Discover my journey, favourite things, pet peeves, and the path that brought me here.
               </p>
@@ -124,12 +124,12 @@ export default function Home() {
 
             <button 
               onClick={() => router.push("/chat")}
-              className="group rounded-3xl p-6 text-left backdrop-blur-sm buttons"
+              className="group  p-6 text-left backdrop-blur-sm buttons"
             >
               <h3 className="mb-2 text-2xl font-bold">
                 🤖 Ask <AIyushi />
               </h3>
-              <h4 className="mb-2 italic">Ask me anything</h4>
+              <h4 className="mb-2 text-xs">Ask me anything</h4>
 
               <p className="text-sm text-foreground/70">
               This AI knows my interests, experience, and plenty of wonderfully random facts.
@@ -143,7 +143,7 @@ export default function Home() {
               <h3 className="mb-2 text-2xl font-bold">
                 📄 CV Explorer
               </h3>
-                            <h4 className="mb-2 italic">All you need to know professionally</h4>
+                            <h4 className="mb-2 text-xs">All you need to know professionally</h4>
               <p className="text-sm text-foreground/70">
                 Browse my experience through interactive filters and themes.
               </p>
@@ -157,7 +157,7 @@ export default function Home() {
               <h3 className="mb-2 text-2xl font-bold">
                 🎨 Art Gallery
               </h3>
-                            <h4 className="mb-2 italic">My creative corner</h4>
+                            <h4 className="mb-2 text-xs">My creative corner</h4>
               <p className="text-sm text-foreground/70">
                 A collection of sketches and experimentsfrom @aayushi_archives.
               </p>

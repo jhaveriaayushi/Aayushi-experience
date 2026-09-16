@@ -71,7 +71,7 @@ export default function CVPage() {
             onClick={() => setSelectedTag(tag)}
             className={`px-4 py-2 rounded-full transition ${selectedTag === tag
                 ? "bg-[var(--accent-light)] text-background hover:bg-[var(--accent-light)]/90"
-                : "bg-[color-mix(in_srgb,var(--accent-dark)_40%,transparent)] text-foreground hover:bg-foreground/20"
+                : "bg-[color-mix(in_srgb,var(--accent-dark)_40%,transparent)] text-foreground hover:bg-[var(--accent-dark)]/90"
               }`}
           >
             {tag}
@@ -86,7 +86,7 @@ export default function CVPage() {
             {filteredExperiences.map((exp, index) => (
               <div
                 key={index}
-                className="border border-foreground/10 rounded-2xl p-6 backdrop-blur-sm bg-[color-mix(in_srgb,var(--accent-dark)_20%,transparent)]"
+                className=" p-6 rectangle"
               >
                 <div className="flex justify-between items-start mb-2">
                   <div>
