@@ -153,7 +153,7 @@ absolute inset-0
 ${post.size}
 animate-pulse
 rounded-sm
-bg-white/30
+bg-foreground/30
 z-20
 `}
                     />
@@ -189,7 +189,7 @@ z-20
                   )}
 
                   {isCarousel && (
-                    <div className="absolute bottom-2 right-2 bg-black/60 text-white text-xs px-2 py-1 rounded-full">
+                    <div className="absolute bottom-2 right-2 bg-black/60 text-foreground text-xs px-2 py-1 rounded-full">
                       +{slideCount}
                     </div>
                   )}

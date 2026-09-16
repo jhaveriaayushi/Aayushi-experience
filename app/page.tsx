@@ -117,12 +117,12 @@ export default function Home() {
                 ✨ About Me
               </h3>
                             <h4 className="mb-2 italic">How did I get here?</h4>
-              <p className="text-sm text-white/70">
+              <p className="text-sm text-foreground/70">
                 Discover my journey, favourite things, pet peeves, and the path that brought me here.
               </p>
             </button>
 
-            <button
+            <button 
               onClick={() => router.push("/chat")}
               className="group rounded-3xl p-6 text-left backdrop-blur-sm buttons"
             >
@@ -131,7 +131,7 @@ export default function Home() {
               </h3>
               <h4 className="mb-2 italic">Ask me anything</h4>
 
-              <p className="text-sm text-white/70">
+              <p className="text-sm text-foreground/70">
               This AI knows my interests, experience, and plenty of wonderfully random facts.
               </p>
             </button>
@@ -144,7 +144,7 @@ export default function Home() {
                 📄 CV Explorer
               </h3>
                             <h4 className="mb-2 italic">All you need to know professionally</h4>
-              <p className="text-sm text-white/70">
+              <p className="text-sm text-foreground/70">
                 Browse my experience through interactive filters and themes.
               </p>
             </button>
@@ -158,7 +158,7 @@ export default function Home() {
                 🎨 Art Gallery
               </h3>
                             <h4 className="mb-2 italic">My creative corner</h4>
-              <p className="text-sm text-white/70">
+              <p className="text-sm text-foreground/70">
                 A collection of sketches and experimentsfrom @aayushi_archives.
               </p>
             </button>

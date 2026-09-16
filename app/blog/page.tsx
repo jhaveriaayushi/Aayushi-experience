@@ -52,7 +52,7 @@ export default function BlogPage() {
           {posts.map((post) => (
             <article
               key={post.title}
-              className="group rounded-3xl border border-white/10 bg-white/5 p-8 hover:border-pink-500/50 hover:bg-white/10 transition-all duration-300"
+              className="group rounded-3xl border border-foreground/10 bg-foreground/5 p-8 hover:border-pink-500/50 hover:bg-foreground/10 transition-all duration-300"
             >
               <div className="flex justify-between items-center mb-6">
                 <span className="px-3 py-1 rounded-full text-sm bg-pink-500/20 text-pink-300">

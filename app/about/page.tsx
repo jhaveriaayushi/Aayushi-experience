@@ -49,7 +49,7 @@ function FloatingStar({
       aria-label={`${isLike ? "Like" : "Dislike"}: ${item.word}`}
       onMouseEnter={() => setActive(true)}
       onMouseLeave={() => setActive(false)}
-      className="absolute grid place-items-center rounded-full focus:outline-none focus-visible:ring-2 focus-visible:ring-white/90 focus-visible:ring-offset-4 focus-visible:ring-offset-cyan-950"
+      className="absolute grid place-items-center rounded-full"
       style={{ left: `${item.x}%`, top: `${item.y}%`, width: size, height: size }}
       animate={{
         x: [0, item.dx, -item.dx * 0.55, 0],
@@ -195,7 +195,7 @@ export default function AboutPage() {
           Hover over a star, or tap one on mobile, to discover something I like or dislike.
         </p>
 
-        <div className="mt-8 flex flex-wrap items-center justify-center gap-5 text-xs font-medium text-white/75">
+        <div className="mt-8 flex flex-wrap items-center justify-center gap-5 text-xs font-medium text-foreground/75">
           <span className="flex items-center gap-2"><span className="h-3 w-3 rotate-45 bg-amber-300 shadow-[0_0_10px_#fbbf24]" /> Golden stars are likes</span>
           <span className="flex items-center gap-2"><span className="h-3 w-3 rotate-45 bg-violet-400 shadow-[0_0_10px_#a78bfa]" /> Violet stars are dislikes</span>
         </div>

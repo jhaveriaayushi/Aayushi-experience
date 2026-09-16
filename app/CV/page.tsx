@@ -70,8 +70,8 @@ export default function CVPage() {
             key={tag}
             onClick={() => setSelectedTag(tag)}
             className={`px-4 py-2 rounded-full transition ${selectedTag === tag
-                ? "bg-[var(--accent-light)] text-black"
-                : "bg-[color-mix(in_srgb,var(--accent-dark)_40%,transparent)] text-foreground hover:bg-white/20"
+                ? "bg-[var(--accent-light)] text-background hover:bg-[var(--accent-light)]/90"
+                : "bg-[color-mix(in_srgb,var(--accent-dark)_40%,transparent)] text-foreground hover:bg-foreground/20"
               }`}
           >
             {tag}
@@ -86,7 +86,7 @@ export default function CVPage() {
             {filteredExperiences.map((exp, index) => (
               <div
                 key={index}
-                className="border border-white/10 rounded-2xl p-6 backdrop-blur-sm bg-[color-mix(in_srgb,var(--accent-dark)_20%,transparent)]"
+                className="border border-foreground/10 rounded-2xl p-6 backdrop-blur-sm bg-[color-mix(in_srgb,var(--accent-dark)_20%,transparent)]"
               >
                 <div className="flex justify-between items-start mb-2">
                   <div>
@@ -107,7 +107,7 @@ export default function CVPage() {
                   {exp.skills.map((skill) => (
                     <span
                       key={skill}
-                      className="px-3 py-1 bg-white/10 text-white text-sm rounded-full"
+                      className="px-3 py-1 bg-foreground/10 text-foreground text-sm rounded-full"
                     >
                       {skill}
                     </span>
@@ -124,7 +124,7 @@ export default function CVPage() {
             {filteredEducation.map((exp, index) => (
               <div
                 key={index}
-                className="border border-white/10 rounded-2xl p-6 backdrop-blur-sm bg-[color-mix(in_srgb,var(--accent-dark)_20%,transparent)]"
+                className="border border-foreground/10 rounded-2xl p-6 backdrop-blur-sm bg-[color-mix(in_srgb,var(--accent-dark)_20%,transparent)]"
               >
                 <div className="flex justify-between items-start mb-2">
                   <div>
@@ -145,7 +145,7 @@ export default function CVPage() {
                   {exp.skills.map((skill) => (
                     <span
                       key={skill}
-                      className="px-3 py-1 bg-white/10 text-white text-sm rounded-full"
+                      className="px-3 py-1 bg-foreground/10 text-foreground text-sm rounded-full"
                     >
                       {skill}
                     </span>
@@ -164,9 +164,9 @@ export default function CVPage() {
               {displayedProjects.map((project) => (
                 <button
                   key={project.title}
-                  className="border border-white/10 rounded-2xl p-6 backdrop-blur-sm bg-[color-mix(in_srgb,var(--accent-dark)_20%,transparent)]"
+                  className="border border-foreground/10 rounded-2xl p-6 backdrop-blur-sm bg-[color-mix(in_srgb,var(--accent-dark)_20%,transparent)]"
                 >
-                  <div className="overflow-hidden rounded-2xl aspect-square border border-white/10 bg-black/20">
+                  <div className="overflow-hidden rounded-2xl aspect-square border border-foreground/10 bg-background/20">
                   
                     <video
                       autoPlay
@@ -190,7 +190,7 @@ export default function CVPage() {
               <div className="mt-6 flex justify-center">
                 <button
                   onClick={() => setShowAllProjects(!showAllProjects)}
-                  className="text-sm text-gray-400 hover:text-white transition-colors"
+                  className="text-sm text-gray-400 hover:text-foreground transition-colors"
                 >
                   {showAllProjects
                     ? "Show Less"
@@ -207,7 +207,7 @@ export default function CVPage() {
             {filteredCertifications.map((exp, index) => (
               <div
                 key={index}
-                className="border border-white/10 rounded-2xl pl-6 p-4 backdrop-blur-sm bg-[color-mix(in_srgb,var(--accent-dark)_20%,transparent)]"
+                className="border border-foreground/10 rounded-2xl pl-6 p-4 backdrop-blur-sm bg-[color-mix(in_srgb,var(--accent-dark)_20%,transparent)]"
               >
                 <div className="flex justify-between items-start mb-2">
                   <div>
