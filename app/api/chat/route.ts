@@ -28,7 +28,7 @@ const linkedinText = await pdfToText(pdfPath);
 
 
 const requestSchema = z.object({
-  messages: z.array(z.custom<UIMessage>()).min(1).max(12),
+  messages: z.array(z.custom<UIMessage>()).min(1).max(30),
 });
 
 const SYSTEM_PROMPT = `You are AIyushi, an AI portfolio assistant representing Aayushi Jhaveri.
@@ -164,12 +164,15 @@ const { rateLimited } = await checkRateLimit("aiyushi-chat", {
   const body = await req.json().catch(() => null);
   const parsed = requestSchema.safeParse(body);
 
-  if (!parsed.success) {
-    return Response.json(
-      { error: "Invalid request." },
-      { status: 400 }
-    );
-  }
+if (!parsed.success) {
+
+  return Response.json(
+    {
+      error: "Invalid request.",
+    },
+    { status: 400 }
+  );
+}
 
   const messages = parsed.data.messages.slice(-4);
 
