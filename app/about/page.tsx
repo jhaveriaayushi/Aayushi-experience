@@ -77,8 +77,12 @@ function FloatingStar({
 
       <motion.svg
         viewBox="0 0 100 100"
-        className="relative z-0 h-full w-full overflow-visible drop-shadow-[0_0_10px_rgba(255,255,255,0.65)]"
-        animate={{ filter: active ? "brightness(1.3)" : "brightness(1)" }}
+        className="relative z-0 h-full w-full overflow-visible"
+        animate={{
+          filter: active
+            ? "brightness(1.8) drop-shadow(0 0 18px rgba(255,255,255,0.95)) drop-shadow(0 0 30px color-mix(in srgb, var(--bowl-highlight) 55%, transparent))"
+            : "brightness(1.1) drop-shadow(0 0 10px rgba(255,255,255,0.35)) drop-shadow(0 0 20px color-mix(in srgb, var(--bowl-highlight) 55%, transparent))",
+        }}
       >
         <defs>
           <linearGradient id={`star-${index}`} x1="0" y1="0" x2="1" y2="1">
@@ -100,8 +104,6 @@ function FloatingStar({
         <polygon
           points={path}
           fill={`url(#star-${index})`}
-          stroke="rgba(255,255,255,.8)"
-          strokeWidth="3"
         />
       </motion.svg>
     </motion.button>
@@ -196,12 +198,12 @@ export default function AboutPage() {
         </p>
 
         <div className="mt-8 flex flex-wrap items-center justify-center gap-5 text-xs font-medium text-foreground/75">
-          <span className="flex items-center gap-2"><span className="h-3 w-3 rotate-45 bg-amber-300 shadow-[0_0_10px_#fbbf24]" /> Golden stars are likes</span>
-          <span className="flex items-center gap-2"><span className="h-3 w-3 rotate-45 bg-violet-400 shadow-[0_0_10px_#a78bfa]" /> Violet stars are dislikes</span>
+          <span className="flex items-center gap-2"><span className="h-3 w-3 rotate-45 bg-[var(--like-mid)] shadow-[0_0_10px_var(--like-start)]" /> stars are likes</span>
+          <span className="flex items-center gap-2"><span className="h-3 w-3 rotate-45 bg-[var(--dislike-mid)] shadow-[0_0_10px_var(--dislike-start)]" /> stars are dislikes</span>
         </div>
 
         <div
-          className="relative isolate mt-8 aspect-[4/3] w-full max-w-3xl overflow-hidden border-4 border-cyan-100/35 bg-gradient-to-b from-cyan-300/15 via-sky-500/10 to-indigo-950/55 shadow-[inset_0_0_50px_rgba(125,211,252,0.18),0_35px_80px_rgba(0,0,0,0.55)] backdrop-blur-sm"
+          className="relative isolate mt-8 aspect-[4/3] w-full max-w-3xl overflow-hidden border-4 border-[color-mix(in_srgb,var(--bowl-border)_35%,transparent)] bg-gradient-to-b from-[color-mix(in_srgb,var(--bowl-start)_0%,var(--background))] via-[color-mix(in_srgb,var(--bowl-mid)_25%,transparent)] to-[color-mix(in_srgb,var(--bowl-end)_80%,transparent)] shadow-[inset_0_0_50px_color-mix(in_srgb,var(--bowl-highlight)_35%,transparent),0_15px_30px_color-mix(in_srgb,var(--accent-light)_25%,transparent)] backdrop-blur-sm"
           style={{
             borderRadius: "50% 50% 42% 42% / 10% 10% 70% 70%",
             backgroundClip: "padding-box",
@@ -209,7 +211,7 @@ export default function AboutPage() {
         >
 
           <div
-            className="pointer-events-none absolute left-[1%] top-[1.5%] z-20 h-[18%] w-[98%] rounded-[50%] border-2 border-cyan-100/30 bg-gradient-to-b from-cyan-100/25 via-cyan-300/10 to-transparent shadow-[inset_0_4px_18px_rgba(207,250,254,0.2),0_0_24px_rgba(103,232,249,0.12)]"
+            className="pointer-events-none absolute left-[1%] top-[1.5%] z-20 h-[18%] w-[98%] rounded-[50%] border-2 border-[color-mix(in_srgb,var(--bowl-border)_25%,transparent)] bg-gradient-to-b from-[color-mix(in_srgb,var(--bowl-highlight)_0%,var(--background) )] via-[color-mix(in_srgb,var(--bowl-mid)_15%,transparent)] to-[color-mix(in_srgb,var(--bowl-end)_20%,transparent)] shadow-[inset_0_4px_18px_color-mix(in_srgb,var(--bowl-highlight)_35%,transparent),0_0_24px_color-mix(in_srgb,var(--bowl-border)_18%,transparent)]"
             aria-hidden="true"
           />
 
@@ -217,7 +219,7 @@ export default function AboutPage() {
           {bubbles.map((bubble, index) => (
             <span
               key={index}
-              className="absolute rounded-full border border-cyan-100/40 bg-cyan-100/15 shadow-[0_0_14px_rgba(125,211,252,0.3)]"
+              className="absolute rounded-full border border-[color-mix(in_srgb,var(--bowl-border)_35%,transparent)] bg-[color-mix(in_srgb,var(--bowl-start)_20%,transparent)] shadow-[0_0_14px_color-mix(in_srgb,var(--bowl-border)_25%,transparent)]"
               style={{
                 left: bubble.left,
                 top: bubble.top,

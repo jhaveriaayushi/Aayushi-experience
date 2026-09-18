@@ -94,7 +94,7 @@ export default function Home() {
 
           <button
             onClick={handleGetStarted}
-            className="px-8 py-4 featured-button rounded-xl transition"
+            className="px-5 py-3 featured-button rounded-xl transition"
           > Get Started
           </button>
         </div>
