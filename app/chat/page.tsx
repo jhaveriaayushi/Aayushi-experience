@@ -65,9 +65,9 @@ export default function Page() {
         />
 
         <div className="relative p-4">
-          <h1 className="text-2xl font-bold tracking-tight">
+          <p className="text-2xl font-bold tracking-tight">
             Chat with <AIyushi />
-          </h1>
+          </p>
         </div>
       </div>
 
@@ -77,9 +77,7 @@ export default function Page() {
         {/* Show a starter welcome bubble when no messages exist yet. */}
         {messages.length === 0 && (
           <div className="flex min-h-[calc(100vh-13rem)] flex-col items-center justify-center px-4 py-10 text-center">
-            <div className="relative mb-8 flex h-20 w-20 items-center justify-center rounded-[2rem] border border-[var(--accent-light)]/40 bg-[var(--accent-dark)]/20 shadow-[0_0_60px_color-mix(in_srgb,var(--accent-light)_20%,transparent)] before:absolute before:inset-2 before:rounded-[1.5rem] before:border before:border-[var(--accent-light)]/20">
-              <span className="relative text-xl font-bold tracking-tight"><AIyushi /></span>
-            </div>
+              <span className="relative text-2xl font-bold tracking-tight"><AIyushi /></span><br></br>
 
             <p className="mb-3 text-xs font-semibold uppercase tracking-[0.3em] text-[var(--accent-light)]/70">Aayushi&apos;s AI CV</p>
             <h2 className="max-w-xl text-4xl font-bold leading-tight tracking-tight text-[var(--foreground)] sm:text-5xl">
@@ -102,7 +100,7 @@ export default function Page() {
                     setInput(prompt);
                     inputRef.current?.focus();
                   }}
-                  className="rounded-full border border-[var(--accent-light)]/25 bg-[var(--foreground)]/5 px-4 py-2 text-xs text-[var(--foreground)]/75 transition hover:-translate-y-0.5 hover:border-[var(--accent-light)] hover:bg-[var(--accent-light)]/10 hover:text-[var(--accent-light)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent-light)]/60"
+                  className="rounded-[var(--bubble-radius)] border border-[var(--accent-light)]/25 bg-[var(--foreground)]/5 px-4 py-2 text-xs text-[var(--foreground)]/75 transition hover:-translate-y-0.5 hover:border-[var(--accent-light)] hover:bg-[var(--accent-light)]/10 hover:text-[var(--accent-light)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent-light)]/60"
                 >
                   {prompt}
                 </button>
@@ -200,7 +198,7 @@ export default function Page() {
         <input
           ref={inputRef}
           aria-label="Message Aayushi's AI CV"
-          className="min-w-0 flex-1 rounded-xl border border-[var(--foreground)]/50 bg-[var(--foreground)]/5 px-4 py-3 text-sm text-[var(--foreground)] outline-none transition placeholder:text-[var(--foreground)]/45 focus:border-[var(--accent-light)]/70 focus:bg-[var(--foreground)]/10 focus:ring-2 focus:ring-[var(--accent-light)]/15"
+          className="min-w-0 flex-1 rounded-[var(--radius)] border border-[var(--foreground)]/50 bg-[var(--foreground)]/5 px-4 py-3 text-sm text-[var(--foreground)] outline-none transition placeholder:text-[var(--foreground)]/45 focus:border-[var(--accent-light)]/70 focus:bg-[var(--foreground)]/10 focus:ring-2 focus:ring-[var(--accent-light)]/15"
           value={input}
           onChange={e => setInput(e.target.value)}
           disabled={status === 'submitted' || status === 'streaming'}
@@ -209,7 +207,7 @@ export default function Page() {
         <button type="submit"
           aria-label="Send message"
           disabled={status === 'submitted' || status === 'streaming'}
-          className="buttons rounded-xl px-5 py-3 text-sm font-semibold disabled:cursor-not-allowed disabled:opacity-40">
+          className="featured-button px-5 py-3 text-sm disabled:cursor-not-allowed disabled:opacity-40">
           Send <span aria-hidden="true">↗</span>
         </button>
       </form>

@@ -3,6 +3,15 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
+export const toggleTheme = () => {
+  
+  const currentTheme = document.documentElement.getAttribute("data-theme") || "boring";
+  const nextTheme = currentTheme === "boring" ? "fun" : "boring";
+
+  document.documentElement.setAttribute("data-theme", nextTheme);
+  localStorage.setItem("theme", nextTheme);
+};
+
 export function Navbar() {
   const [theme, setTheme] = useState("boring");
 
@@ -18,18 +27,7 @@ export function Navbar() {
     }
   }, []);
 
-  const toggleTheme = () => {
-    const newTheme = theme === "boring" ? "fun" : "boring";
 
-    setTheme(newTheme);
-    document.documentElement.setAttribute(
-      "data-theme",
-      newTheme
-    );
-
-    localStorage.setItem("theme", newTheme);
-
-  };
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
@@ -96,8 +94,6 @@ hover:text-shadow-[0_0_10px_var(--accent-light)]
         </Link>
 
 
-
-
         <label className="ml-auto flex items-center gap-2">
           <span className="hidden sm:block sub-theme-font">Boring</span>
 
@@ -106,10 +102,7 @@ hover:text-shadow-[0_0_10px_var(--accent-light)]
             className="w-14 h-8 rounded-full cursor-pointer relative bg-[var(--accent-dark)] transition-colors"
           >
             <div
-              className={`absolute top-1 w-6 h-6 bg-white rounded-full transition-transform ${theme === "fun"
-                ? "translate-x-7"
-                : "translate-x-1"
-                }`}
+              className={`theme-toggle-thumb`}
             />
           </div>
 

@@ -29,10 +29,11 @@
   --dislike-mid: #2d9cb0;
   --dislike-end: #005c68;
 
-  --accent-dark: #315b5e;
+  --accent-dark: #31555e;
   --accent-light: #69a7b2;
 
   --radius: 20px;
+  --bubble-radius: 9999px;
 
 }
 
@@ -45,6 +46,7 @@
   --bubble-outline: #8b8b8b;
 
   --radius: 0px;
+  --bubble-radius: 0px;
 
   --theme-font: var(--font-eb-garamond);
   --theme-body-font: var(--font-inter);
@@ -121,8 +123,30 @@ color-mix(in srgb, var(--accent-light) 60%, var(--background))
   border-radius: var(--radius);
 }
 
+.theme-toggle-thumb {
+  position: absolute;
+  top: 0.25rem;
+  left: 0.25rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 9999px;
+  background: white;
+  transition: transform 150ms ease;
+}
+
+[data-theme="fun"] .theme-toggle-thumb{
+  transform: translateX(1.5rem);
+}
+
+.dark-mode-only {
+  display: none;
+}
+
+html[data-theme="fun"] .dark-mode-only {
+  display: inline-flex;
+}
 .buttons:hover {
-  transform: translateY(-0.3rem);
+  transform: translateY(-0.1rem);
   border: 1px solid var(--accent-light);
   background: rgb(255 255 255 / 0.1);
   box-shadow: 0 0 10px var(--accent-light);
@@ -137,14 +161,14 @@ color-mix(in srgb, var(--accent-light) 60%, var(--background))
 
 [data-theme="fun"] .buttons:hover {
   border: 1px solid var(--accent-dark);
-  transform: translateY(-0.3rem);
+  transform: translateY(-0.1rem);
   background: var(--background);
   box-shadow: 5px 5px 5px color-mix(in srgb, var(--foreground) 20%, var(--accent-dark));
 }
 
 
 .featured-button {
-  background: color-mix(in srgb, var(--accent-dark) 20%, transparent);
+  background: color-mix(in srgb, var(--accent-dark) 40%, transparent);
   color: var(--foreground);
   border: 1px solid color-mix(in srgb, var(--foreground) 30%, transparent);
   cursor: pointer;
@@ -155,10 +179,9 @@ color-mix(in srgb, var(--accent-light) 60%, var(--background))
 }
 
 .featured-button:hover {
-  background: var(--accent-light);
-  color: var(--background);
-  border: none;
+  background: var(--accent-dark);
   box-shadow: 0 0 10px var(--accent-light);
+  transform: translateY(-0.1rem);
 }
 
 [data-theme="fun"] .featured-button {
@@ -171,8 +194,6 @@ color-mix(in srgb, var(--accent-light) 60%, var(--background))
 }
 
 [data-theme="fun"] .featured-button:hover {
-border: 1px solid var(--accent-dark);
-  transform: translateY(-0.3rem);
   background: color-mix(in srgb, var(--accent-light) 70%,var(--foreground));
   box-shadow: 5px 5px 5px color-mix(in srgb, var(--foreground) 20%, var(--accent-dark));
 }

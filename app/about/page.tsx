@@ -4,6 +4,8 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
+import { toggleTheme } from "../navbar";
+
 const likes = ["AI", "Olives", "Art", "Robotics", "Playful UX", "Making things", "Automation"];
 const dislikes = ["Boring forms", "Clutter", "Tiny buttons", "Slow websites", "Needless jargon"];
 
@@ -189,13 +191,21 @@ export default function AboutPage() {
 
 
       <section id="fishbowl" className="relative mx-auto flex max-w-5xl scroll-mt-8 flex-col items-center">
-        <h4 className="mb-2 text-xs tracking-[0.34em]">
+        <h4 className="mb-6 text-xs tracking-[0.34em]">
           Get to know me
         </h4>
         <h1 className="text-center font-serif text-4xl tracking-tight sm:text-6xl">Fishbowl of feelings</h1>
         <p className="mt-3 max-w-xl text-center text-sm leading-6 sm:text-base">
           Hover over a star, or tap one on mobile, to discover something I like or dislike.
         </p>
+
+        <button
+          type="button"
+          onClick={toggleTheme}
+          className="dark-mode-only mt-4 rounded-full border border-[var(--accent-light)] bg-[var(--background)] px-4 py-2 text-[10px] font-bold uppercase tracking-[0.2em] text-[var(--foreground)] shadow-[0_0_12px_color-mix(in_srgb,var(--accent-light)_20%,transparent)] transition hover:-translate-y-0.5 hover:border-[var(--accent-light)] hover:bg-[var(--accent-light)] hover:text-[var(--background)] md:inline-flex"
+        >
+          Much better in the dark
+        </button>
 
         <div className="mt-8 flex flex-wrap items-center justify-center gap-5 text-xs font-medium text-foreground/75">
           <span className="flex items-center gap-2"><span className="h-3 w-3 rotate-45 bg-[var(--like-mid)] shadow-[0_0_10px_var(--like-start)]" /> stars are likes</span>
