@@ -86,11 +86,14 @@ export default function Home() {
             {isTyping && <span className="animate-pulse">|</span>}
           </h1>
 
-          <h4 className="text-[clamp(0.5rem,3vw,1rem)] text-[var(--accent-light)] theme-sub-font mb-8 max-w-[40ch]">
-            Ask me anything about Aayushi's
-            experience, technical skills,
-            project work, education and career journey.
-          </h4>
+          <p className="hero-intro mb-8 max-w-[38ch]">
+            A personal space where I explore web development and UX design.
+            Browse my work, interests, and experience.
+          </p>
+
+          <p className="theme-tip mb-6">
+            <span aria-hidden="true">↗</span> Use the toggle at the top to explore different themes.
+          </p>
 
           <button
             onClick={handleGetStarted}
