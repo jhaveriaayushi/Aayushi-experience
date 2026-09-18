@@ -6,8 +6,8 @@ import Link from "next/link";
 
 import { toggleTheme } from "../navbar";
 
-const likes = ["AI", "Olives", "Art", "Robotics", "Playful UX", "Making things", "Automation"];
-const dislikes = ["Boring forms", "Clutter", "Tiny buttons", "Slow websites", "Needless jargon"];
+const likes = ["Inclusive design", "Deadlines", "Trees", "Olives", "Art", "Robotics", "Playful UX", "Making things", "Physical AI"];
+const dislikes = ["Non-wired connections",  "Inefficiencies", "Colour pickers without hex values", "Tradition", "Needless jargon","Generic design"];
 
 const starPaths = [
   "50 4 61 35 94 35 67 54 78 87 50 67 22 87 33 54 6 35 39 35",
@@ -63,8 +63,8 @@ function FloatingStar({
     >
       <motion.span
         className={`pointer-events-none absolute z-10 whitespace-nowrap rounded-full border px-3 py-1.5 text-xs font-semibold tracking-wide shadow-xl backdrop-blur-md ${isLike
-          ? "border-amber-100/40 bg-amber-100/90 text-amber-950"
-          : "border-violet-100/40 bg-violet-100/90 text-violet-950"
+          ? "border-[var(--like-mid)]/40 bg-[color-mix(in_srgb,var(--like-mid)_40%,white)] text-[color-mix(in_srgb,var(---like-end)_70%,black) "
+          : "border-[var(--dislike-mid)]/40 bg-[color-mix(in_srgb,var(--dislike-mid)_40%,white)] text-[color-mix(in_srgb,var(---dislike-end)_70%,black) "
           }`}
         initial={false}
         animate={{
@@ -119,10 +119,10 @@ export default function AboutPage() {
       ...dislikes.map((word) => ({ word, kind: "dislike" as const })),
     ];
 
-    const positions = [
-      [13, 26], [21, 23], [30, 14], [49, 25], [70, 14], [83, 33],
-      [23, 54], [44, 47], [65, 57], [80, 67], [37, 73], [58, 78],
-    ];
+   const positions = [[70, 34], [23, 54],[13, 26],[58, 88],[44, 47],[83, 33],[30, 24],[65, 57],[37, 83],[21, 43],
+   [80, 67], [49, 25],[15, 68], [74, 44],[52, 68],
+];
+
 
     return words.map((item, index) => ({
       ...item,
@@ -149,14 +149,13 @@ export default function AboutPage() {
               <div className="about-image-frame relative h-48 w-48 overflow-hidden rounded-[2rem] shadow-2xl shadow-[color-mix(in_srgb,var(--accent-dark)_40%,transparent)] transition-[border-radius,transform] duration-700 ease-in-out hover:rotate-2 hover:scale-[1.02] sm:h-60 sm:w-60">
                 <img src="/me.jpeg" alt="Aayushi" className="h-full w-full object-cover" />
               </div>
-              <p className="mt-5 text-xs font-bold uppercase tracking-[0.28em] text-[color-mix(in_srgb,var(--accent-light)_60%,transparent)]">Based in London · Always making</p>
+              <p className=" block w-full text-center mt-5 text-xs font-bold uppercase tracking-[0.28em] text-[color-mix(in_srgb,var(--accent-light)_60%,transparent)]">Based in London</p>
             </div>
-
             <div>
-              <h4 className="text-sm font-bold uppercase tracking-[0.34em] text-[var(--accent-light)]">Hi there, I&apos;m Aayushi</h4>
-              <h2 id="about-title" className="mt-4 max-w-2xl text-4xl font-semibold leading-[1.05] tracking-tight text-foreground sm:text-6xl">
-                Product manager, designer, and engineer.
-              </h2>
+              <h5 className="text-sm font-bold uppercase tracking-[0.34em] text-[var(--accent-light)]">Hi there, I&apos;m Aayushi</h5>
+              <h1 className="mt-4 max-w-2xl text-4xl text-foreground sm:text-6xl">
+                Product manager, engineer, and designer.
+              </h1>
               <p className="mt-6 max-w-2xl text-base leading-7 text-[color-mix(in_srgb,var(--foreground)_75%,transparent)] sm:text-lg">
                 I enjoy turning fuzzy ideas into useful, thoughtful experiences. My work sits at the intersection of product strategy, playful design, and hands-on engineering, and I&apos;m happiest when I&apos;m learning, making, and connecting seemingly unrelated things.
               </p>
@@ -181,9 +180,9 @@ export default function AboutPage() {
 
         <a
           href="#fishbowl"
-          className="group mt-8 inline-flex flex-col items-center gap-2 text-xs font-bold uppercase tracking-[0.28em] text-[color-mix(in_srgb,var(--accent-light)_55%,transparent)] transition hover:text-[var(--accent-light)]"
+          className="group mt-8 inline-flex flex-col items-center gap-2 text-xs text-[color-mix(in_srgb,var(--accent-light)_55%,transparent)] transition hover:text-[var(--accent-light)]"
         >
-          <span>There&apos;s more below</span>
+          <h5>There&apos;s more below</h5>
           <span className="text-lg leading-none transition-transform duration-300 group-hover:translate-y-1" aria-hidden="true">↓</span>
         </a>
       </section>
@@ -191,9 +190,9 @@ export default function AboutPage() {
 
 
       <section id="fishbowl" className="relative mx-auto flex max-w-5xl scroll-mt-8 flex-col items-center">
-        <h4 className="mb-6 text-xs tracking-[0.34em]">
+        <h5 className="mb-6 text-xs">
           Get to know me
-        </h4>
+        </h5>
         <h1 className="text-center font-serif text-4xl tracking-tight sm:text-6xl">Fishbowl of feelings</h1>
         <p className="mt-3 max-w-xl text-center text-sm leading-6 sm:text-base">
           Hover over a star, or tap one on mobile, to discover something I like or dislike.

@@ -65,7 +65,10 @@ export default function CVPage() {
 
   return (
     <main className="w-full max-w-[1200px] mx-auto px-8 py-8">
-      <h1 className="text-5xl mb-8">CV Explorer</h1>
+      <div className="mb-8 text-center">
+        <h1 className="text-5xl">CV Explorer</h1>
+        <h5 className="mt-2 text-[var(--accent-light)] text-xs">Based in London</h5>
+      </div>
 
       <div className="flex flex-wrap gap-3 mb-10">
         {allTags.map((tag) => (
@@ -94,9 +97,9 @@ export default function CVPage() {
               >
                 <div className="flex justify-between items-start mb-2">
                   <div>
-                    <h2 className="text-2xl font-semibold">
+                    <h3 className="text-2xl font-semibold">
                       {exp.title}
-                    </h2>
+                    </h3>
                     <p className="text-[var(--accent-light)]">{exp.company}</p>
                   </div>
 

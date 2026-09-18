@@ -79,10 +79,10 @@ export default function Page() {
           <div className="flex min-h-[calc(100vh-13rem)] flex-col items-center justify-center px-4 py-10 text-center">
               <span className="relative text-2xl font-bold tracking-tight"><AIyushi /></span><br></br>
 
-            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.3em] text-[var(--accent-light)]/70">Aayushi&apos;s AI CV</p>
-            <h2 className="max-w-xl text-4xl font-bold leading-tight tracking-tight text-[var(--foreground)] sm:text-5xl">
+            <h5 className="mb-3 text-xs text-[var(--accent-light)]/70">Aayushi&apos;s AI CV</h5>
+            <h1 className="max-w-xl text-4xl font-bold leading-tight tracking-tight text-[var(--foreground)] sm:text-5xl">
               A CV you can <span className="text-[var(--accent-light)]">talk to.</span>
-            </h2>
+            </h1>
             <p className="mt-5 max-w-md text-sm leading-6 text-[var(--foreground)]/65 sm:text-base">
               Explore Aayushi&apos;s experience, interests, and the ideas behind her work through a curious conversation.
             </p>

@@ -87,8 +87,8 @@ export default function Home() {
           </h1>
 
           <p className="hero-intro mb-8 max-w-[38ch]">
-            A personal space where I explore web development and UX design.
-            Browse my work, interests, and experience.
+            A website project to learn web development and UX design.
+            Browse my work, interests, and experience here.
           </p>
 
           <p className="theme-tip mb-6">
@@ -97,7 +97,7 @@ export default function Home() {
 
           <button
             onClick={handleGetStarted}
-            className="px-5 py-3 featured-button rounded-xl transition"
+            className="px-5 py-3 featured-button text-sm transition"
           > Get Started
           </button>
         </div>
@@ -119,13 +119,13 @@ export default function Home() {
               <h3 className="mb-2 text-2xl font-bold">
                 ✨ About Me
               </h3>
-                            <h4 className="mb-2 text-xs">How did I get here?</h4>
+              <h4 className="mb-2 text-xs">How did I get here?</h4>
               <p className="text-sm text-foreground/70">
-                Discover my journey, favourite things, pet peeves, and the path that brought me here.
+                Me in a nutshell and then a little bit more about me.
               </p>
             </button>
 
-            <button 
+            <button
               onClick={() => router.push("/chat")}
               className="group  p-6 text-left backdrop-blur-sm buttons"
             >
@@ -135,7 +135,7 @@ export default function Home() {
               <h4 className="mb-2 text-xs">Ask me anything</h4>
 
               <p className="text-sm text-foreground/70">
-              This AI knows my interests, experience, and plenty of wonderfully random facts.
+                Have specfic questions? Ask my AI for a quick answer.
               </p>
             </button>
 
@@ -146,9 +146,9 @@ export default function Home() {
               <h3 className="mb-2 text-2xl font-bold">
                 📄 CV Explorer
               </h3>
-                            <h4 className="mb-2 text-xs">All you need to know professionally</h4>
+              <h4 className="mb-2 text-xs">All things professional</h4>
               <p className="text-sm text-foreground/70">
-                Browse my experience through interactive filters and themes.
+                Browse my experience through interactive filters and sections.
               </p>
             </button>
 
@@ -160,9 +160,9 @@ export default function Home() {
               <h3 className="mb-2 text-2xl font-bold">
                 🎨 Art Gallery
               </h3>
-                            <h4 className="mb-2 text-xs">My creative corner</h4>
+              <h4 className="mb-2 text-xs">Creative bits and bobs</h4>
               <p className="text-sm text-foreground/70">
-                A collection of sketches and experimentsfrom @aayushi_archives.
+                A collection of sketches and experiments from @aayushi_archives.
               </p>
             </button>
 
