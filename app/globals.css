@@ -101,11 +101,11 @@ color-mix(in srgb, var(--accent-light) 60%, var(--background))
 }
 
 [data-theme=light] .rectangle {
-  border: 1px solid color-mix(in srgb, var(--accent-dark) 50%, transparent);
+  border: 1px solid color-mix(in srgb, var(--accent-dark) 40%, transparent);
   background: linear-gradient(
     135deg,
     color-mix(in srgb, var(--accent-dark) 20%, transparent),
-    color-mix(in srgb, var(--background) 60%, transparent),
+    color-mix(in srgb, var(--accent-dark) 10%, transparent),
     color-mix(in srgb, var(--accent-dark) 20%, transparent)
   );
   padding: 1.5rem;

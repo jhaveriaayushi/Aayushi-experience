@@ -32,6 +32,44 @@ export const education = [
 
 ];
 
+export const skills = [
+  { title: "Product Management", tags: ["Product", "Strategy"] },
+  { title: "Requirements Gathering", tags: ["Product", "Strategy", "AI"] },
+  { title: "Product Delivery", tags: ["Product", "Strategy"] },
+  { title: "AI Product Strategy", tags: ["AI", "Product", "Strategy"] },
+  { title: "Machine Learning", tags: ["AI", "Software", "Engineering"] },
+  { title: "Copilot Studio", tags: ["AI", "Software"] },
+  { title: "Computer Vision", tags: ["AI", "Software", "Engineering"] },
+  { title: "Stakeholder Management", tags: ["Product", "Strategy"] },
+  { title: "Agile Delivery", tags: ["Product", "Strategy"] },
+  { title: "Scrum", tags: ["Product", "Strategy"] },
+  { title: "Engineering Design", tags: ["Engineering", "Sustainability"] },
+  { title: "Electronics", tags: ["Engineering", "Software"] },
+  { title: "Manufacturing", tags: ["Engineering"] },
+  { title: "CAD", tags: ["Engineering", "Art"] },
+  { title: "Control Systems", tags: ["Engineering", "Software"] },
+  { title: "CANBus", tags: ["Engineering", "Software"] },
+  { title: "Testing", tags: ["Engineering", "Software"] },
+  { title: "Python", tags: ["Software", "AI", "Engineering"] },
+  { title: "C#", tags: ["Software"] },
+  { title: "Software Development", tags: ["Software", "Engineering"] },
+  { title: "Embedded Systems", tags: ["Software", "Engineering"] },
+  { title: "Git", tags: ["Software", "Product"] },
+  { title: "Sustainable Design", tags: ["Sustainability", "Engineering"] },
+  { title: "Systems Thinking", tags: ["Sustainability", "Engineering", "Strategy"] },
+  { title: "Lifecycle Thinking", tags: ["Sustainability", "Strategy"] },
+  { title: "Creative Practice", tags: ["Art"] },
+  { title: "UX Design", tags: ["Art", "Product"] },
+  { title: "Design Thinking", tags: ["Art", "Product", "Strategy"] },
+  { title: "Visual Communication", tags: ["Art", "Product"] },
+  { title: "User Research", tags: ["Other", "Product", "AI"] },
+  { title: "Research", tags: ["Other", "Engineering", "AI"] },
+  { title: "Data Analysis", tags: ["Other", "AI", "Software"] },
+  { title: "Technical Documentation", tags: ["Other", "Software"] },
+  { title: "Spanish", tags: ["Other"] },
+  { title: "Communication", tags: ["Other", "Product"] },
+];
+
 export const experiences = [
   {
     title: "Technical Product Manager",
