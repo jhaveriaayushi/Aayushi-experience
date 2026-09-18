@@ -37,7 +37,7 @@
 
 }
 
-[data-theme="fun"] {
+[data-theme=light] {
   --background: #EEECE1;
   --foreground: #282828;
 
@@ -100,7 +100,7 @@ color-mix(in srgb, var(--accent-light) 60%, var(--background))
 
 }
 
-[data-theme="fun"] .rectangle {
+[data-theme=light] .rectangle {
   border: 1px solid color-mix(in srgb, var(--accent-dark) 50%, transparent);
   background: linear-gradient(
     135deg,
@@ -134,7 +134,7 @@ color-mix(in srgb, var(--accent-light) 60%, var(--background))
   transition: transform 150ms ease;
 }
 
-[data-theme="fun"] .theme-toggle-thumb{
+[data-theme=light] .theme-toggle-thumb{
   transform: translateX(1.5rem);
 }
 
@@ -142,7 +142,7 @@ color-mix(in srgb, var(--accent-light) 60%, var(--background))
   display: none;
 }
 
-html[data-theme="fun"] .dark-mode-only {
+html[data-theme=light] .dark-mode-only {
   display: inline-flex;
 }
 .buttons:hover {
@@ -153,13 +153,13 @@ html[data-theme="fun"] .dark-mode-only {
 
 }
 
-[data-theme="fun"] .buttons {
+[data-theme=light] .buttons {
   background: color-mix(in srgb, var(--accent-dark) 60%, white 20%);
   color: var(--foreground);
   border: none; 
 }
 
-[data-theme="fun"] .buttons:hover {
+[data-theme=light] .buttons:hover {
   border: 1px solid var(--accent-dark);
   transform: translateY(-0.1rem);
   background: var(--background);
@@ -184,7 +184,7 @@ html[data-theme="fun"] .dark-mode-only {
   transform: translateY(-0.1rem);
 }
 
-[data-theme="fun"] .featured-button {
+[data-theme=light] .featured-button {
   background: var(--accent-light);
   color: var(--background);
   border: none;
@@ -193,7 +193,7 @@ html[data-theme="fun"] .dark-mode-only {
   font-weight: bold;
 }
 
-[data-theme="fun"] .featured-button:hover {
+[data-theme=light] .featured-button:hover {
   background: color-mix(in srgb, var(--accent-light) 70%,var(--foreground));
   box-shadow: 5px 5px 5px color-mix(in srgb, var(--foreground) 20%, var(--accent-dark));
 }
@@ -275,7 +275,7 @@ body {
   
 }
 
-[data-theme="fun"] .about-image-frame {
+[data-theme=light] .about-image-frame {
   border: 1px solid var(--accent-dark);
   border-radius: 0
 }

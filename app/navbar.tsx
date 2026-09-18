@@ -5,15 +5,15 @@ import { useEffect, useState } from "react";
 
 export const toggleTheme = () => {
   
-  const currentTheme = document.documentElement.getAttribute("data-theme") || "boring";
-  const nextTheme = currentTheme === "boring" ? "fun" : "boring";
+  const currentTheme = document.documentElement.getAttribute("data-theme") || "dark";
+  const nextTheme = currentTheme === "dark" ? "light" : "dark";
 
   document.documentElement.setAttribute("data-theme", nextTheme);
   localStorage.setItem("theme", nextTheme);
 };
 
 export function Navbar() {
-  const [theme, setTheme] = useState("boring");
+  const [theme, setTheme] = useState("dark");
 
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme");
@@ -95,7 +95,7 @@ hover:text-shadow-[0_0_10px_var(--accent-light)]
 
 
         <label className="ml-auto flex items-center gap-2">
-          <span className="hidden sm:block sub-theme-font">Boring</span>
+          <span className="hidden sm:block sub-theme-font">Dark</span>
 
           <div
             onClick={toggleTheme}
@@ -106,7 +106,7 @@ hover:text-shadow-[0_0_10px_var(--accent-light)]
             />
           </div>
 
-          <span className="hidden sm:block sub-theme-font">Fun</span>
+          <span className="hidden sm:block sub-theme-font">Light</span>
         </label>
 
 
