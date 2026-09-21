@@ -83,7 +83,7 @@ export default function Page() {
             <h1 className="max-w-xl text-4xl font-bold leading-tight tracking-tight text-[var(--foreground)] sm:text-5xl">
               A CV you can <span className="text-[var(--accent-light)]">talk to.</span>
             </h1>
-            <p className="mt-5 max-w-md text-sm leading-6 text-[var(--foreground)]/65 sm:text-base">
+            <p className="explanation-text">
               Explore Aayushi&apos;s experience, interests, and the ideas behind her work through a curious conversation.
             </p>
 

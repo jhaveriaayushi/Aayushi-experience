@@ -86,13 +86,21 @@ export default function Home() {
             {isTyping && <span className="animate-pulse">|</span>}
           </h1>
 
-          <p className="hero-intro mb-8 max-w-[38ch]">
+          <p className="explanation-text mb-8 max-w-[38ch] border-l-2 border-[var(--accent-light)] pl-4">
             A website project to learn web development and UX design.
             Browse my work, interests, and experience here.
           </p>
 
-          <p className="theme-tip mb-6">
-            <span aria-hidden="true">↗</span> Use the toggle at the top to explore different themes.
+          <p
+            className="mb-6 text-[0.8rem] tracking-[0.04em] text-[color-mix(in_srgb,var(--foreground)_60%,transparent)]"
+          >
+            <span
+              aria-hidden="true"
+              className="mr-[0.35rem] inline-block text-[var(--accent-light)]"
+            >
+              ↗
+            </span>
+            Use the toggle at the top to explore different themes.
           </p>
 
           <button
