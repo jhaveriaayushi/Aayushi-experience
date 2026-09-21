@@ -146,7 +146,7 @@ export default function AboutPage() {
 
           <div className="relative grid items-center gap-10 md:items-start md:grid-cols-[minmax(12rem,0.75fr)_1.25fr] md:gap-14">
             <div className="flex flex-col items-center md:items-start">
-              <div className="about-image-frame relative h-48 w-48 overflow-hidden rounded-[2rem] shadow-2xl shadow-[color-mix(in_srgb,var(--accent-dark)_40%,transparent)] transition-[border-radius,transform] duration-700 ease-in-out hover:rotate-2 hover:scale-[1.02] sm:h-60 sm:w-60">
+              <div className="about-image-frame">
                 <img src="/me.jpeg" alt="Aayushi" className="h-full w-full object-cover" />
               </div>
               <p className=" block w-full text-center mt-5 text-xs font-bold uppercase tracking-[0.28em] text-[color-mix(in_srgb,var(--accent-light)_60%,transparent)]">Based in London</p>

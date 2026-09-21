@@ -23,7 +23,7 @@
   --accent-dark: #31555e;
   --accent-light: #69a7b2;
   --radius: 20px;
-  --bubble-radius: 9999px;
+  --bubble-radius: 50px;
 }
 
 [data-theme="light"] {
@@ -58,8 +58,21 @@
   --bowl-highlight: #ffccaf;
 }
 
+@property --radius {
+  syntax: "<length>";
+  inherits: true;
+  initial-value: 20px;
+}
+
+@property --bubble-radius {
+  syntax: "<length>";
+  inherits: true;
+  initial-value: 50px;
+}
+
 /* Shared surfaces and controls */
 .assistant-bubble {
+  border-radius: var(--radius);
   background: linear-gradient(
     135deg,
     color-mix(in srgb, var(--accent-dark) 100%, var(--background)),
@@ -70,14 +83,16 @@
 }
 
 .user-bubble {
+  border-radius: var(--radius);
   background: linear-gradient(
     135deg,
-    color-mix(in srgb, var(--accent-light) 100%, var(--background)),
-    color-mix(in srgb, var(--accent-light) 60%, var(--background))
+    color-mix(in srgb, var(--accent-light) 90%, var(--background)),
+    color-mix(in srgb, var(--accent-light) 70%, var(--background))
   );
   color: var(--background);
   border: 2px solid color-mix(in srgb, var(--accent-light) 20%, transparent);
 }
+
 
 .rectangle {
   border: 1px solid color-mix(in srgb, var(--accent-dark) 30%, transparent);
@@ -219,6 +234,17 @@ body {
   color: var(--foreground);
 }
 
+*,
+*::before,
+*::after {
+  transition: color 700ms ease,
+    border-color 300ms ease,
+    border-radius 700ms ease,
+    box-shadow 300ms ease,
+    opacity 300ms ease,
+    transform 700ms ease;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -230,7 +256,7 @@ body {
 
 .explanation-text {
   color: color-mix(in srgb, var(--foreground) 65%, transparent);
-  font-size: clamp(1rem, 1.8vw, 1.25rem);
+  font-size: clamp(0.9rem, 1.6vw, 1.25rem);
   line-height: 1.55;
 }
 
@@ -249,8 +275,24 @@ body {
 }
 
 .about-image-frame {
+  position: relative;
+  width: 12rem;
+  height: 12rem;
+  overflow: hidden;
   border-radius: 62% 38% 30% 70% / 45% 58% 42% 55%;
   border: 2px solid var(--accent-light);
+  box-shadow: 0 25px 50px -12px color-mix(in srgb, var(--accent-dark) 40%, transparent);
+}
+
+.about-image-frame:hover {
+  transform: rotate(2deg) scale(1.02);
+}
+
+@media (min-width: 640px) {
+  .about-image-frame {
+    width: 15rem;
+    height: 15rem;
+  }
 }
 
 [data-theme="light"] .about-image-frame {
