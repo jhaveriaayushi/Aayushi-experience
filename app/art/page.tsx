@@ -69,8 +69,8 @@ export default function ArtPage() {
 
 
   return (
-    <main className="art-gallery-page w-full max-w-[1200px] mx-auto px-6 py-10 md:px-8">
-      <div className="mx-auto mb-10 max-w-[42rem] text-center">
+    <main className="w-full max-w-[1200px]mx-auto px-8 py-8">
+      <div className="p-6 text-center ">
         <h5 className="text-xs">Collected studies & experiments</h5>
         <h1 className="text-[clamp(3rem,8vw,5.5rem)]">
           Art Gallery
@@ -80,8 +80,7 @@ export default function ArtPage() {
         </p>
       </div>
 
-      <div className="rectangle p-6 md:p-10">
-        <div className="flex flex-wrap justify-center items-center gap-12 md:gap-16">
+  <div className="flex flex-wrap justify-center items-center rectangle gap-12">
           {galleryPosts.map((post, index) => {
             const isCarousel = post.media_type === "CAROUSEL_ALBUM";
             console.log("hi");
@@ -317,7 +316,6 @@ z-20
             </div>
           </div>
         )}
-      </div>
     </main>
   );
 }
