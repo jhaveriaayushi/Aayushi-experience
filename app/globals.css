@@ -7,7 +7,9 @@
   --assistant-bubble: #99bbff;
   --bubble-outline: #fefefe;
 
-  --theme-font: "Caveat", cursive;
+
+  --theme-font: var(--font-rajdhani);
+
   --theme-sub-font: var(--font-quicksand);
   --bowl-border: #006e67;
   --bowl-start: #55b1ae;
@@ -22,6 +24,9 @@
   --dislike-end: #005c68;
   --accent-dark: #31555e;
   --accent-light: #69a7b2;
+  --gallery-border: #616b6a;
+  --gallery-border-thickness: 0.5px;
+  --gallery-shadow: 0 0 5px var(--accent-dark);
   --radius: 20px;
   --bubble-radius: 50px;
 }
@@ -50,6 +55,10 @@
 
   --accent-dark: #d5ccaf;
   --accent-light: #802222;
+  --gallery-border: #ffffff;
+  --gallery-border-thickness: 0.35rem;
+  --gallery-shadow: 0 0 0 1px color-mix(in srgb, var(--accent-dark) 25%, transparent),
+    0 14px 24px color-mix(in srgb, var(--accent-dark) 35%, transparent);
 
   --bowl-border: #e17a7a;
   --bowl-start: #d5bf96;
@@ -202,6 +211,7 @@ h1,
 h3 {
   font-family: var(--theme-font);
   letter-spacing: -0.025em;
+  
 }
 
 h1 {
@@ -234,15 +244,22 @@ body {
   color: var(--foreground);
 }
 
-*,
-*::before,
-*::after {
-  transition: color 700ms ease,
-    border-color 300ms ease,
+html {
+  transition:
+    background-color 300ms ease,
+    color 300ms ease;
+}
+
+.featured-button,
+.buttons,
+.assistant-bubble,
+.user-bubble,
+.rectangle {
+  transition:
     border-radius 700ms ease,
-    box-shadow 300ms ease,
-    opacity 300ms ease,
-    transform 700ms ease;
+    background-color 300ms ease,
+    border-color 300ms ease,
+    box-shadow 300ms ease;
 }
 
 @theme inline {
@@ -258,6 +275,51 @@ body {
   color: color-mix(in srgb, var(--foreground) 65%, transparent);
   font-size: clamp(0.9rem, 1.6vw, 1.25rem);
   line-height: 1.55;
+}
+
+.art-gallery-media {
+  border: var(--gallery-border-thickness) solid var(--gallery-border);
+  background: var(--background);
+  box-shadow: var(--gallery-shadow);
+  border-radius: var(--radius);
+  transform: rotate(0deg);
+}
+
+.group:hover .art-gallery-carousel-back {
+  transform: translate(1.25rem, 1.25rem) rotate(3deg);
+}
+
+.group:hover .art-gallery-carousel-front {
+  transform: translate(0.75rem, 1.25rem) rotate(-3deg);
+}
+
+[data-theme="dark"] .group:hover .art-gallery-carousel-back {
+  transform: translate(1.2rem, 1.2rem);
+}
+
+[data-theme="dark"] .group:hover .art-gallery-carousel-front {
+  transform: translate(0.6rem, 0.6rem);
+}
+
+[data-theme="light"] .art-gallery-media[data-rotation="0"] {
+  transform: rotate(-2deg);
+}
+
+[data-theme="light"] .art-gallery-media[data-rotation="1"] {
+  transform: rotate(1deg);
+}
+
+[data-theme="light"] .art-gallery-media[data-rotation="2"] {
+  transform: rotate(2deg);
+}
+
+[data-theme="light"] .art-gallery-media[data-rotation="3"] {
+  transform: rotate(-1deg);
+}
+
+[data-theme="dark"] .art-gallery-media:hover {
+  border: var(--accent-light) solid 2px;
+  box-shadow: 0 0 10px var(--accent-light);
 }
 
 /* Shared animations */

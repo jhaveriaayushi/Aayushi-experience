@@ -49,9 +49,10 @@ export default function Page() {
     `,
         }}
       />
-      <div className="sticky top-0 z-20">
-        <div
-          className="
+      {messages.length > 0 && (
+        <div className="sticky top-0 z-20">
+          <div
+            className="
       pointer-events-none
       absolute inset-x-0 top-0 h-24
       bg-gradient-to-b
@@ -62,29 +63,30 @@ export default function Page() {
       [mask-image:linear-gradient(to_bottom,black_0%,black_35%,transparent_100%)]
       [-webkit-mask-image:linear-gradient(to_bottom,black_0%,black_35%,transparent_100%)]
     "
-        />
+          />
 
-        <div className="relative p-4">
-          <p className="text-2xl font-bold tracking-tight">
-            Chat with <AIyushi />
-          </p>
+          <div className="relative p-4">
+            <p className="text-2xl font-bold tracking-tight">
+              Chat with <AIyushi />
+            </p>
+          </div>
         </div>
-      </div>
+      )}
 
       {/* Main chat area with welcome message and conversation history */}
-      <div className="flex-1 overflow-y-auto p-4">
+      <div className="flex-1 w-full max-w-4xl mx-auto overflow-y-auto p-4">
 
         {/* Show a starter welcome bubble when no messages exist yet. */}
         {messages.length === 0 && (
-          <div className="flex min-h-[calc(100vh-13rem)] flex-col items-center justify-center px-4 py-10 text-center">
+          <div className="flex min-h-[calc(100vh-13rem)] max-w-[600px] mx-auto flex-col items-center justify-center px-4 py-10 text-center">
               <span className="relative text-2xl font-bold tracking-tight"><AIyushi /></span><br></br>
 
             <h5 className="mb-3 text-xs text-[var(--accent-light)]/70">Aayushi&apos;s AI CV</h5>
-            <h1 className="max-w-xl text-4xl font-bold leading-tight tracking-tight text-[var(--foreground)] sm:text-5xl">
+            <h1 className="max-w-xl text-4xl font-bold sm:text-5xl">
               A CV you can <span className="text-[var(--accent-light)]">talk to.</span>
             </h1>
-            <p className="explanation-text">
-              Explore Aayushi&apos;s experience, interests, and the ideas behind her work through a curious conversation.
+            <p className="explanation-text pt-6">
+              Get to know me through a conversation. Ask about my experience, interests, or whatever you're curious about.
             </p>
 
             <div className="mt-8 flex max-w-2xl flex-wrap justify-center gap-2">

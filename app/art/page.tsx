@@ -17,13 +17,6 @@ export default function ArtPage() {
     "w-72",
   ];
 
-  const rotations = [
-    "-rotate-2",
-    "rotate-1",
-    "rotate-2",
-    "-rotate-1",
-  ];
-
   useEffect(() => {
     async function loadPosts() {
       const res = await fetch("/api/instagram");
@@ -63,20 +56,29 @@ export default function ArtPage() {
   const galleryPosts = posts.map((post, index) => ({
     ...post,
     size: sizes[index % sizes.length],
-    rotation: rotations[index % rotations.length],
+    rotation: index % 4,
   }));
 
 
 
   return (
-    <main className="w-full max-w-[1200px]mx-auto px-8 py-8">
-      <div className="p-6 text-center ">
-        <h5 className="text-xs">Collected studies & experiments</h5>
+    <main className="w-full max-w-[1000px] justify-center mx-auto px-8 py-8">
+      <div className="mx-auto w-full max-w-[700px] p-6 text-center">
+        <h5 className="text-xs">Creative bits and bobs</h5>
         <h1 className="text-[clamp(3rem,8vw,5.5rem)]">
           Art Gallery
         </h1>
         <p className="explanation-text">
-          A moving collection of images, ideas, and things I have made.
+          A collection of art inspired by daily life and travels. These are imported from my Instagram{" "}
+          <a
+            href="https://www.instagram.com/aayushi_archives/"
+            target="_blank"
+            rel="noreferrer"
+            className="italic "
+          >
+            @aayushi_archives
+          </a>
+          .
         </p>
       </div>
 
@@ -95,7 +97,7 @@ export default function ArtPage() {
                   setSelectedSlide(0);
                 }}
                 className={`
-              drop-shadow-[0_12px_10px_color-mix(in_srgb,var(--foreground)_18%,transparent)]
+              
         group
         relative
         inline-block
@@ -118,17 +120,11 @@ export default function ArtPage() {
         w-full
         h-full
         object-cover
-        border-[0.35rem]
-        border-white
-        bg-[var(--background)]
-        shadow-[0_0_0_1px_color-mix(in_srgb,var(--foreground)_20%,transparent),_0_14px_24px_color-mix(in_srgb,var(--foreground)_30%,transparent)]
-        rounded-none
+        art-gallery-media
+        art-gallery-carousel-back
         transition-all
         duration-300
         ease-out
-        group-hover:translate-x-5
-        group-hover:translate-y-5
-        group-hover:rotate-3
         `}
                       />
                     )}
@@ -142,17 +138,11 @@ export default function ArtPage() {
         w-full
         h-full
         object-cover
-        border-[0.35rem]
-        border-white
-        bg-[var(--background)]
-        shadow-[0_0_0_1px_color-mix(in_srgb,var(--foreground)_20%,transparent),_0_14px_24px_color-mix(in_srgb,var(--foreground)_30%,transparent)]
-        rounded-none
+        art-gallery-media
+        art-gallery-carousel-front
         transition-all
         duration-300
         ease-out
-        group-hover:translate-x-3
-        group-hover:translate-y-5
-        group-hover:-rotate-3
         `}
                       />
                     )}
@@ -180,7 +170,8 @@ z-20
                       muted
                       loop
                       playsInline
-                      className={`block object-cover border-[0.35rem] border-white bg-[var(--background)] shadow-[0_0_0_1px_color-mix(in_srgb,var(--foreground)_20%,transparent),_0_14px_24px_color-mix(in_srgb,var(--foreground)_30%,transparent)] rounded-none ${post.size} ${post.rotation}`}
+                      data-rotation={post.rotation}
+                      className={`art-gallery-media block object-cover ${post.size}`}
                       onLoadedData={() =>
                         setLoadedImages(prev => ({
                           ...prev,
@@ -192,7 +183,8 @@ z-20
                     <img
                       src={post.media_url}
                       alt={post.caption || "Instagram post"}
-                      className={`block object-cover border-[0.35rem] border-white bg-[var(--background)] shadow-[0_0_0_1px_color-mix(in_srgb,var(--foreground)_20%,transparent),_0_14px_24px_color-mix(in_srgb,var(--foreground)_30%,transparent)] rounded-none ${post.size} ${post.rotation}`}
+                      data-rotation={post.rotation}
+                      className={`art-gallery-media block object-cover ${post.size}`}
                       onLoad={() => {
                         setLoadedImages(prev => ({
                           ...prev,
