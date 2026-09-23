@@ -57,11 +57,11 @@ export default function Home() {
   }, []);
   return (
     <main
-      className={"relative min-h-[250vh]"}
+      className={"relative"}
     >
       <Starfield />
       <div
-        className="absolute inset-0 z-0 translate-x-[25%] overflow-hidden w-[90%]"
+        className="absolute inset-0 translate-x-[25%] overflow-hidden w-[90%]"
       >
 
         <video
@@ -119,8 +119,7 @@ export default function Home() {
           ref={optionsRef}
           className="relative min-h-screen flex items-center justify-center"
         >
-          {/*<div className="absolute bottom-0 h-250 left-0 right-0 bg-gradient-to-t from-black/100 via-black/90 to-transparent"></div>*/}
-          <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl w-full px-6 md:px-20"
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl w-full px-6 md:px-20 pb-8"
           >
             <button
               onClick={() => router.push("/about")}
