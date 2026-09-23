@@ -97,7 +97,7 @@
   border: 1px solid color-mix(in srgb, var(--accent-dark) 30%, var(--background));
   background: color-mix(in srgb, var(--accent-dark) 20%, var(--background));
   border-radius: var(--radius);
-  padding: 1.5rem;
+  padding: 2rem;
 }
 
 [data-theme="light"] .rectangle {
@@ -239,7 +239,7 @@ body {
 }
 
 .starfield {
-  position: absolute;
+  position: fixed;
   inset: 0;
   z-index: 0;
   overflow: hidden;

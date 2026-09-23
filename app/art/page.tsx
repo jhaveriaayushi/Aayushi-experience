@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Drawing from "@/public/hands.svg";
+import { Starfield } from "../starfield";
 
 export default function ArtPage() {
   const [posts, setPosts] = useState<any[]>([]);
@@ -36,7 +37,9 @@ export default function ArtPage() {
 
   if (loading) {
     return (
+
       <div className="flex items-center justify-center max-h-screen">
+        <Starfield/>
         <svg
           className="w-96 h-170 border border-red-500"
           viewBox="0 0 1500 2000"
@@ -62,7 +65,9 @@ export default function ArtPage() {
 
 
   return (
-    <main className="relative z-10 w-full max-w-[1000px] justify-center mx-auto px-8 py-8">
+    <main className="relative">
+              <Starfield/>
+    <div className="relative z-10 w-full max-w-[1000px] justify-center mx-auto px-8 py-8">
       <div className="mx-auto w-full max-w-[700px] p-6 text-center">
         <h5 className="text-xs">Creative bits and bobs</h5>
         <h1 className="text-[clamp(3rem,8vw,5.5rem)]">
@@ -82,7 +87,7 @@ export default function ArtPage() {
         </p>
       </div>
 
-  <div className="flex flex-wrap justify-center items-center rectangle gap-12">
+  <div className="flex flex-wrap justify-center items-center rectangle p-50 gap-12">
           {galleryPosts.map((post, index) => {
             const isCarousel = post.media_type === "CAROUSEL_ALBUM";
             console.log("hi");
@@ -308,6 +313,7 @@ z-20
             </div>
           </div>
         )}
+        </div>
     </main>
   );
 }

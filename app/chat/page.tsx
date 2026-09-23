@@ -35,20 +35,22 @@ export default function Page() {
   console.log("error", error);
 
   return (
-    <div className="relative z-10 h-screen flex flex-col flex-1 w-full max-w-4xl mx-auto"
+    <main className='relative'>
+      <Starfield/>
+    <div className="relative z-10 h-screen flex overflow-y-auto flex-col flex-1 w-full max-w-5xl mx-auto px-8"
     >
-<Starfield/>
+
       <div
         className="fixed inset-0 pointer-events-none -z-10"
         style={{
           background: `
       radial-gradient(
         circle at top,
-        color-mix(in srgb, var(--accent-light) 70%, transparent),
+        color-mix(in srgb, var(--accent-light) 30%, transparent),
         transparent 40%
     `,
         }}
-      />
+      /> 
       {messages.length > 0 && (
         <div className="sticky top-0 z-20">
           <div
@@ -74,11 +76,11 @@ export default function Page() {
       )}
 
       {/* Main chat area with welcome message and conversation history */}
-      <div className="flex-1 w-full max-w-4xl mx-auto overflow-y-auto z-1">
+      <div className="flex-1 w-full max-w-4xl mx-auto  z-1">
 
         {/* Show a starter welcome bubble when no messages exist yet. */}
         {messages.length === 0 && (
-          <div className="flex min-h-[calc(100vh-13rem)] bg-[color-mix(in_srgb,var(--background)_60%,transparent)] max-w-[600px] mx-auto flex-col items-center justify-center px-4 py-10 text-center">
+          <div className="flex min-h-[calc(100vh-13rem)] max-w-[600px] mx-auto flex-col items-center justify-center px-4 py-10 text-center">
               <span className="relative text-2xl font-bold tracking-tight"><AIyushi /></span><br></br>
 
             <h5 className="mb-3 text-xs text-[var(--accent-light)]/70">Aayushi&apos;s AI CV</h5>
@@ -214,5 +216,6 @@ export default function Page() {
         </button>
       </form>
     </div>
+    </main>
   );
 }
