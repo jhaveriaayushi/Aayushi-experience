@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useMemo } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
@@ -51,7 +51,7 @@ function FloatingStar({
       aria-label={`${isLike ? "Like" : "Dislike"}: ${item.word}`}
       onMouseEnter={() => setActive(true)}
       onMouseLeave={() => setActive(false)}
-      className="absolute grid place-items-center rounded-full"
+      className="absolute grid place-items-center rounded-full will-change-transform [backface-visibility:hidden]"
       style={{ left: `${item.x}%`, top: `${item.y}%`, width: size, height: size }}
       animate={{
         x: [0, item.dx, -item.dx * 0.55, 0],
@@ -63,8 +63,8 @@ function FloatingStar({
     >
       <motion.span
         className={`pointer-events-none absolute z-10 whitespace-nowrap rounded-full border px-3 py-1.5 text-xs font-semibold tracking-wide shadow-xl backdrop-blur-md ${isLike
-          ? "border-[var(--like-mid)]/40 bg-[color-mix(in_srgb,var(--like-mid)_40%,white)] text-[color-mix(in_srgb,var(---like-end)_70%,black) "
-          : "border-[var(--dislike-mid)]/40 bg-[color-mix(in_srgb,var(--dislike-mid)_40%,white)] text-[color-mix(in_srgb,var(---dislike-end)_70%,black) "
+          ? "border-[var(--like-mid)]/40 bg-[color-mix(in_srgb,var(--like-mid)_40%,white)] text-[color-mix(in_srgb,var(--like-end)_70%,black) "
+          : "border-[var(--dislike-mid)]/40 bg-[color-mix(in_srgb,var(--dislike-mid)_40%,white)] text-[color-mix(in_srgb,var(--dislike-end)_70%,black) "
           }`}
         initial={false}
         animate={{
@@ -113,12 +113,7 @@ function FloatingStar({
 export default function AboutPage() {
 
 
-  useEffect(() => {
-    console.log("fishbowl rendered");
-  }, []);
-  ``
-
-  const stars = (() => {
+  const stars = useMemo(() => {
     const words = [
       ...likes.map((word) => ({ word, kind: "like" as const })),
       ...dislikes.map((word) => ({ word, kind: "dislike" as const })),
@@ -137,7 +132,7 @@ export default function AboutPage() {
       dy: 8 + (index % 3) * 5,
       rotate: 8 + (index % 4) * 6,
     }));
-  })();
+}, []);
 
   return (
     <main className="relative min-h-screen overflow-hidden bg-background px-4 py-12 sm:px-8">
