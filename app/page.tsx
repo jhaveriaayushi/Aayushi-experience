@@ -61,7 +61,7 @@ export default function Home() {
     >
       <Starfield />
       <div
-        className="absolute inset-0 translate-x-[25%] overflow-hidden w-[90%]"
+        className="absolute inset-0 -z-10 translate-x-[25%] overflow-hidden w-[90%]"
       >
 
         <video
@@ -81,7 +81,7 @@ export default function Home() {
 
       <section className="relative h-screen flex flex-col items-start justify-center overflow-hidden">
 
-        <div className="fixed inset-0 bg-gradient-to-r from-background from-20% via-background/95 via-35% to-transparent to-90%" />
+        <div className="fixed z-2 inset-0 bg-gradient-to-r from-background from-20% via-background/95 via-35% to-transparent to-90%" />
         <div className="relative z-10 max-w-7xl mx-auto w-full px-6 md:px-12">
           <h1 className="text-[clamp(2.5rem,8vw,5rem)] mb-4 leading-none">
             {displayed}
@@ -117,7 +117,7 @@ export default function Home() {
       {showOptions && (
         <section
           ref={optionsRef}
-          className="relative min-h-screen flex items-center justify-center"
+          className="relative z-10 min-h-screen flex items-center justify-center"
         >
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl w-full px-6 md:px-20 pb-8"
           >

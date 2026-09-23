@@ -9,6 +9,7 @@ import {
 } from "./data";
 
 import { useState, useEffect } from "react";
+import { Starfield } from '../starfield';
 
 
 
@@ -64,7 +65,9 @@ export default function CVPage() {
 
 
   return (
-    <main className="w-full max-w-[1200px] mx-auto px-8 py-8">
+    <main className="relative"> 
+<Starfield/>
+  <div className="relative z-10 w-full max-w-[1200px] mx-auto px-8 py-8">
       <div className="mb-8 text-center">
         <h1 className="text-5xl">CV Explorer</h1>
         <h5 className="mt-2 text-[var(--accent-light)] text-xs">Based in London</h5>
@@ -244,6 +247,7 @@ export default function CVPage() {
         </div>
       </div>
 
+      </div>
       </div>
     </main>
   );

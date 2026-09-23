@@ -94,8 +94,8 @@
 
 
 .rectangle {
-  border: 1px solid color-mix(in srgb, var(--accent-dark) 30%, transparent);
-  background: color-mix(in srgb, var(--accent-dark) 20%, transparent);
+  border: 1px solid color-mix(in srgb, var(--accent-dark) 30%, var(--background));
+  background: color-mix(in srgb, var(--accent-dark) 20%, var(--background));
   border-radius: var(--radius);
   padding: 1.5rem;
 }
@@ -241,7 +241,7 @@ body {
 .starfield {
   position: absolute;
   inset: 0;
-  z-index: 1;
+  z-index: 0;
   overflow: hidden;
   pointer-events: none;
   display: none;
@@ -255,14 +255,14 @@ body {
   position: absolute;
   left: var(--star-left);
   top: var(--star-top);
-  color: var(--foreground);
+  color: color-mix(in srgb, white 50%, transparent);
   font-size: var(--star-size);
   line-height: 1;
   opacity: 0;
   text-shadow:
     0 0 4px white,
     0 0 8px white,
-    0 0 16px #8bbcff;
+    0 0 16px var(--accent-light);
   transform: scale(0.35) rotate(-20deg);
   animation: starfield-appear var(--star-duration) ease-in-out var(--star-delay)
     infinite alternate;

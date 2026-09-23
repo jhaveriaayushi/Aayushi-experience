@@ -62,7 +62,7 @@ export default function ArtPage() {
 
 
   return (
-    <main className="w-full max-w-[1000px] justify-center mx-auto px-8 py-8">
+    <main className="relative z-10 w-full max-w-[1000px] justify-center mx-auto px-8 py-8">
       <div className="mx-auto w-full max-w-[700px] p-6 text-center">
         <h5 className="text-xs">Creative bits and bobs</h5>
         <h1 className="text-[clamp(3rem,8vw,5.5rem)]">

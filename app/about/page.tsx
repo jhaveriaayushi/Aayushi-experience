@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 
 import { toggleTheme } from "../navbar";
+import { Starfield } from "../starfield"; 
 
 const likes = ["Inclusive design", "Deadlines", "Trees", "Olives", "Art", "Robotics", "Playful UX", "Making things", "Physical AI"];
 const dislikes = ["Non-wired connections", "Inefficiencies", "Colour pickers without hex values", "Tradition", "Needless jargon", "Generic design"];
@@ -136,9 +137,9 @@ export default function AboutPage() {
 
   return (
     <main className="relative min-h-screen overflow-hidden bg-background px-4 py-12 sm:px-8">
-
+<Starfield/>
       <section
-        className="relative mx-auto mb-20 w-full max-w-4xl text-center"
+        className="relative z-10 mx-auto mb-20 w-full max-w-4xl text-center"
         aria-labelledby="about-title"
       >
         <div className="rectangle relative mx-auto max-w-5xl overflow-hidden">
@@ -189,7 +190,7 @@ export default function AboutPage() {
 
 
 
-      <section id="fishbowl" className="relative mx-auto flex max-w-5xl scroll-mt-8 flex-col items-center">
+      <section id="fishbowl" className="relative z-10 mx-auto flex max-w-5xl scroll-mt-8 flex-col items-center">
         <h5 className="mb-6 text-xs">
           Get to know me
         </h5>
