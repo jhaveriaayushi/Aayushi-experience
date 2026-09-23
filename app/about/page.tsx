@@ -1,13 +1,13 @@
 'use client';
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
 import { toggleTheme } from "../navbar";
 
 const likes = ["Inclusive design", "Deadlines", "Trees", "Olives", "Art", "Robotics", "Playful UX", "Making things", "Physical AI"];
-const dislikes = ["Non-wired connections",  "Inefficiencies", "Colour pickers without hex values", "Tradition", "Needless jargon","Generic design"];
+const dislikes = ["Non-wired connections", "Inefficiencies", "Colour pickers without hex values", "Tradition", "Needless jargon", "Generic design"];
 
 const starPaths = [
   "50 4 61 35 94 35 67 54 78 87 50 67 22 87 33 54 6 35 39 35",
@@ -79,12 +79,9 @@ function FloatingStar({
 
       <motion.svg
         viewBox="0 0 100 100"
-        className="relative z-0 h-full w-full overflow-visible"
-        animate={{
-          filter: active
-            ? "brightness(1.8) drop-shadow(0 0 18px rgba(255,255,255,0.95)) drop-shadow(0 0 30px color-mix(in srgb, var(--bowl-highlight) 55%, transparent))"
-            : "brightness(1.1) drop-shadow(0 0 10px rgba(255,255,255,0.35)) drop-shadow(0 0 20px color-mix(in srgb, var(--bowl-highlight) 55%, transparent))",
-        }}
+        className={`relative z-0 h-full w-full overflow-visible transition-[filter] duration-300 ${active ? "star-glow-active" : "star-glow"
+
+          }`}
       >
         <defs>
           <linearGradient id={`star-${index}`} x1="0" y1="0" x2="1" y2="1">
@@ -112,16 +109,24 @@ function FloatingStar({
   );
 }
 
+
 export default function AboutPage() {
+
+
+  useEffect(() => {
+    console.log("fishbowl rendered");
+  }, []);
+  ``
+
   const stars = (() => {
     const words = [
       ...likes.map((word) => ({ word, kind: "like" as const })),
       ...dislikes.map((word) => ({ word, kind: "dislike" as const })),
     ];
 
-   const positions = [[70, 34], [23, 54],[13, 26],[58, 88],[44, 47],[83, 33],[30, 24],[65, 57],[37, 83],[21, 43],
-   [80, 67], [49, 25],[15, 68], [74, 44],[52, 68],
-];
+    const positions = [[70, 34], [23, 54], [13, 26], [58, 88], [44, 47], [83, 33], [30, 24], [65, 57], [37, 83], [21, 43],
+    [80, 67], [49, 25], [15, 68], [74, 44], [52, 68],
+    ];
 
 
     return words.map((item, index) => ({
