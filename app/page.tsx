@@ -57,7 +57,7 @@ export default function Home() {
   }, []);
   return (
     <main
-      className={"relative"}
+      className={"relative  overflow-x-hidden"}
     >
       <Starfield />
       <div
