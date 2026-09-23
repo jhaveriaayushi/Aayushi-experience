@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 
 export const toggleTheme = () => {
   
-  const currentTheme = document.documentElement.getAttribute("data-theme") || "dark";
+  const currentTheme = document.documentElement.getAttribute("data-theme") || "light";
   const nextTheme = currentTheme === "dark" ? "light" : "dark";
 
   document.documentElement.setAttribute("data-theme", nextTheme);
@@ -13,7 +13,7 @@ export const toggleTheme = () => {
 };
 
 export function Navbar() {
-  const [theme, setTheme] = useState("dark");
+  const [theme, setTheme] = useState("light");
 
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme");
@@ -71,7 +71,7 @@ md:hidden
 `}
         >
           <div className="flex flex-col px-4 pt-4 gap-3">
-            <h1 className="font-bold sub-theme-font">Menu</h1>
+            <p className="font-bold theme-font text-xl">Menu</p>
             <Link href="/">Home</Link>
             <Link href="/about">About</Link>
             <Link href="/chat">Chat</Link>
@@ -95,7 +95,7 @@ hover:text-shadow-[0_0_10px_var(--accent-light)]
 
 
         <label className="ml-auto flex items-center gap-2">
-          <span className="hidden sm:block sub-theme-font">Dark</span>
+          <span className="hidden sm:block sub-theme-font">Light</span>
 
           <div
             onClick={toggleTheme}
@@ -106,12 +106,8 @@ hover:text-shadow-[0_0_10px_var(--accent-light)]
             />
           </div>
 
-          <span className="hidden sm:block sub-theme-font">Light</span>
+          <span className="hidden sm:block sub-theme-font">Dark</span>
         </label>
-
-
-
-
 
       </div>
 
