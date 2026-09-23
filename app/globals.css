@@ -1,16 +1,42 @@
 @import "tailwindcss";
 
 :root {
+  --background: #EEECE1;
+  --foreground: #282828;
+  --user-bubble: #cfbb93;
+  --assistant-bubble: #eaaaaa;
+  --bubble-outline: #8b8b8b;
+  --radius: 0px;
+  --bubble-radius: 0px;
+  --theme-font: var(--font-eb-garamond);
+  --theme-body-font: var(--font-inter);
+  --like-start: #e8cb95;
+  --like-mid: #caa96c;
+  --like-end: #a4864f;
+  --dislike-start: #cc7f7f;
+  --dislike-mid: #c06161;
+  --dislike-end: #7e3030;
+  --accent-dark: #d5ccaf;
+  --accent-light: #802222;
+  --gallery-border: #ffffff;
+  --gallery-border-thickness: 0.35rem;
+  --gallery-shadow: 0 0 0 1px color-mix(in srgb, var(--accent-dark) 25%, transparent),
+    0 14px 24px color-mix(in srgb, var(--accent-dark) 35%, transparent);
+  --bowl-border: #e17a7a;
+  --bowl-start: #d5bf96;
+  --bowl-mid: #e28471;
+  --bowl-end: #983f48;
+  --bowl-highlight: #ffccaf;
+}
+
+[data-theme="dark"] {
   --background: hsl(0, 0%, 0%);
   --foreground: #bababa;
   --user-bubble: #676767;
   --assistant-bubble: #99bbff;
   --bubble-outline: #fefefe;
-
-
   --theme-font: var(--font-rajdhani);
-
-  --theme-sub-font: var(--font-quicksand);
+  --theme-body-font: var(--font-inter);
   --bowl-border: #006e67;
   --bowl-start: #55b1ae;
   --bowl-mid: #035961;
@@ -29,42 +55,6 @@
   --gallery-shadow: 0 0 5px var(--accent-dark);
   --radius: 20px;
   --bubble-radius: 50px;
-}
-
-[data-theme="light"] {
-  --background: #EEECE1;
-  --foreground: #282828;
-
-  --user-bubble: #cfbb93;
-  --assistant-bubble: #eaaaaa;
-  --bubble-outline: #8b8b8b;
-
-  --radius: 0px;
-  --bubble-radius: 0px;
-
-  --theme-font: var(--font-eb-garamond);
-  --theme-body-font: var(--font-inter);
-
-  --like-start: #e8cb95;
-  --like-mid: #caa96c;
-  --like-end: #a4864f;
-
-  --dislike-start: #cc7f7f;
-  --dislike-mid: #c06161;
-  --dislike-end: #7e3030;
-
-  --accent-dark: #d5ccaf;
-  --accent-light: #802222;
-  --gallery-border: #ffffff;
-  --gallery-border-thickness: 0.35rem;
-  --gallery-shadow: 0 0 0 1px color-mix(in srgb, var(--accent-dark) 25%, transparent),
-    0 14px 24px color-mix(in srgb, var(--accent-dark) 35%, transparent);
-
-  --bowl-border: #e17a7a;
-  --bowl-start: #d5bf96;
-  --bowl-mid: #e28471;
-  --bowl-end: #983f48;
-  --bowl-highlight: #ffccaf;
 }
 
 @property --radius {
@@ -164,11 +154,15 @@
   transition: transform 150ms ease;
 }
 
-[data-theme="light"] .theme-toggle-thumb {
+[data-theme="dark"] .theme-toggle-thumb {
   transform: translateX(1.5rem);
 }
 
 .dark-mode-only {
+  display: inline-flex;
+}
+
+html[data-theme="dark"] .dark-mode-only {
   display: none;
 }
 
@@ -244,10 +238,60 @@ body {
   color: var(--foreground);
 }
 
-html {
+.starfield {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  overflow: hidden;
+  pointer-events: none;
+  display: none;
+}
+
+[data-theme="dark"] .starfield {
+  display: block;
+}
+
+.starfield-star {
+  position: absolute;
+  left: var(--star-left);
+  top: var(--star-top);
+  color: var(--foreground);
+  font-size: var(--star-size);
+  line-height: 1;
+  opacity: 0;
+  text-shadow:
+    0 0 4px white,
+    0 0 8px white,
+    0 0 16px #8bbcff;
+  transform: scale(0.35) rotate(-20deg);
+  animation: starfield-appear var(--star-duration) ease-in-out var(--star-delay)
+    infinite alternate;
+}
+
+@keyframes starfield-appear {
+  0% {
+    opacity: 0;
+    transform: scale(0.35) rotate(-20deg);
+  }
+
+  45%,
+  75% {
+    opacity: 0.8;
+    transform: scale(1) rotate(0deg);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(0.5) rotate(20deg);
+  }
+}
+
+html,
+body,
+main {
   transition:
     background-color 300ms ease,
-    color 300ms ease;
+    color 700ms ease;
 }
 
 .featured-button,
@@ -260,6 +304,7 @@ html {
     background-color 300ms ease,
     border-color 300ms ease,
     box-shadow 300ms ease;
+    
 }
 
 @theme inline {
@@ -344,6 +389,7 @@ html {
   border-radius: 62% 38% 30% 70% / 45% 58% 42% 55%;
   border: 2px solid var(--accent-light);
   box-shadow: 0 25px 50px -12px color-mix(in srgb, var(--accent-dark) 40%, transparent);
+  transition: border-radius 700ms ease-in-out;
 }
 
 .about-image-frame:hover {
@@ -372,4 +418,16 @@ html {
   to {
     stroke-dashoffset: 0;
   }
+}
+
+.star-glow {
+  filter:
+    brightness(1.1)
+    drop-shadow(0 0 10px rgb(255 255 255 / 0.35));
+}
+
+.star-glow-active {
+  filter:
+    brightness(1.5)
+    drop-shadow(0 0 14px rgb(255 255 255 / 0.8));
 }

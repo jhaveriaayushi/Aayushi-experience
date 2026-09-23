@@ -29,6 +29,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      data-theme="light"
       className={`${ebGaramond.variable} ${rajdhani.variable} h-full antialiased`}
     >
       <body className="min-h-screen flex flex-col">
