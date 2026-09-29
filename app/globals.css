@@ -9,6 +9,7 @@
   --radius: 0px;
   --bubble-radius: 0px;
   --theme-font: var(--font-eb-garamond);
+  --theme-font-size-adjust: none;
   --theme-body-font: var(--font-inter);
   --like-start: #e8cb95;
   --like-mid: #caa96c;
@@ -35,7 +36,8 @@
   --user-bubble: #676767;
   --assistant-bubble: #99bbff;
   --bubble-outline: #fefefe;
-  --theme-font: var(--font-rajdhani);
+  --theme-font: var(--font-geist-pixel);
+  --theme-font-size-adjust: 0.45;
   --theme-body-font: var(--font-inter);
   --bowl-border: #006e67;
   --bowl-start: #55b1ae;
@@ -204,6 +206,7 @@ html[data-theme="light"] .dark-mode-only {
 h1,
 h3 {
   font-family: var(--theme-font);
+  font-size-adjust: var(--theme-font-size-adjust);
   letter-spacing: -0.025em;
   
 }
@@ -213,7 +216,7 @@ h1 {
 }
 
 h3 {
-  font-weight: 600;
+  font-weight: 500;
 }
 
 h4,
@@ -314,6 +317,7 @@ main {
 
 .theme-font {
   font-family: var(--theme-font);
+  font-size-adjust: var(--theme-font-size-adjust);
 }
 
 .explanation-text {

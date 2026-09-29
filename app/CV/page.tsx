@@ -92,7 +92,7 @@ export default function CVPage() {
       <div className="space-y-6 w-full">
         {filteredExperiences.length > 0 && (
           <>
-            <h2 className="text-3xl font-bold mb-4">Experience</h2>
+            <h2 className="text-2xl font-bold mb-4">Experience</h2>
             {filteredExperiences.map((exp, index) => (
               <div
                 key={index}
@@ -100,7 +100,7 @@ export default function CVPage() {
               >
                 <div className="flex justify-between items-start mb-2">
                   <div>
-                    <h3 className="text-2xl font-semibold">
+                    <h3 className="text-2xl">
                       {exp.title}
                     </h3>
                     <p className="text-[var(--accent-light)]">{exp.company}</p>
@@ -130,7 +130,7 @@ export default function CVPage() {
 
         {filteredEducation.length > 0 && (
           <>
-            <h2 className="text-3xl font-bold mb-4 mt-12">Education</h2>
+            <h2 className="text-2xl font-bold mb-4 mt-12">Education</h2>
             {filteredEducation.map((exp, index) => (
               <div
                 key={index}
@@ -138,9 +138,9 @@ export default function CVPage() {
               >
                 <div className="flex justify-between items-start mb-2">
                   <div>
-                    <h2 className="text-2xl font-semibold">
+                    <h3 className="text-2xl">
                       {exp.title}
-                    </h2>
+                    </h3>
                     <p className="text-[var(--accent-light)]">{exp.company}</p>
                   </div>
 
@@ -168,7 +168,7 @@ export default function CVPage() {
 
         {filteredProjects.length > 0 && (
           <>
-            <h2 className="text-3xl font-bold mb-4 mt-12">Projects</h2>
+            <h2 className="text-2xl font-bold mb-4 mt-12">Projects</h2>
 
             <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
               {displayedProjects.map((project) => (
@@ -213,7 +213,7 @@ export default function CVPage() {
 
         {filteredCertifications.length > 0 && (
           <>
-            <h2 className="text-3xl font-bold mb-4 mt-8">Certifications</h2>
+            <h2 className="text-2xl font-bold mb-4 mt-8">Certifications</h2>
             {filteredCertifications.map((exp, index) => (
               <div
                 key={index}
@@ -221,10 +221,10 @@ export default function CVPage() {
               >
                 <div className="flex justify-between items-start mb-2">
                   <div>
-                    <h2 className="text-1xl font-semibold">
+                    <h3 className="text-2xl">
                       {exp.title}
-                    </h2>
-                    <p className="text-var(--accent-light)">{exp.company}</p>
+                    </h3>
+                    <p className="text-[var(--accent-light)]">{exp.company}</p>
                   </div>
                 </div>
               </div>

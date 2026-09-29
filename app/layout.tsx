@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { EB_Garamond } from "next/font/google";
-import { Rajdhani } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import { Navbar } from "./navbar";
 import { Analytics } from "@vercel/analytics/next"
@@ -11,10 +11,16 @@ const ebGaramond = EB_Garamond({
   variable: "--font-eb-garamond",
 });
 
-const rajdhani = Rajdhani({
-  weight: ["300", "400", "500", "600", "700"],
-  subsets: ["latin"],
-  variable: "--font-rajdhani",
+
+const geistPixel = localFont({
+  src: [
+    {
+      path: "./fonts/GeistPixel-Regular-VariableFont_ELSH.ttf",
+      weight: "400",
+      style: "normal",
+    },
+  ],
+  variable: "--font-geist-pixel",
 });
 
 export const metadata: Metadata = {
@@ -30,7 +36,7 @@ export default function RootLayout({
     <html
       lang="en"
       data-theme="light"
-      className={`${ebGaramond.variable} ${rajdhani.variable} h-full antialiased`}
+      className={`${ebGaramond.variable} ${geistPixel.variable} h-full antialiased`}
     >
       <body className="min-h-screen flex flex-col">
         <Navbar />
