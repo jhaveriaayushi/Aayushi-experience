@@ -10,6 +10,7 @@ import {
   projects,
   toolsAndTechnologies,
 } from "../../data";
+import { funFacts } from "../../funFacts";
 
 const azure = createAzure({
   resourceName: process.env.AZURE_RESOURCE_NAME!,
@@ -25,6 +26,7 @@ const portfolioData = JSON.stringify({
   certifications,
   capabilities,
   toolsAndTechnologies,
+  funFacts,
 }, null, 2);
 
 
