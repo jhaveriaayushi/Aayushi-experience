@@ -44,18 +44,14 @@ export const capabilities = [
   { title: "Requirements Gathering", tags: ["Product", "Strategy", "AI"] },
   { title: "Product Delivery", tags: ["Product", "Strategy"] },
   { title: "AI Product Strategy", tags: ["AI", "Product", "Strategy"] },
-  { title: "Machine Learning", tags: ["AI", "Software", "Engineering"] },
   { title: "Computer Vision", tags: ["AI", "Software", "Engineering"] },
   { title: "Stakeholder Management", tags: ["Product", "Strategy"] },
-  { title: "Agile Delivery", tags: ["Product", "Strategy"] },
-  { title: "Scrum", tags: ["Product", "Strategy"] },
   { title: "Engineering Design", tags: ["Engineering", "Sustainability"] },
   { title: "Manufacturing", tags: ["Engineering"] },
-  { title: "Testing", tags: ["Engineering", "Software"] },
+  { title: "Evals", tags: ["AI", "Software"] },
   { title: "Software Development", tags: ["Software", "Engineering"] },
   { title: "Sustainable Design", tags: ["Sustainability", "Engineering"] },
   { title: "Systems Thinking", tags: ["Sustainability", "Engineering", "Strategy"] },
-  { title: "Lifecycle Thinking", tags: ["Sustainability", "Strategy"] },
   { title: "Creative Practice", tags: ["Art"] },
   { title: "UX Design", tags: ["Art", "Product"] },
   { title: "Design Thinking", tags: ["Art", "Product", "Strategy"] },
@@ -64,20 +60,23 @@ export const capabilities = [
   { title: "Research", tags: ["Other", "Engineering", "AI"] },
   { title: "Data Analysis", tags: ["Other", "AI", "Software"] },
   { title: "Technical Documentation", tags: ["Other", "Software"] },
-  { title: "Spanish", tags: ["Other"] },
-  { title: "Communication", tags: ["Other", "Product"] },
+  { title: "Tech Architecture", tags: ["Software", "Product", "AI"] },
+  { title: "Creative Communication", tags: ["Other", "Product"] },
+  { title: "Electrical Systems", tags: ["Engineering"] },
 ];
 
 export const toolsAndTechnologies = [
-  { title: "Copilot Studio", tags: ["AI", "Software"] },
   { title: "Electronics", tags: ["Engineering", "Software"] },
+  { title: "TypeScript", tags: ["Software"] },
+  { title: "Claude Code", tags: ["Software", "Engineering"] },
   { title: "CAD", tags: ["Engineering", "Art"] },
-  { title: "Control Systems", tags: ["Engineering", "Software"] },
-  { title: "CANBus", tags: ["Engineering", "Software"] },
   { title: "Python", tags: ["Software", "AI", "Engineering"] },
   { title: "C#", tags: ["Software"] },
   { title: "Embedded Systems", tags: ["Software", "Engineering"] },
+  { title: "Figma", tags: ["Art", "Product"] },
+  { title: "Unity", tags: ["Software", "Art"] },
   { title: "Git", tags: ["Software", "Product"] },
+  { title: "Azure AI SDK", tags: ["AI", "Software"] },
 ];
 
 export const experiences = [
@@ -86,7 +85,7 @@ export const experiences = [
     company: "frog",
     period: "Jun 2025 - Present",
     description:
-      "Leading AI and digital transformation initiatives, translating user needs into product requirements, running stakeholder workshops and supporting product delivery across multidisciplinary teams.",
+      "Developing AI and digital products, translating user needs into product requirements, running stakeholder workshops and supporting product delivery across multidisciplinary teams.",
     tags: ["Product", "AI", "Strategy"],
     skills: [
       "Product Management",
@@ -98,7 +97,7 @@ export const experiences = [
   {
     title: "Experiment Set-up Designer",
     company: "UCL",
-    period: "2024",
+    period: "Oct 2024 - Nov 2024",
     description:
       "Designed and built specialist experimental equipment for behavioural research, balancing engineering constraints with safety and usability requirements.",
     tags: ["Engineering"],
@@ -111,7 +110,7 @@ export const experiences = [
   {
     title: "Software & Electrical Engineering Intern",
     company: "The Little Car Company",
-    period: "2022",
+    period: "June 2022 - Sep 2022",
     description:
       "Worked on electrical systems, embedded software and vehicle testing for electric vehicle prototypes in a multidisciplinary engineering team.",
     tags: ["Engineering", "Software"],
@@ -125,7 +124,7 @@ export const experiences = [
   {
     title: "Software Intern",
     company: "Raspberry Pi",
-    period: "2021",
+    period: "June 2021 - Aug 2021",
     description:
       "Developed software examples and technical documentation demonstrating how Raspberry Pi Pico boards interface with third-party hardware modules. Collaborated through GitHub and contributed to resources used by developers and hobbyists worldwide.",
     tags: ["Software", "Engineering"],
@@ -212,34 +211,7 @@ export const projects = [
     ],
     video: []
   },
-  {
-    title: "Kinect sdffsRacing Game",
-    company: "University of Cambridge",
-    period: "Sep 2019 - May 2020",
-    description:
-      "Created a motion-controlled racing game using Microsoft's Kinect sensor. Designed gesture recognition systems allowing players to steer and control vehicles through full-body movement.",
-    tags: ["Product", "Software"],
-    skills: [
-      "C#",
-      "Kinect",
-      "Unity",
-      "Computer Vision",
-    ],
-  },
-  {
-    title: "Texture fsfsRendering for Holographic Systems",
-    company: "University of Cambridge",
-    period: "2023 - 2024",
-    description:
-      "Researched rendering techniques for holographic displays as part of a master's project. Investigated texture generation and optimisation methods to improve image quality and display realism.",
-    tags: ["Engineering", "Software", "Art"],
-    skills: [
-      "Computer Graphics",
-      "Research",
-      "Python",
-      "Data Analysis",
-    ],
-  },
+
   {
     title: "Polar Graph sffsdcDrawing Machine",
     company: "Personal Project",
