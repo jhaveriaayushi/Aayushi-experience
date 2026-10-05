@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { AIyushi } from "./ai_box";
 import { Starfield } from "./starfield";
+import { Notepad } from "./notepad";
 
 export default function Home() {
   const router = useRouter();
@@ -59,7 +60,8 @@ export default function Home() {
     <main
       className={"relative  overflow-x-hidden"}
     >
-      <Starfield />
+      <Starfield/>
+      <Notepad/>
       <div
         className="absolute inset-0 -z-10 translate-x-[25%] overflow-hidden w-[90%]"
       >

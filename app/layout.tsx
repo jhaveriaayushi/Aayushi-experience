@@ -3,6 +3,7 @@ import { EB_Garamond } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 import { Navbar } from "./navbar";
+
 import { Analytics } from "@vercel/analytics/next"
 
 

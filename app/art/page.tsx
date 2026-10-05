@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Drawing from "@/public/hands.svg";
 import { Starfield } from "../starfield";
+import { Notepad } from "../notepad";
 
 export default function ArtPage() {
   const [posts, setPosts] = useState<any[]>([]);
@@ -67,6 +68,7 @@ export default function ArtPage() {
   return (
     <main className="relative">
               <Starfield/>
+              <Notepad/>
     <div className="relative z-10 w-full max-w-[1000px] justify-center mx-auto px-8 py-8">
       <div className="mx-auto w-full max-w-[700px] p-6 text-center">
         <h5 className="text-xs">Creative bits and bobs</h5>
@@ -201,7 +203,7 @@ z-20
                   )}
 
                   {isCarousel && (
-                    <div className="absolute bottom-2 right-2 bg-black/60 text-foreground text-xs px-2 py-1 rounded-full">
+                    <div className="absolute bottom-2 right-2 bg-black/60 text-white text-xs px-2 py-1 rounded-full">
                       +{slideCount}
                     </div>
                   )}

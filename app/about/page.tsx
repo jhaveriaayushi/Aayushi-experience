@@ -6,6 +6,7 @@ import Link from "next/link";
 
 import { toggleTheme } from "../navbar";
 import { Starfield } from "../starfield"; 
+import { Notepad } from "../notepad";
 
 const likes = ["Inclusive design", "Deadlines", "Trees", "Olives", "Art", "Robotics", "Playful UX", "Making things", "Physical AI"];
 const dislikes = ["Non-wired connections", "Inefficiencies", "Colour pickers without hex values", "Tradition", "Needless jargon", "Generic design"];
@@ -138,6 +139,7 @@ export default function AboutPage() {
   return (
     <main className="relative min-h-screen overflow-hidden bg-background px-4 py-12 sm:px-8">
 <Starfield/>
+<Notepad/>
       <section
         className="relative z-10 mx-auto mb-20 w-full max-w-4xl text-center"
         aria-labelledby="about-title"
