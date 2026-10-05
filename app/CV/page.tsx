@@ -5,11 +5,13 @@ import {
   experiences,
   projects,
   certifications,
-  skills,
-} from "./data";
+  capabilities,
+  toolsAndTechnologies,
+} from "../data";
 
 import { useState, useEffect } from "react";
 import { Starfield } from '../starfield';
+import { Notepad } from "../notepad";
 
 
 
@@ -20,7 +22,8 @@ const allTags = [
     ...education.flatMap(item => item.tags),
     ...projects.flatMap(item => item.tags),
     ...certifications.flatMap(item => item.tags),
-    ...skills.flatMap(item => item.tags),
+    ...capabilities.flatMap(item => item.tags),
+    ...toolsAndTechnologies.flatMap(item => item.tags),
   ]),
 ];
 
@@ -36,7 +39,8 @@ export default function CVPage() {
   const filteredEducation = filterItems(education);
   const filteredProjects = filterItems(projects);
   const filteredCertifications = filterItems(certifications);
-  const filteredSkills = filterItems(skills);
+  const filteredCapabilities = filterItems(capabilities);
+  const filteredToolsAndTechnologies = filterItems(toolsAndTechnologies);
 
 
   const [showAllProjects, setShowAllProjects] = useState(false);
@@ -65,189 +69,215 @@ export default function CVPage() {
 
 
   return (
-    <main className="relative"> 
-<Starfield/>
-  <div className="relative z-10 w-full max-w-[1200px] mx-auto px-8 py-8">
-      <div className="mb-8 text-center">
-        <h1 className="text-5xl">CV Explorer</h1>
-        <h5 className="mt-2 text-[var(--accent-light)] text-xs">Based in London</h5>
-      </div>
+    <main className="relative">
+      <Starfield />
+      <Notepad />
+      <div className="relative z-10 w-full max-w-[1200px] mx-auto px-8 py-8">
+        <div className="mb-8 text-center">
+          <h1 className="text-5xl">CV Explorer</h1>
+          <h5 className="mt-2 text-[var(--accent-light)] text-xs">Based in London</h5>
+        </div>
 
-      <div className="flex flex-wrap gap-3 mb-10">
-        {allTags.map((tag) => (
-          <button
-            key={tag}
-            onClick={() => setSelectedTag(tag)}
-            className={`px-4 py-2 rounded-[var(--bubble-radius)] transition ${selectedTag === tag
+        <div className="flex flex-wrap gap-3 mb-10">
+          {allTags.map((tag) => (
+            <button
+              key={tag}
+              onClick={() => setSelectedTag(tag)}
+              className={`px-4 py-2 rounded-[var(--bubble-radius)] transition ${selectedTag === tag
                 ? "bg-[var(--accent-light)] text-background hover:bg-[var(--accent-light)]/90"
                 : "border border-[var(--accent-light)]/30 bg-[color-mix(in_srgb,var(--accent-dark)_40%,transparent)] text-foreground hover:bg-[var(--accent-dark)]/90"
-              }`}
-          >
-            {tag}
-          </button>
-        ))}
-      </div>
-
-
-      <div className="space-y-6 w-full">
-        {filteredExperiences.length > 0 && (
-          <>
-            <h2 className="text-2xl font-bold mb-4">Experience</h2>
-            {filteredExperiences.map((exp, index) => (
-              <div
-                key={index}
-                className=" p-6 rectangle"
-              >
-                <div className="flex justify-between items-start mb-2">
-                  <div>
-                    <h3 className="text-2xl">
-                      {exp.title}
-                    </h3>
-                    <p className="text-[var(--accent-light)]">{exp.company}</p>
-                  </div>
-
-                  <span className="text-sm text-gray-500">
-                    {exp.period}
-                  </span>
-                </div>
-
-                <p className="mb-4">{exp.description}</p>
-
-                <div className="flex flex-wrap gap-2">
-                  {exp.skills.map((skill) => (
-                    <span
-                      key={skill}
-                      className="px-3 py-1 bg-[var(--accent-dark)]/40 text-foreground text-sm rounded-[var(--bubble-radius)]"
-                    >
-                      {skill}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </>
-        )}
-
-        {filteredEducation.length > 0 && (
-          <>
-            <h2 className="text-2xl font-bold mb-4 mt-12">Education</h2>
-            {filteredEducation.map((exp, index) => (
-              <div
-                key={index}
-                className=" p-6 rectangle"
-              >
-                <div className="flex justify-between items-start mb-2">
-                  <div>
-                    <h3 className="text-2xl">
-                      {exp.title}
-                    </h3>
-                    <p className="text-[var(--accent-light)]">{exp.company}</p>
-                  </div>
-
-                  <span className="text-sm text-gray-500">
-                    {exp.period}
-                  </span>
-                </div>
-
-                <p className="mb-4">{exp.description}</p>
-
-                <div className="flex flex-wrap gap-2">
-                  {exp.skills.map((skill) => (
-                    <span
-                      key={skill}
-                      className="px-3 py-1 bg-[var(--accent-dark)]/40 text-foreground text-sm rounded-[var(--bubble-radius)]"
-                    >
-                      {skill}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </>
-        )}
-
-        {filteredProjects.length > 0 && (
-          <>
-            <h2 className="text-2xl font-bold mb-4 mt-12">Projects</h2>
-
-            <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
-              {displayedProjects.map((project) => (
-                <button
-                  key={project.title}
-                  className=" p-6 rectangle"
-                >
-                  <div className="overflow-hidden rounded-2xl aspect-square border border-foreground/10 bg-background/20">
-                  
-                    <video
-                      autoPlay
-                      muted
-                      loop
-                      playsInline
-                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                    >
-                      {project.video}
-                    </video>
-                  </div>
-
-                  <h3 className="mt-2 text-sm font-semibold">
-                    {project.title}
-                  </h3>
-                </button>
-              ))}
-            </div>
-
-            {filteredProjects.length > initialProjects && (
-              <div className="mt-6 flex justify-center">
-                <button
-                  onClick={() => setShowAllProjects(!showAllProjects)}
-                  className="text-sm text-gray-400 hover:text-foreground transition-colors"
-                >
-                  {showAllProjects
-                    ? "Show Less"
-                    : `+ ${filteredProjects.length - initialProjects} More Projects`}
-                </button>
-              </div>
-            )}
-          </>
-        )}
-
-        {filteredCertifications.length > 0 && (
-          <>
-            <h2 className="text-2xl font-bold mb-4 mt-8">Certifications</h2>
-            {filteredCertifications.map((exp, index) => (
-              <div
-                key={index}
-                className=" p-6 rectangle"
-              >
-                <div className="flex justify-between items-start mb-2">
-                  <div>
-                    <h3 className="text-2xl">
-                      {exp.title}
-                    </h3>
-                    <p className="text-[var(--accent-light)]">{exp.company}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </>
-        )}
-
-
-      <div className="mb-14">
-        <h2 className="text-3xl font-bold mb-6">Skills</h2>
-        <div className="p-6 rectangle flex flex-wrap gap-2">
-          {filteredSkills.map((skill) => (
-            <span
-              key={skill.title}
-              className="px-3 py-1 bg-[var(--accent-dark)]/40 text-foreground text-sm rounded-[var(--bubble-radius)]"
+                }`}
             >
-              {skill.title}
-            </span>
+              {tag}
+            </button>
           ))}
         </div>
-      </div>
 
-      </div>
+
+        <div className="space-y-6 w-full">
+          {filteredExperiences.length > 0 && (
+            <>
+              <h2 className="text-2xl font-bold mb-4">Experience</h2>
+              {filteredExperiences.map((exp, index) => (
+                <div
+                  key={index}
+                  className=" p-6 rectangle"
+                >
+                  <div className="flex justify-between items-start mb-2">
+                    <div>
+                      <h3 className="text-2xl">
+                        {exp.title}
+                      </h3>
+                      <p className="text-[var(--accent-light)]">{exp.company}</p>
+                    </div>
+
+                    <span className="text-sm text-gray-500">
+                      {exp.period}
+                    </span>
+                  </div>
+
+                  <p className="mb-4">{exp.description}</p>
+
+                  <div className="flex flex-wrap gap-2">
+                    {exp.skills.map((skill) => (
+                      <span
+                        key={skill}
+                        className="px-3 py-1 bg-[var(--accent-dark)]/40 text-foreground text-sm rounded-[var(--bubble-radius)]"
+                      >
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </>
+          )}
+
+          {filteredEducation.length > 0 && (
+            <>
+              <h2 className="text-2xl font-bold mb-4 mt-12">Education</h2>
+              {filteredEducation.map((exp, index) => (
+                <div
+                  key={index}
+                  className=" p-6 rectangle"
+                >
+                  <div className="flex justify-between items-start mb-2">
+                    <div>
+                      <h3 className="text-2xl">
+                        {exp.title}
+                      </h3>
+                      <p className="text-[var(--accent-light)]">{exp.company}</p>
+                    </div>
+
+                    <span className="text-sm text-gray-500">
+                      {exp.period}
+                    </span>
+                  </div>
+
+                  <p className="mb-4 whitespace-pre-line">{exp.description}</p>
+                  {exp.skills && exp.skills.length > 0 && (
+                    <div className="flex flex-wrap gap-2">
+                      <strong>Modules:</strong>
+                      {exp.skills.map((skill) => (
+                        <span
+                          key={skill}
+                          className="px-3 py-1 bg-[var(--accent-dark)]/40 text-foreground text-sm rounded-[var(--bubble-radius)]"
+                        >
+                          {skill}
+                        </span>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ))}
+            </>
+          )}
+
+          {filteredProjects.length > 0 && (
+            <>
+              <h2 className="text-2xl font-bold mb-4 mt-12">Projects</h2>
+
+              <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+                {displayedProjects.map((project) => (
+                  <button
+                    key={project.title}
+                    className=" p-6 rectangle"
+                  >
+                    <div className="overflow-hidden rounded-2xl aspect-square border border-foreground/10 bg-background/20">
+
+                      <video
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                        className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                      >
+                        {project.video}
+                      </video>
+                    </div>
+
+                    <h3 className="mt-2 text-sm font-semibold">
+                      {project.title}
+                    </h3>
+                  </button>
+                ))}
+              </div>
+
+              {filteredProjects.length > initialProjects && (
+                <div className="mt-6 flex justify-center">
+                  <button
+                    onClick={() => setShowAllProjects(!showAllProjects)}
+                    className="text-sm text-gray-400 hover:text-foreground transition-colors"
+                  >
+                    {showAllProjects
+                      ? "Show Less"
+                      : `+ ${filteredProjects.length - initialProjects} More Projects`}
+                  </button>
+                </div>
+              )}
+            </>
+          )}
+
+          {filteredCertifications.length > 0 && (
+            <>
+              <h2 className="text-2xl font-bold mb-4 mt-8">Certifications</h2>
+              {filteredCertifications.map((exp, index) => (
+                <div
+                  key={index}
+                  className=" p-6 rectangle"
+                >
+                  <div className="flex justify-between items-start mb-2">
+                    <div>
+                      <h3 className="text-2xl">
+                        {exp.title}
+                      </h3>
+                      <p className="text-[var(--accent-light)]">{exp.company}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </>
+          )}
+
+
+          <div className="mb-14">
+            <h2 className="text-2xl font-semibold mb-6">Skills</h2>
+            <div className="grid gap-6 md:grid-cols-2">
+              {filteredCapabilities.length > 0 && (
+                <section className="rectangle p-6">
+                  <h3 className="mb-4 text-xl font-semibold">Capabilities</h3>
+                  <div className="flex flex-wrap gap-2">
+                {filteredCapabilities.map((skill) => (
+                  <span
+                    key={skill.title}
+                    className="px-3 py-1 bg-[var(--accent-dark)]/40 text-foreground text-sm rounded-[var(--bubble-radius)]"
+                  >
+                    {skill.title}
+                  </span>
+                ))}
+                  </div>
+                </section>
+              )}
+
+              {filteredToolsAndTechnologies.length > 0 && (
+                <section className="rectangle p-6">
+                  <h3 className="mb-4 text-xl font-semibold">Tools + Technologies</h3>
+                  <div className="flex flex-wrap gap-2">
+                    {filteredToolsAndTechnologies.map((skill) => (
+                      <span
+                        key={skill.title}
+                        className="px-3 py-1 bg-[var(--accent-dark)]/40 text-foreground text-sm rounded-[var(--bubble-radius)]"
+                      >
+                        {skill.title}
+                      </span>
+                    ))}
+                  </div>
+                </section>
+              )}
+              </div>
+            </div>
+
+        </div>
       </div>
     </main>
   );

@@ -2,12 +2,14 @@ import { convertToModelMessages, streamText, UIMessage } from 'ai';
 import { createAzure } from '@ai-sdk/azure';
 import { checkRateLimit } from "@vercel/firewall";
 import { z } from "zod";
-import fs from "node:fs";
-import path from "node:path";
-
-
-
-const { pdfToText } = require("../../../scripts/pdf-to-text");
+import {
+  capabilities,
+  certifications,
+  education,
+  experiences,
+  projects,
+  toolsAndTechnologies,
+} from "../../data";
 
 const azure = createAzure({
   resourceName: process.env.AZURE_RESOURCE_NAME!,
@@ -16,15 +18,14 @@ const azure = createAzure({
 
 
 
-const pdfPath = path.join(
-  process.cwd(),
-  "app",
-  "chat",
-  "data",
-  "linkedin.pdf"
-);
-
-const linkedinText = await pdfToText(pdfPath);
+const portfolioData = JSON.stringify({
+  education,
+  experiences,
+  projects,
+  certifications,
+  capabilities,
+  toolsAndTechnologies,
+}, null, 2);
 
 
 const requestSchema = z.object({
@@ -118,7 +119,7 @@ Portfolio information:
 
 
 
-     Use the following info to answer the questions${linkedinText}`
+    Use the following info to answer the questions:\n${portfolioData}`
 
 
 const azureModel = process.env.AZURE_MODEL ?? "gpt-4o";

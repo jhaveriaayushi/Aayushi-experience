@@ -6,55 +6,53 @@ export const education = [
     company: "University of Cambridge",
     period: "2020 - 2024",
     description:
-      "Master's degree in Engineering with a focus on Electrical and Information Sciences. Studied software engineering, machine learning, signal processing, electronics and control systems while delivering research and industry-focused projects.",
+      "Integrated Master's degree in Engineering with an initial 2  year General Engineering foundation. Later specialised in Electrical and Control Engineering.\n\nMaster's Project: Advanced texture rendering in a holographic projection system.",
     tags: ["Engineering", "Software", "Sustainability"],
     skills: [
-      "Machine Learning",
-      "Software Engineering",
-      "Electronics",
-      "Research",
-      "Systems Design",
+      "Semiconductor & Digital Electronics",
+      "Sustainable Business Development",
+      "Electrical Power",
+      "Systems & Control",
+      "Innovation & IP Management",
+      "Electromagnetism"
     ],
   },
   {
-  title: "attRAct Programme",
-  company: "Royal Academy of Arts",
-  period: "2019",
-  description:
-    "Selected for the Royal Academy of Arts attRAct programme, working with practising artists and developing creative techniques across a range of media while exhibiting and discussing work within professional artistic environments.",
-  tags: ["Art"],
-  skills: [
-    "Creative Practice",
-    "Visual Communication",
-    "Design Thinking",
-  ],
-}
-
+    title: "attRAct Programme",
+    company: "Royal Academy of Arts",
+    period: "2019",
+    description:
+      "Selected for the Royal Academy of Arts attRAct programme, working with practising artists and developing creative techniques across a range of media while exhibiting and discussing work within professional artistic environments.",
+    tags: ["Art"],
+    skills: [
+      "Creative Practice",
+      "Visual Communication",
+      "Design Thinking",
+    ],
+  },
+  {
+    title: "A Levels",
+    company: "Bentley Wood High School",
+    period: "2020",
+    description: "A* Computer Science · A* Mathematics · A* Further Mathematics · A* Physics · A AS Level Art",
+    tags: ["Engineering", "Software", "Art"],
+  },
 ];
 
-export const skills = [
+export const capabilities = [
   { title: "Product Management", tags: ["Product", "Strategy"] },
   { title: "Requirements Gathering", tags: ["Product", "Strategy", "AI"] },
   { title: "Product Delivery", tags: ["Product", "Strategy"] },
   { title: "AI Product Strategy", tags: ["AI", "Product", "Strategy"] },
   { title: "Machine Learning", tags: ["AI", "Software", "Engineering"] },
-  { title: "Copilot Studio", tags: ["AI", "Software"] },
   { title: "Computer Vision", tags: ["AI", "Software", "Engineering"] },
   { title: "Stakeholder Management", tags: ["Product", "Strategy"] },
   { title: "Agile Delivery", tags: ["Product", "Strategy"] },
   { title: "Scrum", tags: ["Product", "Strategy"] },
   { title: "Engineering Design", tags: ["Engineering", "Sustainability"] },
-  { title: "Electronics", tags: ["Engineering", "Software"] },
   { title: "Manufacturing", tags: ["Engineering"] },
-  { title: "CAD", tags: ["Engineering", "Art"] },
-  { title: "Control Systems", tags: ["Engineering", "Software"] },
-  { title: "CANBus", tags: ["Engineering", "Software"] },
   { title: "Testing", tags: ["Engineering", "Software"] },
-  { title: "Python", tags: ["Software", "AI", "Engineering"] },
-  { title: "C#", tags: ["Software"] },
   { title: "Software Development", tags: ["Software", "Engineering"] },
-  { title: "Embedded Systems", tags: ["Software", "Engineering"] },
-  { title: "Git", tags: ["Software", "Product"] },
   { title: "Sustainable Design", tags: ["Sustainability", "Engineering"] },
   { title: "Systems Thinking", tags: ["Sustainability", "Engineering", "Strategy"] },
   { title: "Lifecycle Thinking", tags: ["Sustainability", "Strategy"] },
@@ -68,6 +66,18 @@ export const skills = [
   { title: "Technical Documentation", tags: ["Other", "Software"] },
   { title: "Spanish", tags: ["Other"] },
   { title: "Communication", tags: ["Other", "Product"] },
+];
+
+export const toolsAndTechnologies = [
+  { title: "Copilot Studio", tags: ["AI", "Software"] },
+  { title: "Electronics", tags: ["Engineering", "Software"] },
+  { title: "CAD", tags: ["Engineering", "Art"] },
+  { title: "Control Systems", tags: ["Engineering", "Software"] },
+  { title: "CANBus", tags: ["Engineering", "Software"] },
+  { title: "Python", tags: ["Software", "AI", "Engineering"] },
+  { title: "C#", tags: ["Software"] },
+  { title: "Embedded Systems", tags: ["Software", "Engineering"] },
+  { title: "Git", tags: ["Software", "Product"] },
 ];
 
 export const experiences = [
@@ -113,19 +123,19 @@ export const experiences = [
     ],
   },
   {
-  title: "Software Intern",
-  company: "Raspberry Pi",
-  period: "2021",
-  description:
-    "Developed software examples and technical documentation demonstrating how Raspberry Pi Pico boards interface with third-party hardware modules. Collaborated through GitHub and contributed to resources used by developers and hobbyists worldwide.",
-  tags: ["Software", "Engineering"],
-  skills: [
-    "Python",
-    "Git",
-    "Technical Documentation",
-    "Embedded Systems",
-  ],
-},
+    title: "Software Intern",
+    company: "Raspberry Pi",
+    period: "2021",
+    description:
+      "Developed software examples and technical documentation demonstrating how Raspberry Pi Pico boards interface with third-party hardware modules. Collaborated through GitHub and contributed to resources used by developers and hobbyists worldwide.",
+    tags: ["Software", "Engineering"],
+    skills: [
+      "Python",
+      "Git",
+      "Technical Documentation",
+      "Embedded Systems",
+    ],
+  },
 ];
 
 
@@ -144,7 +154,7 @@ export const projects = [
       "Product Management",
       "User Research",
     ],
-    video:[]
+    video: []
   },
   {
     title: "Kinect Racing Game",
@@ -187,7 +197,7 @@ export const projects = [
       "CAD",
       "Programming",
     ],
-  },{
+  }, {
     title: "AI Leardfdfdssdning Mentor",
     company: "National Grid",
     period: "May 2026 - Jul 2026",
@@ -200,7 +210,7 @@ export const projects = [
       "Product Management",
       "User Research",
     ],
-    video:[]
+    video: []
   },
   {
     title: "Kinect sdffsRacing Game",
@@ -248,25 +258,22 @@ export const projects = [
 
 export const certifications = [
   {
-    title: "Professional Scrum Master I",
+    title: "Professional Scrum Product Owner I",
     company: "Scrum.org",
-    period: "2025",
-    description:
-      "Professional certification demonstrating knowledge of Agile delivery, Scrum principles and product development best practices.",
+    period: "2026",
     tags: ["Product"],
-    skills: [
-      "Scrum",
-      "Agile Delivery",
-      "Stakeholder Management",
-    ],
   },
   {
     title: "Spanish CEFR B2",
     company: "CEFR",
     period: "2024",
-    description:
-      "Professional working proficiency in Spanish with strong written and verbal communication skills.",
     tags: ["Other"],
-    skills: ["Spanish", "Communication"],
   },
+  {
+    title: "Claude Certified Architect Foundations",
+    company: "Anthropic",
+    period: "2026",
+    tags: ["AI", "Software"],
+  },
+
 ];

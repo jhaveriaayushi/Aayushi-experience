@@ -6,6 +6,7 @@ import { useState, useEffect, useRef } from 'react';
 import ReactMarkdown from "react-markdown";
 import { AIyushi } from '../ai_box';
 import { Starfield } from '../starfield';
+import { Notepad } from "../notepad";
 
 
 
@@ -37,6 +38,7 @@ export default function Page() {
   return (
     <main className='relative'>
       <Starfield/>
+      <Notepad/>
     <div className="relative z-10 h-screen flex overflow-y-auto flex-col flex-1 w-full max-w-5xl mx-auto px-8"
     >
 
