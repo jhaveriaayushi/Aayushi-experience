@@ -8,6 +8,7 @@ import { Notepad } from "../notepad";
 export default function ArtPage() {
   const [posts, setPosts] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
+  const [loadError, setLoadError] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
   const [selectedSlide, setSelectedSlide] = useState(0);
   const [loadedImages, setLoadedImages] = useState<Record<string, boolean>>({});
@@ -21,15 +22,24 @@ export default function ArtPage() {
 
   useEffect(() => {
     async function loadPosts() {
-      const res = await fetch("/api/instagram");
-      const data = await res.json();
+      try {
+        const res = await fetch("/api/instagram");
+        const data = await res.json();
 
-      const shuffled = [...data.data].sort(
-        () => Math.random() - 0.5
-      );
+        if (!res.ok || !Array.isArray(data.data)) {
+          throw new Error("Instagram feed is unavailable");
+        }
 
-      setPosts(shuffled);
-      setLoading(false);
+        const shuffled = [...data.data].sort(
+          () => Math.random() - 0.5
+        );
+
+        setPosts(shuffled);
+      } catch {
+        setLoadError(true);
+      } finally {
+        setLoading(false);
+      }
     }
 
 
@@ -42,7 +52,7 @@ export default function ArtPage() {
       <div className="flex items-center justify-center max-h-screen">
         <Starfield/>
         <svg
-          className="w-96 h-170 border border-red-500"
+          className="w-96 h-170"
           viewBox="0 0 1500 2000"
         >
           <path
@@ -90,7 +100,11 @@ export default function ArtPage() {
       </div>
 
   <div className="flex flex-wrap justify-center items-center rectangle p-50 gap-12">
-          {galleryPosts.map((post, index) => {
+          {loadError ? (
+            <p role="alert" className="py-12 text-center">
+              The art gallery is temporarily unavailable. Please try again later.
+            </p>
+          ) : galleryPosts.map((post, index) => {
             const isCarousel = post.media_type === "CAROUSEL_ALBUM";
             console.log("hi");
             const carouselImages = post.children?.data || [];
