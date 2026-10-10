@@ -76,9 +76,27 @@ export default function CVPage() {
         <div className="mb-8 text-center">
           <h1 className="text-5xl">CV Explorer</h1>
           <h5 className="mt-2 text-[var(--accent-light)] text-xs">Based in London</h5>
+          <div className="mt-3 flex justify-center gap-5 text-sm">
+            <a
+              href="https://www.linkedin.com/in/aayushi-jhaveri-680253192"
+              target="_blank"
+              rel="noreferrer"
+              className="text-[var(--accent-light)] underline underline-offset-4 hover:opacity-80"
+            >
+              LinkedIn
+            </a>
+            <a
+              href="https://github.com/jhaveriaayushi?tab=repositories"
+              target="_blank"
+              rel="noreferrer"
+              className="text-[var(--accent-light)] underline underline-offset-4 hover:opacity-80"
+            >
+              GitHub
+            </a>
+          </div>
         </div>
 
-        <div className="flex flex-wrap gap-3 mb-10">
+        <div className="flex flex-wrap gap-3 justify-center mb-10">
           {allTags.map((tag) => (
             <button
               key={tag}
