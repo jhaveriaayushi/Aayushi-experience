@@ -102,7 +102,7 @@ export default function Home() {
               aria-hidden="true"
               className="mr-[0.35rem] inline-block text-[var(--accent-light)]"
             >
-              ↗
+              ↗︎
             </span>
             Use the toggle at the top to explore different themes.
           </p>

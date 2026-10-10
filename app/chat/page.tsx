@@ -214,7 +214,7 @@ export default function Page() {
           aria-label="Send message"
           disabled={status === 'submitted' || status === 'streaming'}
           className="featured-button px-5 py-3 text-sm disabled:cursor-not-allowed disabled:opacity-40">
-          Send <span aria-hidden="true">↗</span>
+          Send <span aria-hidden="true">↗︎</span>
         </button>
       </form>
     </div>

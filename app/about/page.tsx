@@ -171,7 +171,7 @@ export default function AboutPage() {
 
               <div className="mt-7 flex flex-wrap justify-center gap-3">
                 <Link href="/chat" className="featured-button px-5 py-3 text-sm transition hover:-translate-y-0.5 hover:shadow-[0_8px_24px_color-mix(in_srgb,var(--accent-light)_25%,transparent)]">
-                  Ask my AI CV <span aria-hidden="true">↗</span>
+                  Ask my AI CV <span aria-hidden="true">↗︎</span>
                 </Link>
                 <Link href="/CV" className="buttons bg-[var(--background)] px-5 py-3 text-sm font-semibold text-[var(--foreground)] transition hover:-translate-y-0.5 hover:shadow-[0_8px_24px_color-mix(in_srgb,var(--accent-light)_25%,transparent)]">
                   View my CV
