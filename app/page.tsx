@@ -6,6 +6,49 @@ import { AIyushi } from "./ai_box";
 import { Starfield } from "./starfield";
 import { Notepad } from "./notepad";
 
+type HomeIconName = "about" | "chat" | "cv" | "art";
+
+function HomeIcon({ name }: { name: HomeIconName }) {
+  return (
+    <svg
+      aria-hidden="true"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.7"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="mr-2 inline-block h-6 w-6 shrink-0 align-[-0.2em] text-[var(--accent-light)]"
+    >
+      {name === "about" && (
+        <>
+          <path d="m12 3 1.9 5.8L20 11l-6.1 2.2L12 19l-1.9-5.8L4 11l6.1-2.2L12 3Z" />
+          <path d="m19 16 .8 2.2L22 19l-2.2.8L19 22l-.8-2.2L16 19l2.2-.8L19 16Z" />
+        </>
+      )}
+      {name === "chat" && (
+        <>
+          <path d="M12 3v3" />
+          <rect x="4" y="6" width="16" height="14" rx="3" />
+          <path d="M9 12h.01M15 12h.01M9 16h6" />
+        </>
+      )}
+      {name === "cv" && (
+        <>
+          <path d="M7 3h7l5 5v13H7z" />
+          <path d="M14 3v5h5M10 13h6M10 17h6" />
+        </>
+      )}
+      {name === "art" && (
+        <>
+          <path d="M12 3a9 9 0 1 0 0 18h1.1a2 2 0 0 0 1.4-3.4 1.8 1.8 0 0 1 1.3-3.1H18a3 3 0 0 0 3-3c0-4.7-4-8.5-9-8.5Z" />
+          <path d="M7.5 10h.01M10 6.5h.01M15 7.5h.01" />
+        </>
+      )}
+    </svg>
+  );
+}
+
 export default function Home() {
   const router = useRouter();
   const text = "Welcome to Aayushi";
@@ -128,7 +171,7 @@ export default function Home() {
               className="group rounded-3xl p-6 text-left backdrop-blur-sm buttons"
             >
               <h3 className="mb-2 text-2xl font-bold">
-                ✨ About Me
+                <HomeIcon name="about" />About Me
               </h3>
               <h4 className="mb-2 text-xs">How did I get here?</h4>
               <p className="text-sm text-foreground/70">
@@ -141,7 +184,7 @@ export default function Home() {
               className="group  p-6 text-left backdrop-blur-sm buttons"
             >
               <h3 className="mb-2 text-2xl font-bold">
-                🤖 Ask <AIyushi />
+                <HomeIcon name="chat" />Ask <AIyushi />
               </h3>
               <h4 className="mb-2 text-xs">Ask me anything</h4>
 
@@ -155,7 +198,7 @@ export default function Home() {
               className="group rounded-3xl p-6 text-left backdrop-blur-sm buttons"
             >
               <h3 className="mb-2 text-2xl font-bold">
-                📄 CV Explorer
+                <HomeIcon name="cv" />CV Explorer
               </h3>
               <h4 className="mb-2 text-xs">All things professional</h4>
               <p className="text-sm text-foreground/70">
@@ -169,7 +212,7 @@ export default function Home() {
               className="group rounded-3xl p-6 text-left backdrop-blur-sm buttons"
             >
               <h3 className="mb-2 text-2xl font-bold">
-                🎨 Art Gallery
+                <HomeIcon name="art" />Art Gallery
               </h3>
               <h4 className="mb-2 text-xs">Creative bits and bobs</h4>
               <p className="text-sm text-foreground/70">
