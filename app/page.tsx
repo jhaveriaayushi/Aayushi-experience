@@ -63,7 +63,7 @@ export default function Home() {
       <Starfield/>
       <Notepad/>
       <div
-        className="absolute inset-0 -z-10 translate-x-[25%] overflow-hidden w-[90%]"
+        className="absolute inset-0 z-0 translate-x-[25%] overflow-hidden w-[90%]"
       >
 
         <video

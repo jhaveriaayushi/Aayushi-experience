@@ -17,6 +17,8 @@ export const funFacts = {
     "one_thing_to_eat_forever": "Caprese salad",
     "morning_person_or_night_owl": "morning person",
     "birthday": "2002-05-08",
+    "Strongest_area":"Product Management/Engineering in Electrical Systems and AI/Software or Innvoation/Design",
+    "Future_tech_to_explore":"Physical AI"
   },
   "likes": [
     "plants",

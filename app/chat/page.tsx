@@ -69,8 +69,8 @@ export default function Page() {
     "
           />
 
-          <div className="relative p-4">
-            <p className="text-2xl font-bold tracking-tight">
+          <div className="relative ">
+            <p className="text-2xl p-4 font-bold tracking-tight">
               Chat with <AIyushi />
             </p>
           </div>
