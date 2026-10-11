@@ -31,7 +31,7 @@ export function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="relative z-50 border-b bg-background">
+    <nav className="relative z-20 border-b bg-background">
       <div className="relative flex items-center p-3 border-b">
         <button
           className="ml-4 md:hidden text-3xl"
@@ -56,14 +56,14 @@ export function Navbar() {
 
         {menuOpen && (
           <div
-            className="fixed inset-0 bg-black/20 z-[998]"
+            className="fixed inset-0 bg-black/20 z-40"
             onClick={() => setMenuOpen(false)}
           />
         )}
         <div
           onClick={() => setMenuOpen(false)}
           className={`
-fixed top-0 left-0 h-screen w-64 z-[999]
+fixed top-0 left-0 h-screen w-64 z-[40]
 bg-[var(--background)] border-r
 transition-transform duration-300 ease-out
 ${menuOpen ? "translate-x-0" : "-translate-x-full"}
