@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import styles from "./notepad.module.css";
 
 type Doodle = {
     id: number;
@@ -136,14 +137,14 @@ export function Notepad() {
     }, []);
 
     return (
-        <div className="notepad" aria-hidden="true">
+        <div className={styles.notepad} aria-hidden="true">
             {doodles.map((doodle) => {
                 const strokes = doodleDrawings[doodle.shape];
                 const fadeStart = (strokes.length * strokeDuration + holdDuration) / doodle.duration;
 
                 return (
                     <svg
-                        className="notepad-doodle"
+                        className={styles.doodle}
                         key={doodle.id}
                         opacity={reducedMotion ? 0.35 : 0}
                         style={{

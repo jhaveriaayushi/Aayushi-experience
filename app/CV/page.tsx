@@ -10,8 +10,8 @@ import {
 } from "../data";
 
 import { useState, useEffect } from "react";
-import { Starfield } from '../starfield';
-import { Notepad } from "../notepad";
+import { Starfield } from '../backgrounds/starfield/starfield';
+import { Notepad } from "../backgrounds/notepad/notepad";
 
 
 

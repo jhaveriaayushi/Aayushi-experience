@@ -5,8 +5,8 @@ import { DefaultChatTransport } from 'ai';
 import { useState, useEffect, useRef } from 'react';
 import ReactMarkdown from "react-markdown";
 import { AIyushi } from '../ai_box';
-import { Starfield } from '../starfield';
-import { Notepad } from "../notepad";
+import { Starfield } from '../backgrounds/starfield/starfield';
+import { Notepad } from "../backgrounds/notepad/notepad";
 
 
 

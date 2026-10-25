@@ -27,7 +27,6 @@ export function Navbar() {
     }
   }, []);
 
-
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
@@ -39,7 +38,6 @@ export function Navbar() {
         >
           ☰
         </button>
-
         {/* Desktop menu */}
         <div className="[&>a]:transition-all [&>a]:hover:font-bold sub-theme-font hidden md:flex px-4 gap-6 ">
           <Link href="/">Home</Link>
@@ -52,8 +50,6 @@ export function Navbar() {
         </div>
 
         {/* Mobile menu */}
-
-
         {menuOpen && (
           <div
             className="fixed inset-0 bg-black/20 z-40"
@@ -81,7 +77,6 @@ md:hidden
             {/*<Link href="/blog">Blog</Link>*/}
           </div>
         </div>
-
         <Link href="/" className="
 
 absolute left-1/2 -translate-x-1/2
@@ -90,13 +85,10 @@ transition-all
 hover:text-[var(--accent-light)]
 hover:text-shadow-[0_0_10px_var(--accent-light)]
 ">
-          Aayushi
+        Aayushi
         </Link>
-
-
         <label className="ml-auto flex items-center gap-2">
           <span className="hidden sm:block sub-theme-font">Light</span>
-
           <div
             onClick={toggleTheme}
             className="w-14 h-8 rounded-full cursor-pointer relative bg-[var(--accent-dark)] transition-colors"
@@ -105,16 +97,12 @@ hover:text-shadow-[0_0_10px_var(--accent-light)]
               className={`theme-toggle-thumb`}
             />
           </div>
-
           <span className="hidden sm:block sub-theme-font">Dark</span>
         </label>
-
       </div>
-
       <div className="border-t border-[color-mix(in_srgb,var(--accent-light)_15%,transparent)] bg-[color-mix(in_srgb,var(--accent-dark)_18%,transparent)] px-4 py-1.5 text-center text-xs font-medium tracking-wide text-[color-mix(in_srgb,var(--foreground)_75%,transparent)]">
         This website is still a work in progress.
       </div>
     </nav>
   );
-
 }

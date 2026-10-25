@@ -5,8 +5,8 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 
 import { toggleTheme } from "../navbar";
-import { Starfield } from "../starfield"; 
-import { Notepad } from "../notepad";
+import { Starfield } from "../backgrounds/starfield/starfield"; 
+import { Notepad } from "../backgrounds/notepad/notepad";
 
 const likes = ["Inclusive design", "Deadlines", "Trees", "Olives", "Art", "Robotics", "Playful UX", "Making things", "Physical AI"];
 const dislikes = ["Non-wired connections", "Inefficiencies", "Colour pickers without hex values", "Tradition", "Needless jargon", "Generic design"];

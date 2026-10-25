@@ -1,0 +1,16 @@
+.notepad {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+  display: none;
+}
+
+:global(html[data-theme="light"]) .notepad {
+  display: block;
+}
+
+.doodle path {
+  stroke-dasharray: 100;
+}

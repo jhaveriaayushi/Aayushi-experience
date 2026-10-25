@@ -3,8 +3,8 @@ import { useEffect, useRef, useState } from "react";
 
 import { useRouter } from "next/navigation";
 import { AIyushi } from "./ai_box";
-import { Starfield } from "./starfield";
-import { Notepad } from "./notepad";
+import { Starfield } from "./backgrounds/starfield/starfield";
+import { Notepad } from "./backgrounds/notepad/notepad";
 
 type HomeIconName = "about" | "chat" | "cv" | "art";
 

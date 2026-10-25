@@ -2,8 +2,8 @@
 
 import { useEffect, useState } from "react";
 import Drawing from "@/public/hands.svg";
-import { Starfield } from "../starfield";
-import { Notepad } from "../notepad";
+import { Starfield } from "../backgrounds/starfield/starfield";
+import { Notepad } from "../backgrounds/notepad/notepad";
 
 export default function ArtPage() {
   const [posts, setPosts] = useState<any[]>([]);

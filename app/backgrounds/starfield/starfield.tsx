@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import styles from "./starfield.module.css";
 
 type Star = {
     id: number;
@@ -91,16 +92,17 @@ export function Starfield() {
     }, []);
 
     return (
-        <div className="starfield" aria-hidden="true">
+        <div className={styles.starfield} aria-hidden="true">
             {stars.map((star) => (
                 <span
-                    className="starfield-star"
+                    className={styles.star}
                     key={star.id}
                     style={
                         {
                             "--star-left": `${star.left}%`,
                             "--star-top": `${star.top}%`,
                             "--star-size": `${star.size}rem`,
+                            "--star-size-mobile": `${star.size * 0.65}rem`,
                             "--star-delay": `${star.delay}s`,
                             "--star-duration": `${star.duration}s`,
                         } as React.CSSProperties
