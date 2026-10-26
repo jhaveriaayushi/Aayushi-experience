@@ -58,7 +58,7 @@ export default function Page() {
           <div
             className="
       pointer-events-none
-      absolute inset-x-0 top-0 h-24
+      absolute inset-x-0 top-0 h-20
       bg-gradient-to-b
       from-background/90
       via-background/50

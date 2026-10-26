@@ -14,6 +14,8 @@ export const toggleTheme = () => {
 
 export function Navbar() {
   const [theme, setTheme] = useState("light");
+  const [lastUpdated, setLastUpdated] = useState<string | null>(null);
+  const [lastUpdatedUnavailable, setLastUpdatedUnavailable] = useState(false);
 
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme");
@@ -25,6 +27,25 @@ export function Navbar() {
         savedTheme
       );
     }
+  }, []);
+
+  useEffect(() => {
+    async function loadLastUpdated() {
+      try {
+        const response = await fetch("/api/last-updated");
+        const data: { lastUpdated?: string } = await response.json();
+
+        if (!response.ok || !data.lastUpdated) {
+          throw new Error("Last-updated date is unavailable");
+        }
+
+        setLastUpdated(data.lastUpdated);
+      } catch {
+        setLastUpdatedUnavailable(true);
+      }
+    }
+
+    loadLastUpdated();
   }, []);
 
   const [menuOpen, setMenuOpen] = useState(false);
@@ -100,8 +121,28 @@ hover:text-shadow-[0_0_10px_var(--accent-light)]
           <span className="hidden sm:block sub-theme-font">Dark</span>
         </label>
       </div>
-      <div className="border-t border-[color-mix(in_srgb,var(--accent-light)_15%,transparent)] bg-[color-mix(in_srgb,var(--accent-dark)_18%,transparent)] px-4 py-1.5 text-center text-xs font-medium tracking-wide text-[color-mix(in_srgb,var(--foreground)_75%,transparent)]">
+      <div className="flex flex-wrap items-center justify-center gap-x-2 border-t border-[color-mix(in_srgb,var(--accent-light)_15%,transparent)] bg-[color-mix(in_srgb,var(--accent-dark)_18%,transparent)] px-4 py-1.5 text-center text-xs font-medium tracking-wide text-[color-mix(in_srgb,var(--foreground)_75%,transparent)]">
         This website is still a work in progress.
+        {lastUpdated && (
+          <>
+            <span aria-hidden="true">·</span>
+            <span>
+              Last updated:{" "}
+              <time dateTime={lastUpdated}>
+                {new Intl.DateTimeFormat(undefined, {
+                  dateStyle: "medium",
+                  timeStyle: "short",
+                }).format(new Date(lastUpdated))}
+              </time>
+            </span>
+          </>
+        )}
+        {lastUpdatedUnavailable && (
+          <>
+            <span aria-hidden="true">·</span>
+            <span>Last updated: unavailable</span>
+          </>
+        )}
       </div>
     </nav>
   );
