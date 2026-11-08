@@ -1,36 +1,25 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Aayushi's portfolio
 
-## Getting Started
+This is my personal website: part portfolio, part interactive CV, and part place to share the things I make. It brings together my work in product, engineering, AI, and art, with a chat assistant that can answer questions about my experience.
 
-First, run the development server:
+I also built it as a hands-on way to learn web development, UX, and how to bring a real project together—from shaping the experience to building its interactive features. It reflects my own work and learning, rather than being a starter template.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+**See the live site: [aayushi-experience.vercel.app](https://aayushi-experience.vercel.app)**
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## What you'll find here
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Home** — a starting point for exploring the site.
+- **About** — a little about me, plus a fishbowl of feelings.
+- **CV Explorer** — browse my experience, education, projects, certifications, and skills.
+- **Chat** — ask an AI assistant questions about my background.
+- **Art** — a gallery that loads posts from my Instagram art account.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Some projects shown here were developed as part of my work with companies or at university, so I don't own the code for all of them and can't share it publicly. I'm happy to talk through my contributions and how I approached the work—feel free to get in touch.
 
-## Learn More
+## Built with
 
-To learn more about Next.js, take a look at the following resources:
+Next.js, React, TypeScript, and Tailwind CSS. The chat uses the AI SDK with Azure OpenAI, and the site uses Vercel Analytics.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Questions?
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+If you have any questions about the project, feel free to [reach out to me on LinkedIn](https://www.linkedin.com/in/aayushi-jhaveri-680253192).
