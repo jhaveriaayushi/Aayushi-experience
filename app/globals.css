@@ -272,11 +272,18 @@ main {
   font-size-adjust: var(--theme-font-size-adjust);
 }
 
-.explanation-text {
+.about-text {
+  max-width: 42rem;
+  margin-top: 1rem;
   color: color-mix(in srgb, var(--foreground) 65%, transparent);
-  font-size: clamp(0.9rem, 1.6vw, 1.25rem);
+  font-size: clamp(0.9rem, 2vw, 1.25rem);
   line-height: 1.55;
 }
+
+.about-text--lead {
+  color: color-mix(in srgb, var(--foreground) 75%, transparent);
+}
+
 
 .art-gallery-media {
   border: var(--gallery-border-thickness) solid var(--gallery-border);

@@ -39,8 +39,7 @@ export default function Page() {
     <main className='relative'>
       <Starfield/>
       <Notepad/>
-    <div className="relative z-10 h-screen flex overflow-y-auto flex-col flex-1 w-full max-w-5xl mx-auto px-8"
-    >
+   <div className="relative z-10 min-h-screen flex flex-col w-full max-w-5xl mx-auto px-8">
 
       <div
         className="fixed inset-0 pointer-events-none -z-10"

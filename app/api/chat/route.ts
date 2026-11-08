@@ -145,6 +145,17 @@ export const maxDuration = 30;
 
 export async function POST(req: Request) {
 
+  const missing = ['AZURE_RESOURCE_NAME', 'AZURE_API_KEY', 'AZURE_OPENAI_DEPLOYMENT']
+    .filter((k) => !process.env[k]);
+
+  if (missing.length) {
+    console.error('Missing env vars:', missing.join(', '));
+    return Response.json(
+      { error: 'Chat is temporarily unavailable.' },
+      { status: 500 }
+    );
+  }
+
   /*
 const rateLimitKey =
   req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ||
@@ -177,6 +188,7 @@ if (!parsed.success) {
   );
 }
 
+
   const messages = parsed.data.messages.slice(-4);
 
   const serializedLength = JSON.stringify(messages).length;
@@ -201,7 +213,12 @@ if (!parsed.success) {
       },
     });
 
-    return result.toUIMessageStreamResponse();
+    return result.toUIMessageStreamResponse({
+      onError: (error) => {
+        console.error('Stream error:', error);
+        return "I couldn't answer that right now. Please try again.";
+      },
+    });
   } catch (error) {
     console.error(
       "AI request failed:",

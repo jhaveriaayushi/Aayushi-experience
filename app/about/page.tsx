@@ -159,13 +159,13 @@ export default function AboutPage() {
               <h1 className="mt-4 max-w-2xl text-4xl text-foreground sm:text-6xl">
                 Product manager, engineer, and designer.
               </h1>
-              <p className="mt-6 max-w-2xl text-base leading-7 text-[color-mix(in_srgb,var(--foreground)_75%,transparent)] sm:text-lg">
+              <p className="about-text about-text--lead">
                 I enjoy turning fuzzy ideas into useful, thoughtful experiences. My work sits at the intersection of product strategy, playful design, and hands-on engineering, and I&apos;m happiest when I&apos;m learning, making, and connecting seemingly unrelated things.
               </p>
-              <p className="mt-4 explanation-text">
-                Outside of work, you&apos;ll usually find me creating something out of anything. I paint, sculpt, build Raspberry Pi projects, or simply just ideate.
+              <p className="about-text">
+                Outside of work, you&apos;ll usually find me creating something. I paint, sculpt, build Raspberry Pi projects, or simply just ideate.
               </p>
-              <p className="mt-4 explanation-text">
+              <p className="about-text">
                 Moving forward, I'd like to venture into green technology and sustainability. Recently, I&apos;ve been exploring sustainable AI and its potential to help people and the planet.
               </p>
 
