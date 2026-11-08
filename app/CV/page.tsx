@@ -197,27 +197,34 @@ export default function CVPage() {
 
               <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
                 {displayedProjects.map((project) => (
-                  <button
+                  <div
                     key={project.title}
                     className=" p-6 rectangle"
                   >
                     <div className="overflow-hidden rounded-2xl aspect-square border border-foreground/10 bg-background/20">
-
-                      <video
-                        autoPlay
-                        muted
-                        loop
-                        playsInline
-                        className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                      >
-                        {project.video}
-                      </video>
+                      {project.video ? (
+                        <video
+                          playsInline
+                          autoPlay
+                          muted
+                          loop  
+                          preload="none"
+                          className="w-full h-full object-cover"
+                        >
+                          <source src={project.video} type="video/mp4" />
+                          Your browser does not support video playback.
+                        </video>
+                      ) : (
+                        <div className="flex h-full items-center justify-center text-sm text-foreground/60">
+                          Video not available
+                        </div>
+                      )}
                     </div>
 
-                    <h3 className="mt-2 text-sm font-semibold">
+                    <h3 className="mt-2 text-lg text-center font-semibold">
                       {project.title}
                     </h3>
-                  </button>
+                  </div>
                 ))}
               </div>
 

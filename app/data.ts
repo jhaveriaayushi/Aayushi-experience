@@ -141,23 +141,7 @@ export const experiences = [
 
 export const projects = [
   {
-    title: "AI Learning Mentor",
-    company: "National Grid",
-    period: "May 2026 - Jul 2026",
-    description:
-      "Developed and tested an AI-powered learning mentor using Microsoft Copilot Studio. Worked with stakeholders to define requirements, evaluate user feedback and support rollout planning for a personalised learning experience.",
-    tags: ["AI", "Product"],
-    skills: [
-      "Copilot Studio",
-      "AI",
-      "Product Management",
-      "User Research",
-    ],
-    video: []
-  },
-  {
     title: "Kinect Racing Game",
-    company: "University of Cambridge",
     period: "Sep 2019 - May 2020",
     description:
       "Created a motion-controlled racing game using Microsoft's Kinect sensor. Designed gesture recognition systems allowing players to steer and control vehicles through full-body movement.",
@@ -168,10 +152,10 @@ export const projects = [
       "Unity",
       "Computer Vision",
     ],
+    video: "/projects/race%20game.mp4",
   },
   {
-    title: "Texture Rendering for Holographic Systems",
-    company: "University of Cambridge",
+    title: "Holographic Projection",
     period: "2023 - 2024",
     description:
       "Researched rendering techniques for holographic displays as part of a master's project. Investigated texture generation and optimisation methods to improve image quality and display realism.",
@@ -182,10 +166,10 @@ export const projects = [
       "Python",
       "Data Analysis",
     ],
+    video: "/projects/holography.mp4",
   },
   {
-    title: "Polar Graph Drawing Machine",
-    company: "Personal Project",
+    title: "Polargraph Drawing Machine",
     period: "Jan 2019 - Jan 2020",
     description:
       "Designed and built a polar-coordinate drawing machine capable of transforming mathematical equations into physical artwork through a combination of mechanical, electrical and software systems.",
@@ -196,36 +180,8 @@ export const projects = [
       "CAD",
       "Programming",
     ],
-  }, {
-    title: "AI Leardfdfdssdning Mentor",
-    company: "National Grid",
-    period: "May 2026 - Jul 2026",
-    description:
-      "Developed and tested an AI-powered learning mentor using Microsoft Copilot Studio. Worked with stakeholders to define requirements, evaluate user feedback and support rollout planning for a personalised learning experience.",
-    tags: ["AI", "Product"],
-    skills: [
-      "Copilot Studio",
-      "AI",
-      "Product Management",
-      "User Research",
-    ],
-    video: []
-  },
-
-  {
-    title: "Polar Graph sffsdcDrawing Machine",
-    company: "Personal Project",
-    period: "Jan 2019 - Jan 2020",
-    description:
-      "Designed and built a polar-coordinate drawing machine capable of transforming mathematical equations into physical artwork through a combination of mechanical, electrical and software systems.",
-    tags: ["Software", "Engineering"],
-    skills: [
-      "Mechanical Design",
-      "Electronics",
-      "CAD",
-      "Programming",
-    ],
-  }
+    video: "/projects/polargraph.mp4",
+  }, 
 ];
 
 export const certifications = [
