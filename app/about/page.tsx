@@ -65,8 +65,8 @@ function FloatingStar({
     >
       <motion.span
         className={`pointer-events-none absolute z-10 whitespace-nowrap rounded-full border px-3 py-1.5 text-xs font-semibold tracking-wide shadow-xl backdrop-blur-md ${isLike
-          ? "border-[var(--like-mid)]/40 bg-[color-mix(in_srgb,var(--like-mid)_40%,white)] text-[color-mix(in_srgb,var(--like-end)_70%,black) "
-          : "border-[var(--dislike-mid)]/40 bg-[color-mix(in_srgb,var(--dislike-mid)_40%,white)] text-[color-mix(in_srgb,var(--dislike-end)_70%,black) "
+          ? "border-[var(--like-mid)]/40 bg-[color-mix(in_srgb,var(--like-mid)_40%,var(--background))] text-[color-mix(in_srgb,var(--like-end)_40%,var(--foreground))] "
+          : "border-[var(--dislike-mid)]/40 bg-[color-mix(in_srgb,var(--dislike-mid)_40%,var(--background))] text-[color-mix(in_srgb,var(--dislike-end)_10%,var(--foreground))] "
           }`}
         initial={false}
         animate={{
@@ -163,10 +163,10 @@ export default function AboutPage() {
                 I enjoy turning fuzzy ideas into useful, thoughtful experiences. My work sits at the intersection of product strategy, playful design, and hands-on engineering, and I&apos;m happiest when I&apos;m learning, making, and connecting seemingly unrelated things.
               </p>
               <p className="mt-4 explanation-text">
-                Outside of work, you&apos;ll usually find me creating something. I paint, sculpt, build Raspberry Pi projects, and dive into almost any DIY challenge that catches my attention. I&apos;m loyal to no medium, just the joy of making.
+                Outside of work, you&apos;ll usually find me creating something out of anything. I paint, sculpt, build Raspberry Pi projects, or simply just ideate.
               </p>
               <p className="mt-4 explanation-text">
-                Curious, energetic, and loyal to no medium, I am a jack of all trades, hoping to master a few. Recently, I&apos;ve been exploring sustainable AI and its potential to help people and the planet.
+                Moving forward, I'd like to venture into green technology and sustainability. Recently, I&apos;ve been exploring sustainable AI and its potential to help people and the planet.
               </p>
 
               <div className="mt-7 flex flex-wrap justify-center gap-3">
