@@ -6,7 +6,7 @@ export const education = [
     company: "University of Cambridge",
     period: "2020 - 2024",
     description:
-      "Integrated Master's degree in Engineering with an initial 2  year General Engineering foundation. Later specialised in Electrical and Control Engineering.\n\nMaster's Project: Advanced texture rendering in a holographic projection system.",
+    "Integrated Master's degree in Engineering with an initial 2  year General Engineering foundation. Later specialised in Electrical and Control Engineering.\n\nMaster's Project: Advanced texture rendering in a holographic projection system.",
     tags: ["Engineering", "Software", "Sustainability"],
     skills: [
       "Semiconductor & Digital Electronics",
@@ -22,7 +22,7 @@ export const education = [
     company: "Royal Academy of Arts",
     period: "2019",
     description:
-      "Selected for the Royal Academy of Arts attRAct programme, working with practising artists and developing creative techniques across a range of media while exhibiting and discussing work within professional artistic environments.",
+    "Selected for the Royal Academy of Arts attRAct programme, working with practising artists and developing creative techniques across a range of media while exhibiting and discussing work within professional artistic environments.",
     tags: ["Art"],
     skills: [
       "Creative Practice",
@@ -85,7 +85,7 @@ export const experiences = [
     company: "frog",
     period: "Jun 2025 - Present",
     description:
-      "Developing AI and digital products, translating user needs into product requirements, running stakeholder workshops and supporting product delivery across multidisciplinary teams.",
+    "Developing AI and digital products, translating user needs into product requirements, running stakeholder workshops and supporting product delivery across multidisciplinary teams.",
     tags: ["Product", "AI", "Strategy"],
     skills: [
       "Product Management",
@@ -93,115 +93,127 @@ export const experiences = [
       "Stakeholder Management",
       "Strategy",
     ],
-  },
-  {
-    title: "Experiment Set-up Designer",
-    company: "UCL",
-    period: "Oct 2024 - Nov 2024",
-    description:
-      "Designed and built specialist experimental equipment for behavioural research, balancing engineering constraints with safety and usability requirements.",
-    tags: ["Engineering"],
-    skills: [
-      "Engineering Design",
-      "Manufacturing",
-      "Research",
-    ],
-  },
-  {
-    title: "Software & Electrical Engineering Intern",
-    company: "The Little Car Company",
-    period: "June 2022 - Sep 2022",
-    description:
+    work_projects: [
+      "Built an end-to-end Python document-extraction tool, automating data extraction from statements of work and organising outputs in a cloud file system via HTTP requests, replacing a lengthy manual process, saving ~15 hours per person and 100+ hours across the department per month.",
+      "Led 10 business analysts on a digital transformation programme targeting a 70% reduction in 90 million annual letters; set the five-month discovery roadmap, plan sprints, and conducted stakeholder interviews to shape future workflows.",
+      "Defined and tracked KPIs for an AI knowledge-sharing tool that captures experienced engineers’ expertise for team training, using user feedback and engineering metrics to assess whether the architecture met performance needs.",
+      "Led requirements gathering and wireframe design for an internal resourcing tool, working with engineers to prototype a centralised view of staff availability and utilisation, replacing reliance on a cumbersome spreadsheet-based process.",
+      "Designed the proposed architecture for a reusable AI knowledge assistant, combining audiovisual content and technical documentation using agentic RAG, retrieval algorithms, and vector and graph databases.",
+      "Developed 19 product concepts for a UK retailer through in-store research, workflow analysis and stakeholder engagement, presenting findings and recommendations to stakeholders to prioritise concepts for further development."],
+    },
+    {
+      title: "Experiment Set-up Designer",
+      company: "UCL",
+      period: "Oct 2024 - Nov 2024",
+      description:
+      "Designed and built specialist experimental equipment for chimpanzee behavioural research, balancing engineering constraints with safety and usability requirements.",
+      tags: ["Engineering"],
+      skills: [
+        "Engineering Design",
+        "Manufacturing",
+        "Research",
+      ],
+    },
+    {
+      title: "Software & Electrical Engineering Intern",
+      company: "The Little Car Company",
+      period: "June 2022 - Sep 2022",
+      description:
       "Worked on electrical systems, embedded software and vehicle testing for electric vehicle prototypes in a multidisciplinary engineering team.",
-    tags: ["Engineering", "Software"],
-    skills: [
-      "Software Development",
-      "Electronics",
-      "Testing",
-      "CANBus",
-    ],
-  },
-  {
-    title: "Software Intern",
-    company: "Raspberry Pi",
-    period: "June 2021 - Aug 2021",
-    description:
+      tags: ["Engineering", "Software"],
+      skills: [
+        "Software Development",
+        "Electronics",
+        "Testing",
+        "CANBus",
+      ],
+       work_projects: [
+"Resolved critical software issues in the DB5 Junior car, restarting production and preventing a 6-month delay.",
+"Led first-prototype dashboard design for a Tamiya EV, conducting user interviews, negotiating with suppliers and ensuring component compatibility with the wider system.",
+"Analysed vehicle test data across 50 tests using Python, identifying anomalous performance readings to help investigate potential high-speed failure risks.",
+      ],
+    },
+    {
+      title: "Software Intern",
+      company: "Raspberry Pi",
+      period: "June 2021 - Aug 2021",
+      description:
       "Developed software examples and technical documentation demonstrating how Raspberry Pi Pico boards interface with third-party hardware modules. Collaborated through GitHub and contributed to resources used by developers and hobbyists worldwide.",
-    tags: ["Software", "Engineering"],
-    skills: [
-      "Python",
-      "Git",
-      "Technical Documentation",
-      "Embedded Systems",
-    ],
-  },
-];
-
-
-
-export const projects = [
-  {
-    title: "Kinect Racing Game",
-    period: "Sep 2019 - May 2020",
-    description:
+      tags: ["Software", "Engineering"],
+      skills: [
+        "Python",
+        "Git",
+        "Technical Documentation",
+        "Embedded Systems",
+      ],
+    },
+  ];
+  
+  
+  
+  export const projects = [
+    {
+      title: "Kinect Racing Game",
+      period: "Sep 2019 - May 2020",
+      description:
       "Created a motion-controlled racing game using Microsoft's Kinect sensor. Designed gesture recognition systems allowing players to steer and control vehicles through full-body movement.",
-    tags: ["Product", "Software"],
-    skills: [
-      "C#",
-      "Kinect",
-      "Unity",
-      "Computer Vision",
-    ],
-    video: "/projects/race%20game.mp4",
-  },
-  {
-    title: "Holographic Projection",
-    period: "2023 - 2024",
-    description:
+      tags: ["Product", "Software"],
+      skills: [
+        "C#",
+        "Kinect",
+        "Unity",
+        "Computer Vision",
+      ],
+      video: "/projects/race%20game.mp4",
+    },
+    {
+      title: "Holographic Projection",
+      period: "2023 - 2024",
+      description:
       "Researched rendering techniques for holographic displays as part of a master's project. Investigated texture generation and optimisation methods to improve image quality and display realism.",
-    tags: ["Engineering", "Software", "Art"],
-    skills: [
-      "Computer Graphics",
-      "Research",
-      "Python",
-      "Data Analysis",
-    ],
-    video: "/projects/holography.mp4",
-  },
-  {
-    title: "Polargraph Drawing Machine",
-    period: "Jan 2019 - Jan 2020",
-    description:
+      tags: ["Engineering", "Software", "Art"],
+      skills: [
+        "Computer Graphics",
+        "Research",
+        "Python",
+        "Data Analysis",
+      ],
+      video: "/projects/holography.mp4",
+    },
+    {
+      title: "Polargraph Drawing Machine",
+      period: "Jan 2019 - Jan 2020",
+      description:
       "Designed and built a polar-coordinate drawing machine capable of transforming mathematical equations into physical artwork through a combination of mechanical, electrical and software systems.",
-    tags: ["Software", "Engineering"],
-    skills: [
-      "Mechanical Design",
-      "Electronics",
-      "CAD",
-      "Programming",
-    ],
-    video: "/projects/polargraph.mp4",
-  }, 
-];
-
-export const certifications = [
-  {
-    title: "Professional Scrum Product Owner I",
-    company: "Scrum.org",
-    period: "2026",
-    tags: ["Product"],
-  },
-  {
-    title: "Spanish CEFR B2",
-    company: "CEFR",
-    period: "2024",
-    tags: ["Other"],
-  },
-  {
-    title: "Claude Certified Architect Foundations",
-    company: "Anthropic",
-    period: "2026",
-    tags: ["AI", "Software"],
-  },
-
-];
+      tags: ["Software", "Engineering"],
+      skills: [
+        "Mechanical Design",
+        "Electronics",
+        "CAD",
+        "Programming",
+      ],
+      video: "/projects/polargraph.mp4",
+    }, 
+  ];
+  
+  export const certifications = [
+    {
+      title: "Professional Scrum Product Owner I",
+      company: "Scrum.org",
+      period: "2026",
+      tags: ["Product"],
+    },
+    {
+      title: "Spanish CEFR B2",
+      company: "CEFR",
+      period: "2024",
+      tags: ["Other"],
+    },
+    {
+      title: "Claude Certified Architect Foundations",
+      company: "Anthropic",
+      period: "2026",
+      tags: ["AI", "Software"],
+    },
+    
+  ];
