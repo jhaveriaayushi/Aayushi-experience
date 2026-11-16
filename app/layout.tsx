@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { EB_Garamond } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
@@ -39,11 +40,20 @@ export default function RootLayout({
       data-theme="light"
       className={`${ebGaramond.variable} ${geistPixel.variable} h-full antialiased`}
     >
+      <Script id="google-tag-bootstrap" strategy="beforeInteractive">
+        {`window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());`}
+      </Script>
       <body className="min-h-screen flex flex-col">
         <Navbar />
         <main className="flex-1 flex flex-col">
         {children}
         </main>
+        <Script
+          src="https://www.googletagmanager.com/gtm.js?id=GTM-N2JCVMP8"
+          strategy="afterInteractive"
+        />
         <Analytics />
       </body>
     </html>
