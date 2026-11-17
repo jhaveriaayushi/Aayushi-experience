@@ -1,6 +1,11 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Skills | Aayushi",
+};
 
 type Brick = {
   x: number;

@@ -7,6 +7,13 @@ import Link from "next/link";
 import { toggleTheme } from "../navbar";
 import { Starfield } from "../backgrounds/starfield/starfield"; 
 import { Notepad } from "../backgrounds/notepad/notepad";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About | Aayushi",
+};
+
+
 
 const likes = ["Inclusive design", "Deadlines", "Trees", "Olives", "Art", "Robotics", "Playful UX", "Making things", "Physical AI"];
 const dislikes = ["Non-wired connections", "Inefficiencies", "Colour pickers without hex values", "Tradition", "Needless jargon", "Generic design"];

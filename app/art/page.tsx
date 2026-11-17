@@ -4,6 +4,10 @@ import { useEffect, useState } from "react";
 import Drawing from "@/public/hands.svg";
 import { Starfield } from "../backgrounds/starfield/starfield";
 import { Notepad } from "../backgrounds/notepad/notepad";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Art | Aayushi",};
 
 export default function ArtPage() {
   const [posts, setPosts] = useState<any[]>([]);

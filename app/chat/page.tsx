@@ -7,6 +7,11 @@ import ReactMarkdown from "react-markdown";
 import { AIyushi } from '../ai_box';
 import { Starfield } from '../backgrounds/starfield/starfield';
 import { Notepad } from "../backgrounds/notepad/notepad";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Chat | Aayushi",
+};
 
 
 

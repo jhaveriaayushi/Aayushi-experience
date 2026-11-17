@@ -12,8 +12,10 @@ import {
 import { useState, useEffect } from "react";
 import { Starfield } from '../backgrounds/starfield/starfield';
 import { Notepad } from "../backgrounds/notepad/notepad";
-
-
+import { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "CV | Aayushi",
+};
 
 const allTags = [
   "All",
